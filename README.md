@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Logistics
+Node version 18.2.0
+npm version 8.9.0
+firebasetools 
+
 ## Available Scripts
 
 In the project directory, you can run:
