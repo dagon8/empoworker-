@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import CompanyCard from './CompanyCard';
 
 function CompanySearch(props){
 
@@ -17,7 +18,7 @@ function CompanySearch(props){
                     let company = responseData[key].trade_nm.toLowerCase();
                     if(company.slice(0, searchQuery.length).indexOf(searchQuery) !== -1){
                         setResult(prevResult => {
-                            return [...prevResult, responseData[key].trade_nm]
+                            return [...prevResult, responseData[key]]
                         })
                     }
                 }
@@ -31,7 +32,6 @@ function CompanySearch(props){
 
     }, [value])
 
-
     return (
         <div>
             <h1>Company Search</h1>
@@ -43,7 +43,14 @@ function CompanySearch(props){
             <div className='searchBack'>
                 {result.map((result, index) => (
                         <div className='searchEntry'>
-                            {result}
+                            <CompanyCard 
+                                name={result.trade_nm} 
+                                city={result.cty_nm} 
+                                state={result.st_cd} 
+                                total={result.violations.case_violtn_cnt} 
+                                flsa={result.violations.flsa.flsa_cl_violtn_cnt} 
+                                osha={result.violations.osha_violtn_cnt}
+                            />
                         </div>
                     
                 ))}

@@ -13,7 +13,7 @@ export default function CompanyCard(props) {
           {props.name}
         </Typography>
         <Typography variant="h10" component="div" color="text.secondary">
-          {props.location}
+          {props.city}, {props.state}
         </Typography>
         <Typography variant="h10" component="div" color="text.secondary">
           {props.industry}
@@ -23,7 +23,7 @@ export default function CompanyCard(props) {
           {props.description}
         </Typography>
         <Typography variant="body2">
-          {props.violations}
+          Total Violations: {props.total} | Fair Labor Act Violations: {props.flsa} | OSHA Violations: {props.osha}
         </Typography>
       </CardContent>
       <CardActions>
