@@ -51,6 +51,7 @@ function CompanySearch(props){
                                 flsa={result.violations.flsa.flsa_cl_violtn_cnt} 
                                 osha={result.violations.osha_violtn_cnt}
                             />
+                            <br/>
                         </div>
                     
                 ))}
