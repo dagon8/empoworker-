@@ -43,13 +43,13 @@ function CompanySearch(props){
             <div className='searchBack'>
                 {result.map((result, index) => (
                         <div className='searchEntry'>
-                            <CompanyCard 
-                                name={result.trade_nm} 
-                                city={result.cty_nm} 
-                                state={result.st_cd} 
-                                total={result.violations.case_violtn_cnt} 
-                                flsa={result.violations.flsa.flsa_cl_violtn_cnt} 
-                                osha={result.violations.osha_violtn_cnt}
+                            <CompanyCard {...result}
+                                // name={result.trade_nm} 
+                                // city={result.cty_nm} 
+                                // state={result.st_cd} 
+                                // total={result.violations.case_violtn_cnt} 
+                                // flsa={result.violations.flsa.flsa_cl_violtn_cnt} 
+                                // osha={result.violations.osha_violtn_cnt}
                             />
                             <br/>
                         </div>
