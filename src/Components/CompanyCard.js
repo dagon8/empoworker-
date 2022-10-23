@@ -20,7 +20,7 @@ export default function CompanyCard(props) {
         </Typography>
         <br/>
         <Typography variant="body2">
-          No description available.
+          No description available at the moment.
         </Typography>
         <br/>
         <Typography variant="body2">
