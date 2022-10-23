@@ -3,7 +3,6 @@ import CompanyCard from './CompanyCard';
 
 function CompanySearch(props){
 
-
     const[value, setValue] = useState('');
     const[result, setResult] = useState([]);
 
@@ -11,6 +10,7 @@ function CompanySearch(props){
         if(value.length > 0){
             fetch('https://empoworker475-default-rtdb.firebaseio.com/companies.json').then(
                 response => response.json()
+               
             ).then(responseData => {
                 setResult([]);
                 let searchQuery = value.toLowerCase();
@@ -18,7 +18,7 @@ function CompanySearch(props){
                     let company = responseData[key].trade_nm.toLowerCase();
                     if(company.slice(0, searchQuery.length).indexOf(searchQuery) !== -1){
                         setResult(prevResult => {
-                            return [...prevResult, responseData[key]]
+                            return [...prevResult, [key, responseData[key]] ]
                         })
                     }
                 }
@@ -32,6 +32,8 @@ function CompanySearch(props){
 
     }, [value])
 
+   
+
     return (
         <div>
             <h1>Company Search</h1>
@@ -41,20 +43,15 @@ function CompanySearch(props){
             value={value}
             />
             <div className='searchBack'>
-                {result.map((result, index) => (
-                        <div className='searchEntry'>
-                            <CompanyCard {...result}
-                                // name={result.trade_nm} 
-                                // city={result.cty_nm} 
-                                // state={result.st_cd} 
-                                // total={result.violations.case_violtn_cnt} 
-                                // flsa={result.violations.flsa.flsa_cl_violtn_cnt} 
-                                // osha={result.violations.osha_violtn_cnt}
-                            />
+                {result.map((company, index) => {
+                    console.log(company[0])
+                    return (
+                        <div className='searchEntry' key={index}>
+                            <CompanyCard name={company[0]} info={company[1]}/>
                             <br/>
                         </div>
-                    
-                ))}
+            
+                )})}
             </div>
         </div>
     )
