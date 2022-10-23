@@ -18,7 +18,6 @@ function CompanySearch(props){
                     let company = responseData[key].trade_nm.toLowerCase();
                     if(company.slice(0, searchQuery.length).indexOf(searchQuery) !== -1){
                         setResult(prevResult => {
-                            console.log(result)
                             return [...prevResult, responseData[key]]
                         })
                     }
