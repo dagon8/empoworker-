@@ -1,5 +1,9 @@
-import { React, useState } from 'react'
+import { React } from 'react'
 import data from "./DummyListData.json"
+
+// this files search the search and filter functionality
+// currently it only works with DummyListData.json
+// TODO: Configure it to work with the wageTheft Companies
 
 function List(props) {
     //create a new array by filtering the original array
