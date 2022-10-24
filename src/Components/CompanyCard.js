@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 export default function CompanyCard({name, info}) {
 
   useEffect(() => {
-    console.log('name', name)
+    console.log(info.violations)
   }, [])
 
   return (
@@ -30,7 +30,7 @@ export default function CompanyCard({name, info}) {
         </Typography>
         <br/>
         <Typography variant="body2">
-          Total Violations: {info.violations.case_violtn_cnt} | Fair Labor Act Violations: {info.violations.flsa.flsa_cl_violtn_cnt} | OSHA Violations: {info.violations.osha_violtn_cnt}
+          Total Violations: {info.violations.case_violtn_cnt.count} | Fair Labor Act Violations: {info.violations.flsa_violtn_cnt.count} | OSHA Violations: {info.violations.osha_violtn_cnt.count}
         </Typography>
       </CardContent>
       <CardActions>
