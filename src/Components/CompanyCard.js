@@ -8,10 +8,6 @@ import Typography from '@mui/material/Typography';
 
 export default function CompanyCard({name, info}) {
 
-  useEffect(() => {
-    console.log('name', name)
-  }, [])
-
   return (
     <Card sx={{ maxWidth: 500 }}>
       <CardContent>
@@ -30,12 +26,12 @@ export default function CompanyCard({name, info}) {
         </Typography>
         <br/>
         <Typography variant="body2">
-          Total Violations: {info.violations.case_violtn_cnt.count} | Fair Labor Act Violations: {info.violations.flsa_cl_violtn_cnt.count} | OSHA Violations: {info.violations.osha_violtn_cnt.count}
+          Total Violations: {info.violations.case_violtn_cnt.count} | Fair Labor Act Violations: {info.violations.flsa_violtn_cnt.count} | OSHA Violations: {info.violations.osha_violtn_cnt.count}
         </Typography>
       </CardContent>
       <CardActions>
 
-        <Link to={`/user/${name}`}>
+        <Link to={`/company/${name}`}>
           <Button size="small">Learn More</Button>
         </Link>
 

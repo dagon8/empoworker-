@@ -4,7 +4,7 @@ import ViolationsTable from "./ViolationsTable";
 
 const Profile = () => {
     let location = useLocation()
-    let company = location.pathname.slice(5)
+    let company = location.pathname.slice(9)
     const [companyInfo, setCompanyInfo] = useState(null)
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const Profile = () => {
         .then(response => response.json())
         .then(jsonRes => {setCompanyInfo(jsonRes)})
     }, [])
-    
+
   return (
     <div>
         {

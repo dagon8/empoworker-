@@ -44,7 +44,6 @@ function CompanySearch(props){
             />
             <div className='searchBack'>
                 {result.map((company, index) => {
-                    console.log(company[0])
                     return (
                         <div className='searchEntry' key={index}>
                             <CompanyCard name={company[0]} info={company[1]}/>
