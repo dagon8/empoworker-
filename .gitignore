@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # firebase database keys
-src/Utils/fire-config.js
+src/Util/fire-config.js
