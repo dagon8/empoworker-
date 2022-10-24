@@ -7,12 +7,10 @@ const Profile = () => {
     const [companyInfo, setCompanyInfo] = useState(null)
 
     useEffect(() => {
-        console.log('company', company)
         fetch(`https://empoworker475-default-rtdb.firebaseio.com/companies/${company}.json`)
         .then(response => response.json())
         .then(jsonRes => {setCompanyInfo(jsonRes)})
     }, [])
-    
 
   return (
     <div>

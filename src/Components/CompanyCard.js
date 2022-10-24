@@ -8,10 +8,6 @@ import Typography from '@mui/material/Typography';
 
 export default function CompanyCard({name, info}) {
 
-  useEffect(() => {
-    console.log(info.violations)
-  }, [])
-
   return (
     <Card sx={{ maxWidth: 500 }}>
       <CardContent>
