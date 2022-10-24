@@ -34,7 +34,7 @@ function App() {
       {/* ^ will show list of companies */}
       <Routes>
         <Route path="/" element={<CompanySearch input={inputText}/>}/>
-        <Route path="/user/:name" element={<Profile/>}/>
+        <Route path="/company/:name" element={<Profile/>}/>
         <Route path="*" element={<Error/>}/>
       </Routes>
     </Router>

@@ -35,7 +35,7 @@ export default function CompanyCard({name, info}) {
       </CardContent>
       <CardActions>
 
-        <Link to={`/user/${name}`}>
+        <Link to={`/company/${name}`}>
           <Button size="small">Learn More</Button>
         </Link>
 
