@@ -18,7 +18,7 @@ export default function CompanyCard({name, info}) {
           {info.cty_nm}, {info.st_cd}
         </Typography>
         <Typography variant="h11" component="div" color="text.secondary">
-          NAIC Code: {info.naic_cd}
+          NAIC Code: {info.naic.naics_code_description}
         </Typography>
         <br/>
         <Typography variant="body2">

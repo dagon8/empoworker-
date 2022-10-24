@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {useLocation} from "react-router-dom"
+import {useLocation} from "react-router-dom";
+import ViolationsTable from "./ViolationsTable";
 
 const Profile = () => {
     let location = useLocation()
@@ -19,9 +20,18 @@ const Profile = () => {
             &&
             <div>
                 <h1>{companyInfo['trade_nm']}</h1>
-                <p>{`${companyInfo['street_addr_1_txt']}, ${companyInfo['cty_nm']}, ${companyInfo['st_cd']}`}</p>
-                <p>{`${companyInfo['naic'].naics_code_description}`}</p>
-                <p>Description</p>
+                <p>Location: {`${companyInfo['street_addr_1_txt']}, ${companyInfo['cty_nm']}, ${companyInfo['st_cd']}`}</p>
+                <p>Industry: {`${companyInfo['naic'].naics_code_description}`}</p>
+                <p>Description not available.</p>
+                <p>
+                    Total Case Violations: {`${companyInfo['violations'].case_violtn_cnt.count}`} | 
+                    Total Fair Labor Standard Act (FLSA) Violations: {`${companyInfo['violations'].flsa_violtn_cnt.count}`} | 
+                    FLSA Repeat Violator: {`${companyInfo['violations'].flsa_repeat_violator}`}
+                </p>
+                <br></br>
+                <div>
+                    <ViolationsTable companyData={companyInfo}></ViolationsTable>
+                </div>
 
             </div>
             
