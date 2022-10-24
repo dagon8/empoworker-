@@ -1,7 +1,4 @@
 import { React, useState } from "react";
-import TextField from "@mui/material/TextField";
-import List from "./Components/DummyList";
-import CompanyList from "./Components/CompanyListData";
 import './App.css'; 
 import CompanySearch from "./Components/CompanySearch";
 
