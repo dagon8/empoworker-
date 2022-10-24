@@ -22,7 +22,7 @@ export default function CompanyCard({name, info}) {
           {info.cty_nm}, {info.st_cd}
         </Typography>
         <Typography variant="h11" component="div" color="text.secondary">
-          NAIC Code: {info.naic_cd}
+          NAIC Code: {info.naic.naics_code_description}
         </Typography>
         <br/>
         <Typography variant="body2">
@@ -30,7 +30,7 @@ export default function CompanyCard({name, info}) {
         </Typography>
         <br/>
         <Typography variant="body2">
-          Total Violations: {info.violations.case_violtn_cnt} | Fair Labor Act Violations: {info.violations.flsa.flsa_cl_violtn_cnt} | OSHA Violations: {info.violations.osha_violtn_cnt}
+          Total Violations: {info.violations.case_violtn_cnt.count} | Fair Labor Act Violations: {info.violations.flsa_cl_violtn_cnt.count} | OSHA Violations: {info.violations.osha_violtn_cnt.count}
         </Typography>
       </CardContent>
       <CardActions>
