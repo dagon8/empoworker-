@@ -3,10 +3,11 @@ import {useLocation} from "react-router-dom"
 
 const Profile = () => {
     let location = useLocation()
-    let company = location.pathname.slice(5)
+    let company = location.pathname.slice(9)
     const [companyInfo, setCompanyInfo] = useState(null)
 
     useEffect(() => {
+        console.log('company', company)
         fetch(`https://empoworker475-default-rtdb.firebaseio.com/companies/${company}.json`)
         .then(response => response.json())
         .then(jsonRes => {setCompanyInfo(jsonRes)})
