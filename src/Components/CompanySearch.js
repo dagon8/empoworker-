@@ -1,5 +1,9 @@
 import React, { useState, useEffect} from 'react';
 import TextField from "@mui/material/TextField";
+import './CompanySearch.css';
+import { Button } from '@mui/material';
+import InputAdornment from '@mui/material/InputAdornment';
+import SearchIcon from '@mui/icons-material/Search';
 
 
 function CompanySearch(props){
@@ -47,19 +51,36 @@ function CompanySearch(props){
 
 
     return (
-        <div>
-            <h1>Company Search</h1>
-            <div className="SearchBar">
-            <TextField
-            id="outlined-basic"
-            onChange={(event) => setValue(event.target.value)}
-            value={value}
-            variant="outlined"
-            fullWidth
-            label="Enter Company Name"
-            />
+        <div className='container'>
+            <div className="bar-button-container">
+                <div className="SearchBar">
+                    <TextField
+                    id="outlined-basic"
+                    onChange={(event) => setValue(event.target.value)}
+                    value={value}
+                    variant="outlined"
+                    fullWidth
+                    label="Search"
+                    size="small"
+                    InputProps={{ startAdornment:<InputAdornment position="start"> 
+                    <SearchIcon />
+                    </InputAdornment>
+                    }}
+                    />
+                </div>
+
+                <div className="searchButton">
+                    <Button
+                    variant="contained"
+                    color="warning"
+                    size="medium"
+                    sx={{textTransform:"none",
+                    color: "black"}}
+                    > Search </Button>
+                </div>
             </div>
             
+            {/* these are the search results */}
             <div className="searchBack">
                 {/* loop through result and display all the values */}
                 {result.map((result, index) => (

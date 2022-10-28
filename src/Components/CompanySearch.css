@@ -1,0 +1,13 @@
+.bar-button-container{
+    display:flex;
+    padding-top: 98px;
+}
+.SearchBar {
+    background-color: #fbfcfd;
+    width: 517px;
+    height: 40px;
+}
+
+.searchButton {
+    text-transform: none;
+}
