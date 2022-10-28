@@ -4,10 +4,9 @@ import './CompanySearch.css';
 import { Button } from '@mui/material';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
-
+import CompanyCard from './CompanyCard';
 
 function CompanySearch(props){
-
 
     const[value, setValue] = useState('');
     const[result, setResult] = useState([]);
@@ -18,7 +17,6 @@ function CompanySearch(props){
             fetch('https://empoworker475-default-rtdb.firebaseio.com/companies.json').then(
                 // when it's finished requesting the data 
                 response => response.json()
-
                 // to have access to the javascript object
             ).then(responseData => {
                 // clear array results so the search will start from stratch
@@ -34,7 +32,7 @@ function CompanySearch(props){
                     if(company.slice(0, searchQuery.length).indexOf(searchQuery) !== -1){
                         // if we type 'p', it will return "pineapple, pear, peach"
                         setResult(prevResult => {
-                            return [...prevResult, responseData[key].trade_nm]
+                            return [...prevResult, [key, responseData[key]] ]
                         })
                     }
                 }
@@ -49,6 +47,7 @@ function CompanySearch(props){
 
     }, [value])
 
+   
 
     return (
         <div className='container'>
@@ -83,12 +82,14 @@ function CompanySearch(props){
             {/* these are the search results */}
             <div className="searchBack">
                 {/* loop through result and display all the values */}
-                {result.map((result, index) => (
-                        <div className="searchResults" key={index}>
-                            {result}
+                {result.map((company, index) => {
+                    return (
+                        <div className='searchEntry' key={index}>
+                            <CompanyCard name={company[0]} info={company[1]}/>
+                            <br/>
                         </div>
-                    
-                ))}
+            
+                )})}
             </div>
         </div>
     )
