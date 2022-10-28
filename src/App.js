@@ -18,9 +18,6 @@ function App() {
 
   return ( 
     <Router>
-      <div className="main">
-        <CompanySearch input ={inputText}/>
-      </div>
       <Routes>
         <Route path="/" element={<CompanySearch input={inputText}/>}/>
         <Route path="/company/:name" element={<Profile/>}/>
