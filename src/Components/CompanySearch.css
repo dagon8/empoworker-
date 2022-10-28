@@ -12,3 +12,8 @@
 .searchButton {
     text-transform: none;
 }
+
+.searchEntry{
+    display: flex;
+    justify-content: center;
+}
