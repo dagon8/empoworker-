@@ -1,7 +1,6 @@
 .bar-button-container{
     display:flex;
     padding-top: 98px;
-    justify-content: center;
 }
 .SearchBar {
     background-color: #fbfcfd;
@@ -11,9 +10,4 @@
 
 .searchButton {
     text-transform: none;
-}
-
-.searchEntry{
-    display: flex;
-    justify-content: center;
 }
