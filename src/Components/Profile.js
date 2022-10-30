@@ -10,7 +10,14 @@ const Profile = () => {
     useEffect(() => {
         fetch(`https://empoworker475-default-rtdb.firebaseio.com/companies/${company}.json`)
         .then(response => response.json())
-        .then(jsonRes => {setCompanyInfo(jsonRes)})
+        .then(jsonRes => {
+            if(jsonRes == null){
+                window.location.assign("../error");
+            }else{
+                setCompanyInfo(jsonRes)
+            }
+            
+        })
     }, [])
 
   return (

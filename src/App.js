@@ -12,10 +12,11 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<CompanySearch/>}/>
-        <Route path="/company/:name" element={<Profile/>}/>
-        <Route path="/resources" element={<Resources/>}/>
+        <Route exact path="/" element={<CompanySearch/>}/>
+        <Route exact path="/company/:name" element={<Profile/>}/>
+        <Route exact path="/resources" element={<Resources/>}/>
         <Route path="*" element={<Error/>}/>
+        <Route path="/error" element={<Error/>}/>
       </Routes>
     </Router>
   );

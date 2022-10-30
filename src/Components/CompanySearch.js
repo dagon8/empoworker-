@@ -7,8 +7,7 @@ function CompanySearch(props){
     const[value, setValue] = useState('');
     const[result, setResult] = useState([]);
 
-    useEffect(() => {
-        // if user input is greater than 0
+    const search = () => {
         if(value.length > 0){
             fetch('https://empoworker475-default-rtdb.firebaseio.com/companies.json').then(
                 // when it's finished requesting the data 
@@ -39,10 +38,7 @@ function CompanySearch(props){
             // once the user deletes their input or they don't type anything in
             setResult([]);
         }
-
-
-    }, [value])
-
+    }
    
 
     return (
@@ -56,6 +52,11 @@ function CompanySearch(props){
             variant="outlined"
             fullWidth
             label="Enter Company Name"
+            onKeyPress= {(e) => {
+                if (e.key === 'Enter') {
+                  search()
+                }
+        }}
             />
 
             </div>
