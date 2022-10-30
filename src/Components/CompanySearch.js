@@ -46,7 +46,7 @@ function CompanySearch(props){
    
 
     return (
-        <div>
+        <div className="main">
             <h1>Company Search</h1>
             <div className="SearchBar">
             <TextField
