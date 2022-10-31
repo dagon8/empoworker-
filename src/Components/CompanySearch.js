@@ -44,7 +44,7 @@ function CompanySearch(props){
     return (
         <div className="main">
             <h1>Company Search</h1>
-            <div className="SearchBar">
+            <div className="SearchBar" style={{display: "flex"}}>
             <TextField
             id="outlined-basic"
             onChange={(event) => setValue(event.target.value)}
@@ -57,7 +57,9 @@ function CompanySearch(props){
                   search()
                 }
         }}
+            
             />
+            <button onClick={() => search()} style={{backgroundColor: "orange", width: "100px", borderRadius: "4px", cursor: "pointer" }}><p style={{fontFamily: "Arial, Helvetica, sans-serif", fontWeight: "bold"}}>Search</p></button>
 
             </div>
             
