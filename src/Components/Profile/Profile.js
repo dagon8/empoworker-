@@ -46,7 +46,7 @@ const Profile = () => {
                 </div>
 
                 <div className='profile-violations-container'>
-                    {/* <ViolationsTable companyData={companyInfo}></ViolationsTable> */}
+                    <ViolationsTable companyData={companyInfo}></ViolationsTable>
                 </div>
 
             </div>
