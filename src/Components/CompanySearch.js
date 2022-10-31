@@ -5,6 +5,7 @@ import { Button } from '@mui/material';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import CompanyCard from './CompanyCard';
+import { borderColor } from '@mui/system';
 
 function CompanySearch(props){
 
@@ -52,6 +53,9 @@ function CompanySearch(props){
     return (
         <div className='container'>
             <div className="bar-button-container">
+                <div className="header">
+                    Empoworker
+                </div>
                 <div className="SearchBar">
                     <TextField
                     id="outlined-basic"
@@ -76,6 +80,23 @@ function CompanySearch(props){
                     sx={{textTransform:"none",
                     color: "black"}}
                     > Search </Button>
+                </div>
+
+                <div className="nav-button">
+                    <Button
+                    size="small"
+                    sx={{textTransform:"none",
+                    color: "black"}}> Resources </Button>
+                </div>
+
+                <div className="nav-button contact-button">
+                    <Button 
+                    size="small"
+                    variant="outlined"
+                    sx={{textTransform:"none",
+                    color: "black", 
+                    borderColor:"black", 
+                   }}> Contact Us </Button>
                 </div>
             </div>
             
