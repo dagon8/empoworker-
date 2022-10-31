@@ -1,53 +1,57 @@
 import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import {useState, useEffect} from 'react';
+import ViolationAccordion from './ViolationAccordion'
 
-export default function DenseTable({companyData}) {
-  function createData(name, count) {
-    return { name, count};
+export default function ViolationsTable({companyData}) {
+  const [viols, setViols] = useState(null)
+
+  async function getData(key) {
+    fetch(`https://empoworker475-default-rtdb.firebaseio.com/violations/${key}.json`)
+    .then(response => response.json())
+    .then(jsonRes => {
+        if(jsonRes == null){
+            window.location.assign("../error");
+        }else{
+            setViols(jsonRes)
+            return jsonRes
+        }
+    })
+  }
+
+
+
+  function createData(nm, cnt, des, exnm) {
+    return {nm, cnt, des, exnm};
   }
   
   const rows = [];
 
-  let violations = companyData.violations
-
-  for(const key in violations){
-    console.log(key)
-    if (key === "flsa_repeat_violator" || key === "flsa_violtn_cnt" || key === "case_violtn_cnt") {
-      continue
+  async function fillRows() {
+    let violations = companyData.violations
+    for(const key in violations){
+      if (key === "flsa_repeat_violator" || key === "flsa_violtn_cnt" || key === "case_violtn_cnt" || violations[key].count == 0) {
+        continue
+      }
+      let name = violations[key].violation_name
+      let count = violations[key].count
+      getData(key)
+      let violationsData = viols
+      console.log(violationsData)
+      rows.push(createData(name, count, violationsData.description, violationsData.expanded_name))
     }
-    let name = violations[key].violation_name
-    let count = violations[key].count
-    rows.push(createData(name, count))
   }
 
+  fillRows()
+
+
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ maxWidth: 500 }} size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Violation Name</TableCell>
-            <TableCell align="right">Number of Violations</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.count}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <>
+        {rows.map((v) => (
+          <div>
+              <ViolationAccordion name={v.nm} count={v.cnt} description={v.des} expanded={v.exnm}></ViolationAccordion>
+              <br></br>
+          </div>
+        ))}
+    </>
   );
 }
