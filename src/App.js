@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Profile from "./Components/Profile";
+import Profile from "./Components/Profile/Profile";
 import Resources from "./Components/Resources/Resources";
 import Error from "./Components/Error";
 import Navbar from "./Components/Navbar";
