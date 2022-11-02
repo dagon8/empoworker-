@@ -17,7 +17,6 @@ export default function DenseTable({companyData}) {
   let violations = companyData.violations
 
   for(const key in violations){
-    console.log(key)
     if (key === "flsa_repeat_violator" || key === "flsa_violtn_cnt" || key === "case_violtn_cnt") {
       continue
     }

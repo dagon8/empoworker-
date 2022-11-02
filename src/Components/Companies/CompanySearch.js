@@ -14,6 +14,7 @@ function CompanySearch(props){
                 response => response.json()
                 // to have access to the javascript object
             ).then(responseData => {
+                console.log(responseData)
                 // clear array results so the search will start from stratch
                 setResult([]);
                 let searchQuery = value.toLowerCase(); 
@@ -36,6 +37,7 @@ function CompanySearch(props){
             })
         } else {
             // once the user deletes their input or they don't type anything in
+            console.log('no result')
             setResult([]);
         }
     }
@@ -56,7 +58,7 @@ function CompanySearch(props){
                 if (e.key === 'Enter') {
                   search()
                 }
-        }}
+            }}
             
             />
             <button onClick={() => search()} style={{backgroundColor: "#FF7A40", border: "none", width: "100px", borderRadius: "4px", cursor: "pointer" }}><p style={{fontFamily: "Arial, Helvetica, sans-serif", fontWeight: "bold"}}>Search</p></button>
@@ -71,7 +73,6 @@ function CompanySearch(props){
                             <CompanyCard name={company[0]} info={company[1]}/>
                             <br/>
                         </div>
-            
                 )})}
             </div>
         </div>
