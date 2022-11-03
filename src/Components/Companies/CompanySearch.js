@@ -12,14 +12,14 @@ function CompanySearch(props){
     const[value, setValue] = useState('');
     const[result, setResult] = useState([]);
 
-    useEffect(() => {
-        // if user input is greater than 0
+    const search = () => {
         if(value.length > 0){
             fetch('https://empoworker475-default-rtdb.firebaseio.com/companies.json').then(
                 // when it's finished requesting the data 
                 response => response.json()
                 // to have access to the javascript object
             ).then(responseData => {
+                console.log(responseData)
                 // clear array results so the search will start from stratch
                 setResult([]);
                 let searchQuery = value.toLowerCase(); 
@@ -42,15 +42,14 @@ function CompanySearch(props){
             })
         } else {
             // once the user deletes their input or they don't type anything in
+            console.log('no result')
             setResult([]);
         }
-
-
-    }, [value])
-
+    }
    
 
     return (
+<<<<<<< HEAD:src/Components/CompanySearch.js
         <div className='container'>
             <div className="bar-button-container">
                 <div className="header">
@@ -71,6 +70,26 @@ function CompanySearch(props){
                     }}
                     />
                 </div>
+=======
+        <div className="main">
+            <div className="SearchBar" style={{display: "flex"}}>
+            
+            <TextField
+            id="outlined-basic"
+            onChange={(event) => setValue(event.target.value)}
+            value={value}
+            variant="outlined"
+            fullWidth
+            label="Enter Company Name"
+            onKeyPress= {(e) => {
+                if (e.key === 'Enter') {
+                  search()
+                }
+            }}
+            
+            />
+            <button onClick={() => search()} style={{backgroundColor: "#FF7A40", border: "none", width: "100px", borderRadius: "4px", cursor: "pointer" }}><p style={{fontFamily: "Arial, Helvetica, sans-serif", fontWeight: "bold"}}>Search</p></button>
+>>>>>>> bc3036af77cfd57412d0694dcb0f4499b9ba537d:src/Components/Companies/CompanySearch.js
 
                 <div className="searchButton">
                     <Button
@@ -109,7 +128,6 @@ function CompanySearch(props){
                             <CompanyCard name={company[0]} info={company[1]}/>
                             <br/>
                         </div>
-            
                 )})}
             </div>
         </div>
