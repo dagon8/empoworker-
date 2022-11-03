@@ -1,10 +1,10 @@
-import { React, useState } from "react";
+import { React} from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Profile from "./Components/Companies/Profile";
 import Resources from "./Components/Resources/Resources";
 import Error from "./Components/Error";
 import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
+import Home from "./Components/Home/Home";
 import './App.css'; 
 import CompanySearch from "./Components/Companies/CompanySearch";
 
