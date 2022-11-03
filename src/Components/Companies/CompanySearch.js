@@ -6,6 +6,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import CompanyCard from './CompanyCard';
 import logo from "../../images/logo.png"
+import {Link} from "react-router-dom"
+
 
 
 function CompanySearch(props){
@@ -93,15 +95,30 @@ function CompanySearch(props){
                     > Search </Button>
                 </div>
 
-                <div className="nav-button">
-                    <Button
+
+                <div className="nav-button home-button">
+                    <Button component={Link} to="/"
+                        size="small"
+                        sx={{textTransform:"none",
+                        color: "black"}}> Home </Button>
+                </div>
+
+                <div className="nav-button search-button">
+                    <Button component={Link} to="/search"
+                        size="small"
+                        sx={{textTransform:"none",
+                        color: "black"}}> Search </Button>
+                </div>
+
+                <div className="nav-button resources-button">
+                    <Button component={Link} to="/resources"
                     size="small"
                     sx={{textTransform:"none",
                     color: "black"}}> Resources </Button>
                 </div>
 
                 <div className="nav-button contact-button">
-                    <Button 
+                    <Button component={Link} to="/"
                     size="small"
                     variant="outlined"
                     sx={{textTransform:"none",
@@ -109,6 +126,7 @@ function CompanySearch(props){
                     borderColor:"black", 
                    }}> Contact Us </Button>
                 </div>
+                
             </div>
             
             {/* these are the search results */}

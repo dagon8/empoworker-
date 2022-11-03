@@ -11,10 +11,11 @@ import CompanySearch from "./Components/Companies/CompanySearch";
 function App() {
   return ( 
     <Router>
-      <Navbar/>
+      {/* <Navbar/> */}
+      <CompanySearch/>
       <Routes>
         <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/search" element={<CompanySearch/>}/>
+        <Route exact path="/search"/>
         <Route exact path="/company/:name" element={<Profile/>}/>
         <Route exact path="/resources" element={<Resources/>}/>
         <Route path="*" element={<Error/>}/>
