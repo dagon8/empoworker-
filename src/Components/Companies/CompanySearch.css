@@ -1,3 +1,24 @@
+
+@font-face {
+    font-family: LabilGroteskTrial;
+    font-weight: bold;
+    src: url(../../fonts/LabilGroteskTrial-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../../fonts/Metropolis-Black.otf) format("opentype");
+}
+
+
+.header{
+    display:flex;
+}
+
+.logo{
+padding-right: 10px;
+}
+
 .bar-button-container{
     display:flex;
     padding-top: 98px;
@@ -22,7 +43,7 @@
     justify-content: center;
 }
 
-.header{
+.title{
     width: 150px;
     height: 33px;
     flex-grow: 0;
@@ -43,4 +64,3 @@
     flex-grow: 0;
     padding-right: 30px;
 }
-

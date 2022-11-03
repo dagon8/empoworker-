@@ -5,7 +5,8 @@ import { Button } from '@mui/material';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import CompanyCard from './CompanyCard';
-import { borderColor } from '@mui/system';
+import logo from "../../images/logo.png"
+
 
 function CompanySearch(props){
 
@@ -49,16 +50,26 @@ function CompanySearch(props){
    
 
     return (
-<<<<<<< HEAD:src/Components/CompanySearch.js
         <div className='container'>
             <div className="bar-button-container">
                 <div className="header">
-                    Empoworker
+                    <div className="logo"> 
+                        <img src={logo} alt="empoworker logo"/>
+                    </div>
+                    <div className="title">
+                        Empoworker
+                    </div> 
                 </div>
+
                 <div className="SearchBar">
                     <TextField
                     id="outlined-basic"
                     onChange={(event) => setValue(event.target.value)}
+                    onKeyPress= {(e) => {
+                        if (e.key === 'Enter') {
+                            search()
+                        }
+                    }}
                     value={value}
                     variant="outlined"
                     fullWidth
@@ -70,32 +81,13 @@ function CompanySearch(props){
                     }}
                     />
                 </div>
-=======
-        <div className="main">
-            <div className="SearchBar" style={{display: "flex"}}>
-            
-            <TextField
-            id="outlined-basic"
-            onChange={(event) => setValue(event.target.value)}
-            value={value}
-            variant="outlined"
-            fullWidth
-            label="Enter Company Name"
-            onKeyPress= {(e) => {
-                if (e.key === 'Enter') {
-                  search()
-                }
-            }}
-            
-            />
-            <button onClick={() => search()} style={{backgroundColor: "#FF7A40", border: "none", width: "100px", borderRadius: "4px", cursor: "pointer" }}><p style={{fontFamily: "Arial, Helvetica, sans-serif", fontWeight: "bold"}}>Search</p></button>
->>>>>>> bc3036af77cfd57412d0694dcb0f4499b9ba537d:src/Components/Companies/CompanySearch.js
 
                 <div className="searchButton">
                     <Button
                     variant="contained"
                     color="warning"
                     size="medium"
+                    onClick={() => search()}
                     sx={{textTransform:"none",
                     color: "black"}}
                     > Search </Button>
