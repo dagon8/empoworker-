@@ -1,6 +1,14 @@
 import React, { useState, useEffect} from 'react';
 import TextField from "@mui/material/TextField";
+import './CompanySearch.css';
+import { Button } from '@mui/material';
+import InputAdornment from '@mui/material/InputAdornment';
+import SearchIcon from '@mui/icons-material/Search';
 import CompanyCard from './CompanyCard';
+import logo from "../../images/logo.png"
+import {Link} from "react-router-dom"
+
+
 
 function CompanySearch(props){
 
@@ -44,28 +52,85 @@ function CompanySearch(props){
    
 
     return (
-        <div className="main">
-            <div className="SearchBar" style={{display: "flex"}}>
-            
-            <TextField
-            id="outlined-basic"
-            onChange={(event) => setValue(event.target.value)}
-            value={value}
-            variant="outlined"
-            fullWidth
-            label="Enter Company Name"
-            onKeyPress= {(e) => {
-                if (e.key === 'Enter') {
-                  search()
-                }
-            }}
-            
-            />
-            <button onClick={() => search()} style={{backgroundColor: "#FF7A40", border: "none", width: "100px", borderRadius: "4px", cursor: "pointer" }}><p style={{fontFamily: "Arial, Helvetica, sans-serif", fontWeight: "bold"}}>Search</p></button>
+        <div className='container'>
+            <div className="bar-button-container">
+                <div className="header">
+                    <div className="logo"> 
+                        <img src={logo} alt="empoworker logo"/>
+                    </div>
+                    <div className="title">
+                        Empoworker
+                    </div> 
+                </div>
 
+                <div className="SearchBar">
+                    <TextField
+                    id="outlined-basic"
+                    onChange={(event) => setValue(event.target.value)}
+                    onKeyPress= {(e) => {
+                        if (e.key === 'Enter') {
+                            search()
+                        }
+                    }}
+                    value={value}
+                    variant="outlined"
+                    fullWidth
+                    label="Search"
+                    size="small"
+                    InputProps={{ startAdornment:<InputAdornment position="start"> 
+                    <SearchIcon />
+                    </InputAdornment>
+                    }}
+                    />
+                </div>
+
+                <div className="searchButton">
+                    <Button
+                    variant="contained"
+                    color="warning"
+                    size="medium"
+                    onClick={() => search()}
+                    sx={{textTransform:"none",
+                    color: "black"}}
+                    > Search </Button>
+                </div>
+
+
+                <div className="nav-button home-button">
+                    <Button component={Link} to="/"
+                        size="small"
+                        sx={{textTransform:"none",
+                        color: "black"}}> Home </Button>
+                </div>
+
+                <div className="nav-button search-button">
+                    <Button component={Link} to="/search"
+                        size="small"
+                        sx={{textTransform:"none",
+                        color: "black"}}> Search </Button>
+                </div>
+
+                <div className="nav-button resources-button">
+                    <Button component={Link} to="/resources"
+                    size="small"
+                    sx={{textTransform:"none",
+                    color: "black"}}> Resources </Button>
+                </div>
+
+                <div className="nav-button contact-button">
+                    <Button component={Link} to="/"
+                    size="small"
+                    variant="outlined"
+                    sx={{textTransform:"none",
+                    color: "black", 
+                    borderColor:"black", 
+                   }}> Contact Us </Button>
+                </div>
+                
             </div>
             
-            <div className='searchBack'>
+            {/* these are the search results */}
+            <div className="searchBack">
                 {/* loop through result and display all the values */}
                 {result.map((company, index) => {
                     return (

@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: LabilGroteskTrial;
+    font-weight: bold;
+    src: url(../../fonts/LabilGroteskTrial-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(../../fonts/Metropolis-Black.otf) format("opentype");
+}
+
+
+.header{
+    display:flex;
+}
+
+.logo{
+padding-right: 10px;
+}
+
+.bar-button-container{
+    display:flex;
+    padding-top: 98px;
+    justify-content: center;
+    height: 50px;
+    padding: 35px 100px 4px;
+    /* padding-top: 35px; */
+    background-color: #ffe5da;
+}
+.SearchBar {
+    background-color: #fbfcfd;
+    width: 517px;
+    height: 40px;
+}
+
+.searchButton {
+    padding-right: 30px;
+}
+
+.searchEntry{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    width: 150px;
+    height: 33px;
+    flex-grow: 0;
+    margin: 4px 114px 13px 7px;
+    font-family: LabilGroteskTrial;
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #18332d; 
+}
+
+.nav-button{
+    display: flex;
+    flex-grow: 0;
+    padding-right: 30px;
+}
