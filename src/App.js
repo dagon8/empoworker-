@@ -1,8 +1,7 @@
 import { React, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Resources from "./Components/Resources/Resources";
 import Error from "./Components/Error";
-import Navbar from "./Components/Navbar";
 import Home from "./Components/Home/Home";
 import CompanySearch from "./Components/Companies/CompanySearch";
 import CompanyList from "./Components/Companies/CompanyList";
@@ -11,8 +10,12 @@ import "./App.css";
 function App() {
   const [result, setResult] = useState([]);
   const [value, setValue] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const search = () => {
+    setLoading(true);
+    navigate("/search");
     if (value.length > 0) {
       fetch("https://empoworker475-default-rtdb.firebaseio.com/companies.json")
         .then(
@@ -40,6 +43,7 @@ function App() {
               });
             }
           }
+          setLoading(false);
         })
         .catch((error) => {
           console.log(error);
@@ -52,25 +56,27 @@ function App() {
   };
 
   return (
-    <Router>
+    <div>
       {/* <Navbar/> */}
       <CompanySearch
         value={value}
         setValue={(val) => setValue(val)}
-        search={() => search()}
+        search={() => {
+          search();
+        }}
       />
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route
           exact
           path='/search'
-          element={<CompanyList companies={result} />}
+          element={<CompanyList companies={result} loading={loading} />}
         />
         <Route exact path='/resources' element={<Resources />} />
         <Route path='*' element={<Error />} />
         <Route path='/error' element={<Error />} />
       </Routes>
-    </Router>
+    </div>
   );
 }
 

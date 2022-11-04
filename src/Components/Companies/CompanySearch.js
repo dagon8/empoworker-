@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import TextField from "@mui/material/TextField";
 import "./CompanySearch.css";
 import { Button } from "@mui/material";
@@ -47,7 +47,9 @@ function CompanySearch({ setValue, value, search }) {
             variant='contained'
             color='warning'
             size='medium'
-            onClick={() => search()}
+            onClick={() => {
+              search();
+            }}
             sx={{ textTransform: "none", color: "black" }}
           >
             {" "}

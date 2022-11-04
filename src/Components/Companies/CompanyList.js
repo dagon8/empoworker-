@@ -3,12 +3,12 @@ import { Box, Grid } from "@mui/material";
 import CompanyProfile from "./CompanyProfile";
 import CompanyProfileFull from "./CompanyProfileFull.js";
 import InfiniteScroll from "react-infinite-scroll-component";
+import LoadingGif from "../../images/loading.gif";
 
-const CompanyList = ({ companies }) => {
+const CompanyList = ({ companies, loading }) => {
   let companiesList = [];
   if (companies.length !== 0) {
-    companiesList = companies[0];
-    console.log("companiesList: ", companiesList);
+    companiesList = companies;
   }
 
   const [profile, setProfile] = useState(() =>
@@ -20,8 +20,12 @@ const CompanyList = ({ companies }) => {
   };
 
   useEffect(() => {
-    setProfile(() => (companiesList.length === 0 ? null : companiesList[0]));
+    setProfile(() => (!companiesList.length ? null : companiesList[0]));
   }, [companies]);
+
+  useEffect(() => {
+    companiesList = [];
+  }, []);
 
   return (
     <Grid
@@ -47,7 +51,7 @@ const CompanyList = ({ companies }) => {
                 dataLength={companiesList.length}
                 style={{ maxHeight: "78vh" }}
               >
-                {companiesList.length !== 0 ? (
+                {companiesList.length ? (
                   companiesList.map((company, idx) => (
                     <CompanyProfile
                       company={company}
@@ -75,7 +79,21 @@ const CompanyList = ({ companies }) => {
           background: "#BCD2E4",
         }}
       >
-        <CompanyProfileFull profile={profile} />
+        {loading ? (
+          <img
+            src={LoadingGif}
+            alt='loading'
+            style={{
+              position: "absolute",
+              top: "40vh",
+              left: "65vw",
+              height: "20vh",
+              width: "10vw",
+            }}
+          />
+        ) : (
+          <CompanyProfileFull profile={profile} />
+        )}
       </Grid>
     </Grid>
   );

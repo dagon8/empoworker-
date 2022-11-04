@@ -6,7 +6,7 @@ const NoResults = () => {
     <Box
       style={{
         position: "absolute",
-        top: "50vh",
+        top: "40vh",
         left: "55vw",
         display: "flex",
         alignItems: "center",
