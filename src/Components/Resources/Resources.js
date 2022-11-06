@@ -1,5 +1,6 @@
 import React from 'react'
 import Dropdown from "./Dropdown.js"
+import Quiz from './Quiz.js'
 
 const Resources = () => {
   return (
@@ -16,7 +17,12 @@ const Resources = () => {
         
         
         </div>
+
+        <div>
+          <Quiz></Quiz>
+        </div>
     </div>
+   
   )
 }
 
