@@ -16,6 +16,10 @@ function App() {
   const search = () => {
     setLoading(true);
     navigate("/search");
+    if (value.length === 0) {
+      setLoading(false);
+      setResult([]);
+    }
     if (value.length > 0) {
       fetch("https://empoworker475-default-rtdb.firebaseio.com/companies.json")
         .then(

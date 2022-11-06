@@ -99,7 +99,14 @@ function CompanySearch({ setValue, value, search }) {
             to='/'
             size='small'
             variant='outlined'
-            sx={{ textTransform: "none", color: "black", borderColor: "black" }}
+            sx={{
+              textTransform: "none",
+              color: "black",
+              borderColor: "black",
+              display: "flex",
+              flexDirection: "column",
+              textAlign: "center",
+            }}
           >
             {" "}
             Contact Us{" "}
