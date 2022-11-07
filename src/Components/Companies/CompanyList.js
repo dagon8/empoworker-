@@ -36,7 +36,7 @@ const CompanyList = ({ companies, loading }) => {
     >
       <Grid
         item
-        xs={5}
+        xs={4}
         style={{
           background: "#D1E7EE",
           height: "80vh",
@@ -71,7 +71,7 @@ const CompanyList = ({ companies, loading }) => {
 
       <Grid
         item
-        xs={5}
+        xs={6}
         style={{
           height: "80vh",
           width: "40vw",

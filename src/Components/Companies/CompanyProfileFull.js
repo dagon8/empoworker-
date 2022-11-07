@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography, Container } from "@mui/material";
 import NoResults from "./NoResults";
 import ViolationsBox from "./Violations/ViolationsBox";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { violationsDescription } from "./Violations/violationsDescription";
 
 const CompanyProfileFull = ({ profile }) => {
   let [vCount, setVCount] = useState(0);
@@ -39,7 +41,14 @@ const CompanyProfileFull = ({ profile }) => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Typography>
           <Typography sx={{ mb: 1.5 }}>Total Violations: {vCount}</Typography>
-          <ViolationsBox />
+          <InfiniteScroll
+            dataLength={violationsDescription.length}
+            style={{ maxHeight: "55vh" }}
+          >
+            {violationsDescription.map((type, idx) => (
+              <ViolationsBox type={type} key={idx} />
+            ))}
+          </InfiniteScroll>
         </Container>
       )}
     </Box>

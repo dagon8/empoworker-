@@ -1,0 +1,134 @@
+export const violationsDescription = [
+  {
+    wage_theft: {
+      category_description:
+        "Wage theft occurs any time an employer does not pay an employee everything the employee is owed by law.",
+      violations: {
+        sca_violtn_cnt: {
+          key: "sca_violtn_cnt",
+          expanded_name: "Service Contract Act Violations",
+          violation_description:
+            "The McNamara-O Hara Service Contract Act requires contractors and subcontractors performing services on prime contracts in excess of $2,500 to pay service employees in various classes no less than the wage rates and fringe benefits found prevailing in the locality, or the rates (including prospective increases) contained in a predecessor contractor's collective bargaining agreement.",
+        },
+        fmla_violtn_cnt: {
+          key: "fmla_violtn_cnt",
+          expanded_name: "Family and Medical Leave Act Violations",
+          violation_description:
+            "The FMLA entitles eligible employees of covered employers to take unpaid, job-protected leave for specified family and medical reasons with continuation of group health insurance coverage under the same terms and conditions as if the employee had not taken leave.",
+        },
+        dbra_cl_violtn_cnt: {
+          key: "dbra_cl_violtn_cnt",
+          expanded_name: "Davis-Bacon and Related Act Violations",
+          violation_description:
+            "Under the Davis-Bacon and Related Acts and Reorganization Plan No. 14 of 1950, the U.S. Department of Labor is responsible for determining prevailing wages, issuing regulations and standards to be observed by federal agencies that award or fund projects subject to Davis-Bacon labor standards, and overseeing consistent enforcement of the Davis-Bacon labor standards.",
+        },
+        flsa_smw14_violtn_cnt: {
+          key: "flsa_smw14_violtn_cnt",
+          expanded_name:
+            "Fair Labor Standards Act - Special Minimum Wages Violations",
+          violation_description:
+            "Overtime pay at a rate not less than one and one-half times the regular rate of pay is required after 40 hours of work in a workweek. FLSA Minimum Wage: The federal minimum wage is $7.25 per hour effective July 24, 2009.",
+        },
+        cwhssa_violtn_cnt: {
+          key: "cwhssa_violtn_cnt",
+          expanded_name:
+            "Contract Work Hours and Safety Standards Act Violations",
+          violation_description:
+            "The Contract Work Hours and Safety Standards Act (CWHSSA) requires contractors and subcontractors to pay laborers and mechanics, including watchmen and guards, employed in the performance of covered contracts one and one-half times their basic rate of pay for all hours worked over 40 in a workweek.",
+        },
+        pca_violtn_cnt: {
+          key: "pca_violtn_cnt",
+          expanded_name: "Public Contracts Act Violations",
+          violation_description:
+            "The Walsh-Healey Public Contracts Act (PCA), as amended, establishes minimum wage, maximum hours, and safety and health standards for work on contracts in excess of $15,000 for the manufacturing or furnishing of materials, supplies, articles, or equipment to the U.S. government or the District of Columbia.",
+        },
+        ca_violtn_cnt: {
+          key: "ca_violtn_cnt",
+          expanded_name: "Copeland Anti-kickbact Act Violations",
+          violation_description:
+            "The Copeland Act's Anti-Kickback provision prohibits contractors and subcontractors performing work on covered contracts from in any way inducing an employee to give up any part of the compensation to which he or she is entitled.",
+        },
+      },
+    },
+  },
+  {
+    workplace_accident: {
+      category_description:
+        "An OSHA violation occurs when a company or employee willingly or unknowingly ignores potential and real safety hazards.",
+      violations: {
+        osha_violtn_cnt: {
+          key: "osha_violtn_cnt",
+          expanded_name: "Occupational Safety and Health Standards Violations",
+          violation_description:
+            "The McNamara-O Hara Service Contract Act requires contractors and subcontractors performing services on prime contracts in excess of $2,500 to pay service employees in various classes no less than the wage rates and fringe benefits found prevailing in the locality, or the rates (including prospective increases) contained in a predecessor contractor's collective bargaining agreement.",
+        },
+        crew_violtn_cnt: {
+          key: "crew_violtn_cnt",
+          expanded_name: "CREW Act Violations",
+          violation_description:
+            "A federal law that provides for the payment of compensation, medical care, and vocational rehabilitation services to employees disabled from on the job injuries that occur on the navigable waters of the United States, or in adjoining areas customarily used in the loading, unloading, repairing, or building of a vessel.",
+        },
+      },
+    },
+  },
+  {
+    child_labor: {
+      category_description:
+        "The child labor laws were enacted to ensure that when young people work, the work is safe and does not jeopardize their health, well-being or educational opportunities.",
+      violations: {
+        flsa_cl_violtn_cnt: {
+          key: "flsa_cl_violtn_cnt",
+          expanded_name: "Fair Labor Standards Act - Child Labor Violations",
+          violation_description:
+            "FLSA restricts the hours that youth under 16 years of age can work and lists hazardous occupations too dangerous for young workers to perform.",
+        },
+      },
+    },
+  },
+  {
+    migrant: {
+      category_description:
+        "This category represents violations that pertain to migrant workers and their employers. The violations below represent the violation of acts to protect documented and undocumented immigrants.",
+      violations: {
+        sraw_violtn_cnt: {
+          key: "sraw_violtn_cnt",
+          expanded_name:
+            "Spec. Agri. Workers/Replenishment Agri. Workers Violations",
+          violation_description:
+            "Act aimed at protecting undocumented people already working in the fields and to prevent labor shortages.",
+        },
+        mspa_violtn_cnt: {
+          key: "mspa_violtn_cnt",
+          expanded_name:
+            "Migrant and Seasonal Agricultural Worker Protection Act Violations",
+          violation_description:
+            "Protects migrant and seasonal agricultural workers by establishing employment standards related to wages, housing, transportation, disclosures and recordkeeping. The MSPA also requires farm labor contractors to register with the U.S. Department of Labor (DOL).",
+        },
+        h1b_violtn_cnt: {
+          key: "h1b_violtn_cnt",
+          expanded_name: "Work Visa - Speciality Occupations Violations",
+          violation_description:
+            "The H-1B is a temporary (nonimmigrant) visa category that allows employers to petition for highly educated foreign professionals to work in “specialty occupations” that require at least a bachelor's degree or the equivalent.",
+        },
+        h2a_violtn_cnt: {
+          key: "h2a_violtn_cnt",
+          expanded_name: "Work Visa - Seasonal Agricultural Workers Violations",
+          violation_description:
+            "The H-2A program allows U.S. employers or U.S. agents who meet specific regulatory requirements to bring foreign nationals to the United States to fill temporary agricultural jobs.",
+        },
+        h1a_violtn_cnt: {
+          key: "h1a_violtn_cnt",
+          expanded_name:
+            "Work Visa - Registered Nurses for Temporary Employment Violations",
+          violation_description: "",
+        },
+        eev_violtn_cnt: {
+          key: "eev_violtn_cnt",
+          expanded_name: "Employment Standards Act Violation",
+          violation_description:
+            "Employers are required to verify the identity and employment authorization of individuals hired for employment in the United States.",
+        },
+      },
+    },
+  },
+];
