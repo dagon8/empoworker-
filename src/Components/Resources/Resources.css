@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    /* border-radius: 15px;
+    height: "100vh";
+    left: "20vh";
+    right: "20vh"; 
+    top: "20vh"; */
+    /* background-color: #18332d; */
+}
+
+.resources-box{
+    
+    border-radius: 15px;
+    /* width: 1241px;
+    height: 833px; */
+    /* margin: 105px 99px 0 100px; */
+    padding: 58px 200px 1px 100px;
+    
+
+    background-color: blue;
+    
+}
+
+.quiz-form{
+    margin-top: 900px;
+    margin-left: 140px;
+}
