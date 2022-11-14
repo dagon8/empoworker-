@@ -1,0 +1,132 @@
+import React, {useState} from "react";
+import Card from '@mui/material/Card';
+import { Box } from "@mui/system";
+
+
+export default function Quiz(){
+    const questions = [
+
+        {
+            questionText: "Are you not gettig paid all the hours you have worked?",
+            exampleText: "e.i. Not paying at all, paying below minimum wage",
+            answerOptions: [
+                {answerText: "Yes", isTrue: true},
+                {answerText: "No", isTrue: false},
+            ],
+        },
+        {
+            questionText: "Are you being harrassed?",
+            exampleText: "e.i. verbal abuse, threats",
+            answerOptions: [
+                {answerText: "Yes", isTrue: true},
+                {answerText: "No", isTrue: false},
+            ],  
+        },
+        {
+            questionText: "Are you or know anyone who is under 18 and is working over 9 hours a day?",
+            exampleText: "",
+            answerOptions: [
+                {answerText: "Yes", isTrue: true},
+                {answerText: "No", isTrue: false},
+            ],  
+        },
+    ];
+
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    var wageTheft  = 0;
+    var harassment = 0;
+    var childLabor = 0;
+    // const [wageTheft, setWageTheft] = useState(0);
+    // const [harrsement, setHarrasment] = useState(0);
+    // const [childLabor, setChildLabor] = useState(0);
+    const [showEvaluation, setEvaluation] = useState(false);
+    var abuseList = [];
+    const handleResetButton = () => {
+        setEvaluation(false);
+        setCurrentQuestion(0);
+        wageTheft = 0;
+        harassment = 0;
+        childLabor = 0;
+    }
+
+    // takes the current question number and whenever it's clicked it goes to the next question 
+    const handleAnswerButtonClick = () => {
+        const nextQuestion = currentQuestion + 1;
+        if (nextQuestion < questions.length){
+            setCurrentQuestion(nextQuestion);
+        } else {
+            setEvaluation(true);
+            // when user reaches end of the quiz -> results will be revealed
+        }
+    }
+
+    var checkAbuse = (currentQuestion, isTrue) => {
+        if (isTrue===true && currentQuestion===0){
+            wageTheft = wageTheft + 1;
+        }
+        else if (isTrue=== true && currentQuestion===1){
+            harassment = harassment + 1;
+        }
+        else if (isTrue ===true && currentQuestion===2){
+            childLabor = childLabor + 1;
+        }
+    }
+
+    var showAbuse = () => {
+        if (wageTheft === 1){
+            abuseList.push("wage theft");
+        }
+
+        if (harassment === 1){
+            abuseList.push("harassment");
+        }
+
+        if (childLabor === 1){
+            abuseList.push("child labor");
+        }
+        
+        return abuseList;
+    }
+
+    function process(currentQuestion, isTrue){
+        handleAnswerButtonClick();
+        checkAbuse(currentQuestion, isTrue);
+    }
+
+    console.log(showAbuse())
+    
+	return (
+        <Card sx={{ maxWidth: 1000, backgroundColor:"azure" }}>
+            {/* <Box sx={{display: "flex", flexDirection:"column"}}> */}
+                <div className="quiz">
+                    {/* HINT: replace "false" with logic to display the 
+            score when the user has answered all the questions */}
+                    {showEvaluation ? (
+                        <div className='eval-section'>
+                        You are facing this type of abuses(s): Wage Theft, Harassment
+                            <button onClick={handleResetButton}> Reset </button> </div>
+                    ) : (
+                        <>
+                            <div className='question-section'>
+                                <div className='question-count'>
+                                    <span>Question {currentQuestion + 1} </span>/{questions.length}
+                                </div>
+                                <div className='question-text'>{questions[currentQuestion].questionText}</div>
+                            </div>
+                            <div className='answer-section'>
+                                {questions[currentQuestion].answerOptions.map((answerOption) =>
+                                    <button onClick={() => process(currentQuestion, answerOption.isTrue)}>{answerOption.answerText}</button>)}
+                            </div>
+                        </>
+                    )}
+                </div>
+             {/* </Box> */}
+        </Card>
+        // NEEDED LOGIC:
+        // each question corresponds to a certain type of abuse
+        // if the user says yes, we want to increment the abuse type so it can tracked and later displayed
+        // if abuse_num > 1 then at showEvaluation, need to list abuse
+        // currently stuck on incrementing the abuse type 
+	);
+    
+}
