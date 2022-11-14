@@ -31,7 +31,7 @@ const Resources = () => {
                 </Grid>
               ))}
             </Grid>
-          <div className="quiz-title">Quiz</div>
+          <div className="quiz-title">Quiz (Optional) </div>
           </div>
             
         {/* <div className="categories"> */}
