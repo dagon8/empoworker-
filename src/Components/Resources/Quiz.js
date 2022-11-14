@@ -32,6 +32,9 @@ export default function Quiz(){
     ];
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [wageTheft, setWageTheft] = useState(0);
+    const [harrsement, setHarrasment] = useState(0);
+    const [childLabor, setChildLabor] = useState(0);
 
     const [showEvaluation, setEvaluation] = useState(false);
 
