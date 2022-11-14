@@ -4,15 +4,21 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import SmallViolation from "./SmallViolation.js";
 import "./ViolationsBox.css";
 
-const ViolationsBox = ({ type, key }) => {
+const ViolationsBox = ({ type, key, profile }) => {
   const [expand, setExpand] = useState(false);
-
-  let title;
-  let vType = Object.keys(type)[0];
+  const [vData, setVData] = useState(profile[1]["violations"]);
 
   useEffect(() => {
     setExpand(false);
   }, []);
+
+  useEffect(() => {
+    console.log("profile changed", profile[1]["violations"]);
+    setVData(profile[1]["violations"]);
+  }, [profile]);
+
+  let title;
+  let vType = Object.keys(type)[0];
 
   switch (vType) {
     case "wage_theft":
@@ -92,7 +98,14 @@ const ViolationsBox = ({ type, key }) => {
           >
             {Object.keys(violations).map((vKey, key) => {
               const vObj = violations[vKey];
-              return <SmallViolation vObj={vObj} key={key} />;
+              return (
+                <SmallViolation
+                  vObj={vObj}
+                  key={key}
+                  vKey={vKey}
+                  vData={vData}
+                />
+              );
             })}
           </InfiniteScroll>
         </Grid>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Box, Typography, Grid } from "@mui/material";
 
-const SmallViolation = ({ vObj }) => {
+const SmallViolation = ({ vObj, vKey, vData }) => {
   const [smallExpand, setSmallExpand] = useState(false);
+
   return (
     <Grid
       item

@@ -9,18 +9,10 @@ const CompanyProfileFull = ({ profile }) => {
   let [vCount, setVCount] = useState(0);
 
   useEffect(() => {
-    let count = 0;
-
-    if (profile) {
-      for (const type in profile[1]["violations"]) {
-        let val = parseInt(profile[1]["violations"][type]["count"]);
-        if (!isNaN(val)) {
-          count += val;
-        }
-      }
-    }
-
-    setVCount(count);
+    if (profile)
+      setVCount(
+        profile[1]["violations"]["overall"]["case_violtn_cnt"]["count"],
+      );
   }, [profile]);
 
   return (
@@ -30,25 +22,86 @@ const CompanyProfileFull = ({ profile }) => {
       ) : (
         <Container style={{ margin: "3vh 1vw" }}>
           <Typography>{`${profile[1]["cty_nm"]}, ${profile[1]["st_cd"]} | ${profile[1]["naic"]["naics_code_description"]}`}</Typography>
-          <Typography
-            sx={{ mb: 1.5 }}
-            style={{ color: "#101F2D", fontWeight: "700", margin: "2vh 0" }}
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "spaceBetween",
+              margin: "10px",
+            }}
           >
-            {`${profile[1]["trade_nm"]}`} &#128308;
-          </Typography>
-          <Typography sx={{ mb: 1.5 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Typography>
-          <Typography sx={{ mb: 1.5 }}>Total Violations: {vCount}</Typography>
-          <InfiniteScroll
+            <div>
+              <Typography
+                sx={{ mb: 1.5 }}
+                style={{
+                  color: "#101F2D",
+                  fontWeight: "700",
+                  width: "20vw",
+                }}
+              >
+                {`${profile[1]["trade_nm"]}`} &#128308;
+              </Typography>
+            </div>
+
+            <div style={{ margin: "auto" }}>
+              <Typography sx={{ mb: 1.5 }} style={{ float: "right" }}>
+                Total Violations:{" "}
+                <span style={{ color: "#FF0000" }}>
+                  <strong>{vCount}</strong>
+                </span>
+              </Typography>
+            </div>
+          </div>
+
+          {/* <InfiniteScroll
             dataLength={violationsDescription.length}
             style={{ maxHeight: "55vh" }}
           >
             {violationsDescription.map((type, idx) => (
-              <ViolationsBox type={type} key={idx} />
+              <ViolationsBox type={type} key={idx} profile={profile} />
             ))}
-          </InfiniteScroll>
+          </InfiniteScroll> */}
+
+          {/* <div style={{ paddingTop: "0px" }}>
+            <div
+              style={{
+                position: "absolute",
+                left: "45vw",
+                top: "30vh",
+                borderRadius: "50%",
+                backgroundColor: "#F3FF67",
+                display: "inlineBlock",
+                height: "40vh",
+                width: "23vw",
+              }}
+            ></div>
+            <div
+              style={{
+                position: "absolute",
+                left: "68vw",
+                top: "35vh",
+                position: "absolute",
+                borderRadius: "50%",
+                backgroundColor: "#5B7DB8",
+                display: "inlineBlock",
+                height: "31vh",
+                width: "18vw",
+              }}
+            ></div>
+            <div
+              style={{
+                position: "absolute",
+                left: "61vw",
+                top: "63vh",
+                position: "absolute",
+                borderRadius: "50%",
+                backgroundColor: "#FF337C",
+                display: "inlineBlock",
+                height: "29vh",
+                width: "16vw",
+              }}
+            ></div>
+          </div> */}
         </Container>
       )}
     </Box>

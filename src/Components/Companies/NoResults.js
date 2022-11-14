@@ -6,8 +6,8 @@ const NoResults = () => {
     <Box
       style={{
         position: "absolute",
-        top: "40vh",
-        left: "55vw",
+        top: "45vh",
+        left: "54vw",
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
