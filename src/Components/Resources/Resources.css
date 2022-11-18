@@ -6,9 +6,11 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 97px 100px 3px;
-    padding: 21px 357px 726px 325px;
     background-color: #18332D;
+    width: 1240px;
+    height: auto;
+    margin: 90px 120px 3px;
+    padding-right: 60px;
 }
 
 .resources-title{
@@ -17,6 +19,7 @@
     font-size: 40px;
     font-weight: bold;
     display: flex;
+    padding-top: 20px;
 }
 
 .description{
