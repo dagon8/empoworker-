@@ -3,8 +3,3 @@
     flex-wrap: wrap;
     width: 920px;
 }
-.button{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
