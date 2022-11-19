@@ -16,7 +16,12 @@ function CompanySearch({ setValue, value, search }) {
             <div className='logo'>
               <img src={logo} alt='empoworker logo' />
             </div>
-            <div className='title'>Empoworker</div>
+            <p
+              className='title'
+              style={{ fontSize: "45px", marginRight: "11vw", padding: "0vh" }}
+            >
+              Empoworker
+            </p>
           </div>
 
           <div className='SearchBar'>

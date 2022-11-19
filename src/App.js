@@ -17,10 +17,7 @@ function App() {
   const search = () => {
     setLoading(true);
     navigate("/search");
-    console.log(
-      "numberInput id: ",
-      document.getElementById("numberInput").value,
-    );
+
     if (value.length === 0) {
       setLoading(false);
       setResult([]);

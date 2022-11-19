@@ -7,7 +7,7 @@ const NoResults = () => {
       style={{
         position: "absolute",
         top: "45vh",
-        left: "54vw",
+        left: "52vw",
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
