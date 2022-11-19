@@ -7,17 +7,6 @@ import categories from "./ResourceCategories.json"
 import { Grid } from '@mui/material'
 import { useEffect, useState } from 'react'
 const Resources = () => {
-
-
-  // const categories = ["Wage Theft", "Child Labor", "Work Place Accidents", "Migrant Resources", "Workers' Rights", "Occupational Safety and Health"];
-  // const [resources, setResources] = useState([])
-
-  // useEffect(() => {
-  //   fetch("./ResourceCategories.json")
-  //   .then(res => res.json())
-  //   .then(data => setResources(data))
-  // }, [])
-
   return (
     <div className="container">
         <div className="resources-box">

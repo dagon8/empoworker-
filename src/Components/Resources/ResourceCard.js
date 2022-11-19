@@ -7,11 +7,12 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Box from '@mui/material/Box';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import "./ResourceCard.css";
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 export default function ResourceCard({category}){
-    
+    const navigate = useNavigate();
     return(
         
         <div>
@@ -35,7 +36,10 @@ export default function ResourceCard({category}){
                 </div>
                 
                 <CardActions sx={{display:"flex", justifyContent:"flex-end"}}>
-                    <IconButton sx={{color: "#7f39fb"}} > <ArrowForwardIosIcon/></IconButton>
+                    <IconButton 
+                    component={Link}
+                    to={category.path}    
+                    sx={{color: "#7f39fb"}} > <ArrowForwardIosIcon/></IconButton>
                 </CardActions>
            </Card>
         </div>
