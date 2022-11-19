@@ -30,14 +30,14 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
         >
           <Box>
             <Typography
-              sx={{ fontSize: 14 }}
+              sx={{ fontSize: 18 }}
               gutterBottom
               style={{ color: "#393434", maxWidth: "350px" }}
             >
               {`${company[1]["cty_nm"]}, ${company[1]["st_cd"]}`}
             </Typography>
             <Typography
-              sx={{ fontSize: 14 }}
+              sx={{ fontSize: 18 }}
               gutterBottom
               style={{ color: "#393434", maxWidth: "350px" }}
             >
@@ -46,7 +46,7 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
           </Box>
 
           <Typography
-            sx={{ fontSize: 14 }}
+            sx={{ fontSize: 18 }}
             gutterBottom
             style={{ color: "#393434", float: "right", margin: "1vh 0vw" }}
           >
@@ -63,7 +63,7 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
 
         <Typography
           sx={{ mb: 1.5 }}
-          style={{ color: "#101F2D", fontWeight: "700", fontSize: "20px" }}
+          style={{ color: "#101F2D", fontWeight: "800", fontSize: "20px" }}
         >
           {`${company[1]["trade_nm"]}`}
         </Typography>

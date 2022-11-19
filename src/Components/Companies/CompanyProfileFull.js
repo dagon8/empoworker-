@@ -21,30 +21,38 @@ const CompanyProfileFull = ({ profile }) => {
         <NoResults />
       ) : (
         <Container style={{ margin: "3vh 1vw" }}>
-          <Typography>{`${profile[1]["cty_nm"]}, ${profile[1]["st_cd"]} | ${profile[1]["naic"]["naics_code_description"]}`}</Typography>
+          <Typography
+            style={{ fontSize: "25px" }}
+          >{`${profile[1]["cty_nm"]}, ${profile[1]["st_cd"]} | ${profile[1]["naic"]["naics_code_description"]}`}</Typography>
+
           <div
             style={{
               width: "100%",
               display: "flex",
               justifyContent: "spaceBetween",
               margin: "10px",
+              marginLeft: "0px",
             }}
           >
-            <div>
+            <div style={{ marginLeft: "0px" }}>
               <Typography
                 sx={{ mb: 1.5 }}
                 style={{
                   color: "#101F2D",
                   fontWeight: "700",
-                  width: "20vw",
+                  width: "30vw",
+                  fontSize: "30px",
                 }}
               >
-                {`${profile[1]["trade_nm"]}`} &#128308;
+                {profile[1]["trade_nm"]} &#128308;
               </Typography>
             </div>
 
             <div style={{ margin: "auto" }}>
-              <Typography sx={{ mb: 1.5 }} style={{ float: "right" }}>
+              <Typography
+                sx={{ mb: 1.5 }}
+                style={{ float: "right", fontSize: "30px" }}
+              >
                 Total Violations:{" "}
                 <span style={{ color: "#FF0000" }}>
                   <strong>{vCount}</strong>

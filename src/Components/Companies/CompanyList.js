@@ -55,15 +55,15 @@ const CompanyList = ({ companies, loading, filter, search, clearFilter }) => {
               backgroundColor: "#F0F0F0",
               margin: "0px",
               textAlign: "center",
-              height: "5vh",
+              height: "4.75vh",
               borderRadius: "5px",
               outlineColor: "#F0F0F0",
             }}
           >
             <p
               style={{
-                fontSize: "10px",
-                padding: "5px 5px 5px 5px",
+                fontSize: "14px",
+                padding: "0px 5px 5px 5px",
                 fontWeight: "700",
               }}
             >
@@ -91,15 +91,15 @@ const CompanyList = ({ companies, loading, filter, search, clearFilter }) => {
               backgroundColor: "#F0F0F0",
               margin: "0px",
               textAlign: "center",
-              height: "5vh",
+              height: "4.75vh",
               borderRadius: "5px",
               outlineColor: "#F0F0F0",
             }}
           >
             <p
               style={{
-                fontSize: "10px",
-                padding: "5px 5px 5px 5px",
+                fontSize: "14px",
+                padding: "0px 5px 5px 5px",
                 fontWeight: "700",
               }}
             >
