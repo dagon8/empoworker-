@@ -33,21 +33,33 @@ export default function Quiz(){
     ];
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
-    var wageTheft  = 0;
-    var harassment = 0;
-    var childLabor = 0;
-    // const [wageTheft, setWageTheft] = useState(0);
-    // const [harrsement, setHarrasment] = useState(0);
-    // const [childLabor, setChildLabor] = useState(0);
+    const [wageTheft, setWageTheft] = useState(0);
+    const [harassment, setHarrasment] = useState(0);
+    const [childLabor, setChildLabor] = useState(0);
     const [showEvaluation, setEvaluation] = useState(false);
-    var abuseList = [];
+    const [results, setResults] = useState([""]);
+    const [reveal, setReveal] = useState(false);
+
+    // set everything back to the start when the quiz is started over 
     const handleResetButton = () => {
         setEvaluation(false);
         setCurrentQuestion(0);
-        wageTheft = 0;
-        harassment = 0;
-        childLabor = 0;
+        setWageTheft(0);
+        setHarrasment(0);
+        setChildLabor(0);
+        setResults([""]);
     }
+
+    // add results to the result list to be later displayed
+    const addResult = (newResult) => 
+    setResults(results => [...results, newResult]);
+
+    // process the current question and pass the elements to see what abuse 
+    // the question matches to
+    function process(currentQuestion, isTrue){
+        handleAnswerButtonClick();
+        checkAbuse(currentQuestion, isTrue);
+    }   
 
     // takes the current question number and whenever it's clicked it goes to the next question 
     const handleAnswerButtonClick = () => {
@@ -60,41 +72,34 @@ export default function Quiz(){
         }
     }
 
+    // based on the question, it increments which abuse is being faced
     var checkAbuse = (currentQuestion, isTrue) => {
         if (isTrue===true && currentQuestion===0){
-            wageTheft = wageTheft + 1;
+            setWageTheft(wageTheft + 1);
         }
         else if (isTrue=== true && currentQuestion===1){
-            harassment = harassment + 1;
+            setHarrasment(harassment + 1);
         }
         else if (isTrue ===true && currentQuestion===2){
-            childLabor = childLabor + 1;
+            setChildLabor(childLabor + 1);
         }
     }
 
-    var showAbuse = () => {
+    // based on the value of the category, it adds the type of abuse to the result list 
+    const showAbuse = () => {
         if (wageTheft === 1){
-            abuseList.push("wage theft");
+            addResult("Wage Theft");
         }
 
-        if (harassment === 1){
-            abuseList.push("harassment");
+        if (harassment === 1){ 
+            addResult("Harassment");            
         }
 
-        if (childLabor === 1){
-            abuseList.push("child labor");
+        if (childLabor === 1){ 
+            addResult("Child Labor");
         }
-        
-        return abuseList;
     }
 
-    function process(currentQuestion, isTrue){
-        handleAnswerButtonClick();
-        checkAbuse(currentQuestion, isTrue);
-    }
-
-    console.log(showAbuse())
-    
 	return (
         <Card sx={{ maxWidth: 1000, backgroundColor:"azure" }}>
             {/* <Box sx={{display: "flex", flexDirection:"column"}}> */}
@@ -103,8 +108,15 @@ export default function Quiz(){
             score when the user has answered all the questions */}
                     {showEvaluation ? (
                         <div className='eval-section'>
-                        You are facing this type of abuses(s): Wage Theft, Harassment
-                            <button onClick={handleResetButton}> Reset </button> </div>
+                        You are facing this type of abuses(s):
+                            <button onClick={() => showAbuse()}>Results</button>
+                            {results.map((result, index) => (
+                                <div key={index}>
+                                {result}
+                                </div>
+                            ))}
+                            <button onClick={handleResetButton}> Reset </button> 
+                        </div>
                     ) : (
                         <>
                             <div className='question-section'>
