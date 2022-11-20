@@ -17,7 +17,7 @@ export default function ResourceCard({category}){
         
         <div>
            <Card 
-           sx={{ backgroundColor: "#98a2b3", display:"flex", width:"1000px", height:"136px"}}>
+           sx={{ backgroundColor: "#bcd2e4", display:"flex", width:"1000px", height:"136px"}}>
             
                 <Box sx={{display: "flex", flexDirection:"row", flexWrap: "wrap", backgroundColor: "#d3ced0",
                         width: "220px", height:"136px", position:"absolute", alignItems:"center", justifyContent:"center"}}>
@@ -39,7 +39,7 @@ export default function ResourceCard({category}){
                     <IconButton 
                     component={Link}
                     to={category.path}    
-                    sx={{color: "#7f39fb"}} > <ArrowForwardIosIcon/></IconButton>
+                    sx={{color: "#ff7a40"}} > <ArrowForwardIosIcon/></IconButton>
                 </CardActions>
            </Card>
         </div>
