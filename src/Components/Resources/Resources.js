@@ -31,7 +31,9 @@ const Resources = () => {
         <Dropdown num={3}/>
         <Dropdown num={4}/>
         </div> */}
-        <Quiz/>
+          <div className="quiz-section">            
+          <Quiz/>
+          </div>
         </div>
 
         {/* <div className='quiz-form'>

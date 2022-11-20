@@ -38,7 +38,6 @@ export default function Quiz(){
     const [childLabor, setChildLabor] = useState(0);
     const [showEvaluation, setEvaluation] = useState(false);
     const [results, setResults] = useState([""]);
-    const [reveal, setReveal] = useState(false);
 
     // set everything back to the start when the quiz is started over 
     const handleResetButton = () => {
@@ -101,7 +100,7 @@ export default function Quiz(){
     }
 
 	return (
-        <Card sx={{ maxWidth: 1000, backgroundColor:"azure" }}>
+        <Card sx={{ maxWidth: 1000, backgroundColor:"azure", marginRight:"500px", marginLeft:"150px" }}>
             {/* <Box sx={{display: "flex", flexDirection:"column"}}> */}
                 <div className="quiz">
                     {/* HINT: replace "false" with logic to display the 
