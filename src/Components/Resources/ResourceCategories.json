@@ -2,35 +2,35 @@
             "title": "Wage Theft",
             "description": "Wage theft occurs any time an employer does not pay an employee everything the employee is owed by law.",
             "id": 1,
-            "path": "/resources/wageTheft",
+            "path": "/resources/wage-theft",
             "component": "WageTheft"
         },
         {
             "title": "Child Labor",
             "description": "The exploitation of children through any form of work that deprives children of their childhood, interferes with their ability to attend regular school, and is mentally, physically, socially and morally harmful.",
             "id": 2,
-            "path": "/resources/childLabor",
+            "path": "/resources/child-labor",
             "component": "ChildLabor"
         },
         {
             "title": "Work Place Accidents",
             "description": "An unplanned incident or event that leads to the injury of an employee.",
             "id": 3,
-            "path": "/resources/workPlaceAccidents",
-            "component": "WorkPlaceAccidents"
+            "path": "/resources/workplace-accidents",
+            "component": "WorkplaceAccidents"
         },
         {
             "title": "Migrant Resources",
             "description": "Wage theft occurs any time an employer does not pay an employee everything the employee is owed by law.",
             "id": 4,
-            "path": "/resources/migrantResources",
+            "path": "/resources/migrant-resources",
             "component": "MigrantResources"
         },
         {
             "title": "Workers' Rights",
             "description": "Legal rights and human rights relating to labor relations between workers and employers.",
             "id": 5,
-            "path" : "/resources/workersRights",
+            "path" : "/resources/workers-rights",
             "component" : "WorkersRights"
         },
         {

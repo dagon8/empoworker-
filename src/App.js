@@ -82,11 +82,11 @@ function App() {
         <Route exact path='/resources' element={<Resources />} />
         <Route path='*' element={<Error />} />
         <Route path='/error' element={<Error />} />
-        <Route exact path='/resources/wageTheft' element={<WageTheft />} />
-        <Route exact path='/resources/childLabor' element={<ChildLabor />} />
-        <Route exact path='/resources/workPlaceAccidents' element={<WorkPlaceAccidents />} />
-        <Route exact path='/resources/migrantResources' element={<MigrantResources />} />
-        <Route exact path='/resources/workersRights' element={<WorkersRights />} />
+        <Route exact path='/resources/wage-theft' element={<WageTheft />} />
+        <Route exact path='/resources/child-labor' element={<ChildLabor />} />
+        <Route exact path='/resources/workplace-accidents' element={<WorkPlaceAccidents />} />
+        <Route exact path='/resources/migrant-resources' element={<MigrantResources />} />
+        <Route exact path='/resources/workers-rights' element={<WorkersRights />} />
         <Route exact path='/resources/osh' element={<OccupationSH />} />
       </Routes>
     </div>
