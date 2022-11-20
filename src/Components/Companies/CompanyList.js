@@ -156,7 +156,11 @@ const CompanyList = ({ companies, loading, filter, search, clearFilter }) => {
         container
         spacing={2}
         direction='row'
-        style={{ marginTop: "1vh", justifyContent: "center" }}
+        style={{
+          marginTop: "1vh",
+          justifyContent: "center",
+          overflow: "hidden",
+        }}
       >
         <Grid
           item
