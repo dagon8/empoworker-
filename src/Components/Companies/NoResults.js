@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { t } from 'i18next'
+import { useTranslation } from "react-i18next";
 
 const NoResults = () => {
+  const {t, i18n} = useTranslation()
   return (
     <Box
       style={{

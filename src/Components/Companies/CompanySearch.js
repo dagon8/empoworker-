@@ -7,6 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import LangBtn from "../LangBtn/LangBtn";
 
 function CompanySearch({ setValue, value, search }) {
   const {t, i18n} = useTranslation()
@@ -102,7 +103,7 @@ function CompanySearch({ setValue, value, search }) {
           </div>
 
           <div className='nav-button contact-button'>
-            <Button
+            {/* <Button
               component={Link}
               to='/'
               size='small'
@@ -118,7 +119,8 @@ function CompanySearch({ setValue, value, search }) {
             >
               {" "}
               {t("contact")}{" "}
-            </Button>
+            </Button> */}
+            <LangBtn></LangBtn>
           </div>
         </div>
         {/* these are the search results */}

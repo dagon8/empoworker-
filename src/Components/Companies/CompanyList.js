@@ -6,8 +6,11 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import LoadingGif from "../../images/loading.gif";
 import Filter from "../../images/filter.png";
 import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const CompanyList = ({ companies, loading, filter, search, clearFilter }) => {
+  const {t, i18n} = useTranslation()
+
   let companiesList = [];
   if (companies.length !== 0) {
     companiesList = companies;

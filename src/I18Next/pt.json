@@ -1,44 +1,45 @@
 {
-    "home_view": "View violations.",
-    "home_prevent": "Prevent harm.",
-    "home_start": "Start searching",
-    "home_company": "your company",
+    "home_view": "Ver violações.",
+    "home_prevent": "Prevenir danos.",
+    "home_start": "Comece a pesquisar",
+    "home_company": "sua empresa",
 
-    "home": "Home",
-    "search": "Search",
-    "resources": "Resources",
-    "contact": "Contact Us",
+    "home": "Começo",
+    "search": "Pesquisa",
+    "resources": "Recursos",
+    "contact": "Contate-nos",
+    "language": "Língua",
 
-    "resources_wt_title": "Wage Theft",
-    "resources_wt_des": "Wage theft occurs any time an employer does not pay an employee everything the employee is owed by law.",
+    "resources_wt_title": "Roubo de Salário",
+    "resources_wt_des": "O roubo de salário ocorre sempre que um empregador não paga a um funcionário tudo o que é devido por lei.",
 
-    "resources_cl_title": "Child Labor",
-    "resources_cl_des": "The exploitation of children through any form of work that deprives children of their childhood, interferes with their ability to attend regular school, and is mentally, physically, socially and morally harmful.",
+    "resources_cl_title": "Trabalho Infantil",
+    "resources_cl_des": "A exploração de crianças por meio de qualquer forma de trabalho que prive as crianças de sua infância, interfira em sua capacidade de frequentar a escola regular e seja mental, física, social e moralmente prejudicial.",
 
-    "resources_wpa_title": "Work Place Accidents",
-    "resources_wpa_des": "An unplanned incident or event that leads to the injury of an employee.",
+    "resources_wpa_title": "Acidentes de Trabalho",
+    "resources_wpa_des": "Um incidente ou evento não planejado que leva à lesão de um funcionário.",
 
-    "resources_mr_title": "Immigrant Resources",
-    "resources_mr_des": "The Immigration and Nationality Act protects employees from being descriminated against because of their legal status in the US.",
+    "resources_mr_title": "Recursos Imigrantes",
+    "resources_mr_des": "A Lei de Imigração e Nacionalidade protege os funcionários de serem discriminados por causa de seu status legal nos EUA.",
 
-    "resources_wr_title": "Workers' Rights",
-    "resources_wr_des": "Legal rights and human rights relating to labor relations between workers and employers.",
+    "resources_wr_title": "Os Direitos dos Trabalhadores",
+    "resources_wr_des": "Direitos legais e direitos humanos relativos às relações de trabalho entre trabalhadores e empregadores.",
 
-    "resources_osh_title": "Occupational Safety and Health",
-    "resources_osh_des": "Deals with all aspects of health and safety in the workplace.",
+    "resources_osh_title": "Segurança e Saúde Ocupacional",
+    "resources_osh_des": "Trata de todos os aspectos de saúde e segurança no trabalho.",
 
-    "resources_des": "Learn more about work-related violations and your rights.",
+    "resources_des": "Saiba mais sobre violações relacionadas ao trabalho e seus direitos.",
 
-    "not_found": "Page Not Found",
+    "not_found": "Página não encontrada",
 
-    "no_result": "No Results",
-    "no_result_mess": "There are no companies that match your current search.",
+    "no_result": "Sem Resultados",
+    "no_result_mess": "Não há empresas que correspondam à sua pesquisa atual.",
 
-    "location": "Location",
-    "insert_location": " Insert location",
-    "violations": "Violations",
-    "insert_violation_num": " Insert number of violations",
-    "filter": "Filter",
-    "clear": "Clear",
-    "total_v": "Total Violations"
+    "location": "Localização",
+    "insert_location": " Inserir localização",
+    "violations": "Violações",
+    "insert_violation_num": " Insira o número de violações",
+    "filter": "Filtro",
+    "clear": "Limpar",
+    "total_v": "violações totais"
 }

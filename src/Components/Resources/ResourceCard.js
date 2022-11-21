@@ -8,8 +8,11 @@ import Box from "@mui/material/Box";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import "./ResourceCard.css";
 import { t } from 'i18next'
+import { useTranslation } from "react-i18next";
 
 export default function ResourceCard({ category }) {
+  const {t, i18n} = useTranslation()
+
   let transid = category.transid
   let title = "resources_" + transid + "_title"
   let description = "resources_" + transid + "_des"

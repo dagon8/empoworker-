@@ -7,6 +7,7 @@ import categories from "./ResourceCategories.json"
 import { Grid } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { t } from 'i18next'
+import { useTranslation } from 'react-i18next'
 const Resources = () => {
 
 
@@ -18,7 +19,7 @@ const Resources = () => {
   //   .then(res => res.json())
   //   .then(data => setResources(data))
   // }, [])
-
+  const {t, i18n} = useTranslation()
   return (
     <div className="container">
         <div className="resources-box">
