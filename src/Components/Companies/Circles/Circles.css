@@ -15,7 +15,9 @@
     font-weight: 700;
     margin-top: 0px;
     margin-bottom: 20px;
-    font-size: 20px
+    font-size: 18px;
+    max-width: 10vw;
+    text-align: center
 }
 
 
