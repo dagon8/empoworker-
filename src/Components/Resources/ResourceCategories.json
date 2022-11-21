@@ -4,7 +4,7 @@
             "id": 1,
 
             "path": "/resources/wage-theft",
-            "component": "WageTheft"
+            "component": "WageTheft",
             "transid": "wt"
 
         },
@@ -14,7 +14,7 @@
             "id": 2,
 
             "path": "/resources/child-labor",
-            "component": "ChildLabor"
+            "component": "ChildLabor",
             "transid": "cl"
         },
         {
@@ -23,7 +23,7 @@
             "id": 3,
 
             "path": "/resources/workplace-accidents",
-            "component": "WorkplaceAccidents"
+            "component": "WorkplaceAccidents",
             "transid": "wpa"
         },
         {
@@ -31,7 +31,7 @@
             "description": "Wage theft occurs any time an employer does not pay an employee everything the employee is owed by law.",
             "id": 4,
             "path": "/resources/migrant-resources",
-            "component": "MigrantResources"
+            "component": "MigrantResources",
             "transid": "mr"
         },
         {
@@ -40,7 +40,7 @@
             "id": 5,
 
             "path" : "/resources/workers-rights",
-            "component" : "WorkersRights"
+            "component" : "WorkersRights",
             "transid": "wr"
         },
         {
@@ -48,7 +48,6 @@
             "description": "Deals with all aspects of health and safety in the workplace.",
             "id": 6,   
             "path" : "/resources/osh",
-            "component": "Osh"
-            "id": 6,
+            "component": "Osh",
             "transid": "osh"   
 }]
