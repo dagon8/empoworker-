@@ -2,37 +2,36 @@
     display: flex;
 }
 
-.resources-box{
+.box{
     display: flex;
     justify-content: center;
     flex-direction: column;
     background-color: #18332D;
     width: 1240px;
-    height: auto;
+    height: 800px;
     margin: 90px 120px 3px;
     padding-right: 60px;
 }
 
-.resources-title{
+.header{
     color: #ff7a40;
     justify-content: center;
     font-size: 40px;
     font-weight: bold;
-    display: flex;
-    padding-top: 20px;
 }
 
-.description{
+.wage-title{
+    color: #f3ff67;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 250px;
+}
+
+.wage-description{
     font-size: 22px;
     color:white;
     display: flex;
-    justify-content: center;
-
-}
-
-.quiz-title{
-    color: #ff7a40;
-    padding-top: 100px;
-    font-size:22px;
-    margin-left: 150px;
+    padding-left: 250px;
+    margin-bottom: 500px;
+    width:850px;
 }
