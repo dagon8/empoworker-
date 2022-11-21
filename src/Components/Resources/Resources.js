@@ -6,12 +6,26 @@ import ResourceCard from './ResourceCard.js'
 import categories from "./ResourceCategories.json"
 import { Grid } from '@mui/material'
 import { useEffect, useState } from 'react'
+import { t } from 'i18next'
+import { useTranslation } from 'react-i18next'
 const Resources = () => {
+
+
+  // const categories = ["Wage Theft", "Child Labor", "Work Place Accidents", "Migrant Resources", "Workers' Rights", "Occupational Safety and Health"];
+  // const [resources, setResources] = useState([])
+
+  // useEffect(() => {
+  //   fetch("./ResourceCategories.json")
+  //   .then(res => res.json())
+  //   .then(data => setResources(data))
+  // }, [])
+  const {t, i18n} = useTranslation()
+  
   return (
     <div className="container">
         <div className="resources-box">
-          <div className= "resources-title">Resources</div>
-          <div className="description">Learn more about work-related violations and your rights </div>
+          <div className= "resources-title">{t("resources")}</div>
+          <div className="description">{t("resources_des")}</div>
           <div className="categories">
             <Grid container spacing={3} m={1} display="flex" alignItems="center" flexDirection="column">
               {categories.map((category) =>  (

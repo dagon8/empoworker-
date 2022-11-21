@@ -16,6 +16,7 @@ import OccupationSH from "./Components/Resources/ResourceCategories/OccupationSH
 
 function App() {
   const [result, setResult] = useState([]);
+  const [ogSearch, setOGSearch] = useState([]);
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -23,33 +24,39 @@ function App() {
   const search = () => {
     setLoading(true);
     navigate("/search");
+
+    if (value.length === 0) {
+      setLoading(false);
+      setResult([]);
+    }
+
     if (value.length > 0) {
-      fetch("https://empoworker475-default-rtdb.firebaseio.com/companies.json")
+      fetch("https://empoworkerbase-default-rtdb.firebaseio.com/companies.json")
         .then(
           // when it's finished requesting the data
           (response) => response.json(),
           // to have access to the javascript object
         )
         .then((responseData) => {
-          // clear array results so the search will start from stratch
           setResult([]);
           let searchQuery = value.toLowerCase();
-          // loop through response data so you can loop through the companies
+
           for (const key in responseData) {
-            // get the trade name of each company
             let company = responseData[key].trade_nm.toLowerCase();
-            // returns the first character of the search word
-            // e.g. if we type in "pear" it's not going to match with "apple"
-            // because the 'p' is not at the start of "apple"
+
             if (
               company.slice(0, searchQuery.length).indexOf(searchQuery) !== -1
             ) {
-              // if we type 'p', it will return "pineapple, pear, peach"
               setResult((prevResult) => {
+                return [...prevResult, [key, responseData[key]]];
+              });
+
+              setOGSearch((prevResult) => {
                 return [...prevResult, [key, responseData[key]]];
               });
             }
           }
+
           setLoading(false);
         })
         .catch((error) => {
@@ -60,6 +67,53 @@ function App() {
       console.log("no result");
       setResult([]);
     }
+  };
+
+  const filter = () => {
+    let num = document.getElementById("numberInput").value;
+    let str = document.getElementById("locationInput").value;
+
+    if (ogSearch.length !== 0 && (num || str)) {
+      if (num && !str) {
+        setResult(
+          ogSearch.filter(
+            (obj) =>
+              obj[1]["violations"]["overall"]["case_violtn_cnt"]["count"] ===
+              num,
+          ),
+        );
+      } else if (!num && str) {
+        let lStr = str.toLowerCase();
+        setResult(
+          ogSearch.filter(
+            (obj) =>
+              obj[1]["cty_nm"].toLowerCase().includes(lStr) ||
+              obj[1]["st_cd"].toLowerCase().includes(lStr) ||
+              obj[1]["street_addr_1_txt"].toLowerCase().includes(lStr) ||
+              obj[1]["zip_cd"] === lStr,
+          ),
+        );
+      } else if (num && str) {
+        let lStr = str.toLowerCase();
+        setResult(
+          ogSearch.filter(
+            (obj) =>
+              (obj[1]["cty_nm"].toLowerCase().includes(lStr) ||
+                obj[1]["st_cd"].toLowerCase().includes(lStr) ||
+                obj[1]["street_addr_1_txt"].toLowerCase().includes(lStr) ||
+                obj[1]["zip_cd"] === lStr) &&
+              obj[1]["violations"]["overall"]["case_violtn_cnt"]["count"] ===
+                num,
+          ),
+        );
+      }
+    }
+  };
+
+  const clearFilter = () => {
+    setResult(ogSearch);
+    document.getElementById("numberInput").value = "";
+    document.getElementById("locationInput").value = "";
   };
 
   return (
@@ -77,7 +131,15 @@ function App() {
         <Route
           exact
           path='/search'
-          element={<CompanyList companies={result} loading={loading} />}
+          element={
+            <CompanyList
+              companies={result}
+              loading={loading}
+              filter={filter}
+              search={search}
+              clearFilter={clearFilter}
+            />
+          }
         />
         <Route exact path='/resources' element={<Resources />} />
         <Route path='*' element={<Error />} />

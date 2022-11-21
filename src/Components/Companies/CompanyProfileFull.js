@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Container } from "@mui/material";
 import NoResults from "./NoResults";
+import Circles from "./Circles/Circles.js";
+import { t } from 'i18next'
+import { useTranslation } from "react-i18next";
 
 const CompanyProfileFull = ({ profile }) => {
   let [vCount, setVCount] = useState(0);
+  const {t, i18n} = useTranslation()
 
   useEffect(() => {
-    let count = 0;
-
-    if (profile) {
-      for (const type in profile[1]["violations"]) {
-        let val = parseInt(profile[1]["violations"][type]["count"]);
-        if (!isNaN(val)) {
-          count += val;
-        }
-      }
-    }
-
-    setVCount(count);
+    if (profile)
+      setVCount(
+        profile[1]["violations"]["overall"]["case_violtn_cnt"]["count"],
+      );
   }, [profile]);
 
   return (
@@ -26,18 +22,63 @@ const CompanyProfileFull = ({ profile }) => {
         <NoResults />
       ) : (
         <Container style={{ margin: "3vh 1vw" }}>
-          <Typography>{`${profile[1]["cty_nm"]}, ${profile[1]["st_cd"]} | ${profile[1]["naic"]["naics_code_description"]}`}</Typography>
-          <Typography
-            sx={{ mb: 1.5 }}
-            style={{ color: "#101F2D", fontWeight: "700", margin: "2vh 0" }}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              margin: "0px 0px 25px 0px",
+              padding: "0px 0px 5px 0px",
+              height: "1vh",
+            }}
           >
-            {`${profile[1]["trade_nm"]}`} &#128308;
-          </Typography>
-          <Typography sx={{ mb: 1.5 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Typography>
-          <Typography sx={{ mb: 1.5 }}>Total Violations: {vCount}</Typography>
+            <Typography
+              style={{ fontSize: "20px", width: "50vw" }}
+            >{`${profile[1]["cty_nm"]}, ${profile[1]["st_cd"]} | ${profile[1]["naic"]["naics_code_description"]}`}</Typography>
+            <p style={{ fontSize: "40px", marginRight: "20px" }}>&#128308;</p>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "spaceBetween",
+              margin: "10px",
+              marginLeft: "0px",
+              marginBottom: "0px",
+              paddingBottom: "0px",
+            }}
+          >
+            <div style={{ marginLeft: "0px" }}>
+              <Typography
+                sx={{ mb: 1.5 }}
+                style={{
+                  color: "#101F2D",
+                  fontWeight: "700",
+                  width: "30vw",
+                  fontSize: "30px",
+                  margin: 0,
+                  padding: 0,
+                }}
+              >
+                {profile[1]["trade_nm"]}
+              </Typography>
+            </div>
+
+            <div style={{ margin: "auto" }}>
+              <Typography
+                sx={{ mb: 1.5 }}
+                style={{ float: "right", fontSize: "30px" }}
+              >
+                {t("total_v")}:{" "}
+                <span style={{ color: "#FF0000" }}>
+                  <strong>{vCount}</strong>
+                </span>
+              </Typography>
+            </div>
+          </div>
+
+          <Circles profile={profile} />
         </Container>
       )}
     </Box>
