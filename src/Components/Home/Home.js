@@ -1,17 +1,19 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
-//import ViolationGlossary from '../Resources/ViolationGlossary/ViolationGlossary';
+
 
 export default function Home() {
   const navigate = useNavigate();
+  const {t, i18n} = useTranslation()
 
   return (
     <div className='home-container'>
       <div className='left-home'>
         <p className='left-title'>Empoworker</p>
         <p className='left-sub'>
-          View violations. <br /> Prevent Harm.
+          {t("home_view")} <br /> {t("home_prevent")}
         </p>
       </div>
 
@@ -31,7 +33,7 @@ export default function Home() {
           }}
           className='right-title'
         >
-          Start searching <br /> your company
+          {t("home_start")} <br /> {t("home_company")}
         </p>
       </div>
     </div>

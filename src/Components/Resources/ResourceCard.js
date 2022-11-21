@@ -7,8 +7,12 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Box from "@mui/material/Box";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import "./ResourceCard.css";
+import { t } from 'i18next'
 
 export default function ResourceCard({ category }) {
+  let transid = category.transid
+  let title = "resources_" + transid + "_title"
+  let description = "resources_" + transid + "_des"
   return (
     <div>
       <Card
@@ -45,7 +49,7 @@ export default function ResourceCard({ category }) {
                 padding: "16px",
               }}
             >
-              {category.title}
+              {t(title)}
             </Typography>
             <Typography
               sx={{
@@ -54,7 +58,7 @@ export default function ResourceCard({ category }) {
                 marginLeft: "220px",
               }}
             >
-              {category.description}
+              {t(description)}
             </Typography>
           </CardContent>
         </div>

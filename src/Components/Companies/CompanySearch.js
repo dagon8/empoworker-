@@ -6,8 +6,10 @@ import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function CompanySearch({ setValue, value, search }) {
+  const {t, i18n} = useTranslation()
   return (
     <div>
       <div className='container'>
@@ -36,7 +38,7 @@ function CompanySearch({ setValue, value, search }) {
               value={value}
               variant='outlined'
               fullWidth
-              label='Search'
+              label={t("search")}
               size='small'
               InputProps={{
                 startAdornment: (
@@ -59,7 +61,7 @@ function CompanySearch({ setValue, value, search }) {
               sx={{ textTransform: "none", color: "black" }}
             >
               {" "}
-              Search{" "}
+              {t("search")}{" "}
             </Button>
           </div>
 
@@ -71,7 +73,7 @@ function CompanySearch({ setValue, value, search }) {
               sx={{ textTransform: "none", color: "black" }}
             >
               {" "}
-              Home{" "}
+              {t("home")}{" "}
             </Button>
           </div>
 
@@ -83,7 +85,7 @@ function CompanySearch({ setValue, value, search }) {
               sx={{ textTransform: "none", color: "black" }}
             >
               {" "}
-              Search{" "}
+              {t("search")}{" "}
             </Button>
           </div>
 
@@ -95,7 +97,7 @@ function CompanySearch({ setValue, value, search }) {
               sx={{ textTransform: "none", color: "black" }}
             >
               {" "}
-              Resources{" "}
+              {t("resources")}{" "}
             </Button>
           </div>
 
@@ -115,7 +117,7 @@ function CompanySearch({ setValue, value, search }) {
               }}
             >
               {" "}
-              Contact Us{" "}
+              {t("contact")}{" "}
             </Button>
           </div>
         </div>

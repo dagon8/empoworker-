@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 import "./Circles.css";
 
@@ -18,28 +19,28 @@ const Circles = ({ profile }) => {
           backgroundColor: "#F3FF67",
         }}
       >
-        <p className='circleText'> Wage Theft</p>
+        <p className='circleText'>{t("resources_wt_title")}</p>
         <p style={{ alignText: "center", fontSize: "30px" }}>
           {profile[1]["violations"]["wage_theft"]["category_total"]}
         </p>
       </div>
 
       <div className='circle' id='circle2'>
-        <p className='circleText'>Worker's Rights</p>
+        <p className='circleText'>{t("resources_wr_title")}</p>
         <p style={{ alignText: "center", fontSize: "30px" }}>
           {profile[1]["violations"]["migrant"]["category_total"]}
         </p>
       </div>
 
       <div className='circle' id='circle3'>
-        <p className='circleText'>Safety & Health</p>
+        <p className='circleText'>{t("resources_osh_title")}</p>
         <p style={{ alignText: "center", fontSize: "30px" }}>
           {profile[1]["violations"]["workplace_accident"]["category_total"]}
         </p>
       </div>
 
       <div className='circle' id='circle4'>
-        <p className='circleText'>Child Labor</p>
+        <p className='circleText'>{t("resources_cl_title")}</p>
         <p style={{ alignText: "center", fontSize: "30px" }}>
           {profile[1]["violations"]["child_labor"]["category_total"]}
         </p>

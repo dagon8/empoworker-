@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, Typography, Button, Box } from "@mui/material";
+import { t } from 'i18next'
 
 const CompanyProfile = ({ company, switchProfile, highlight }) => {
   let [vCount, setVCount] = useState(0);
@@ -50,7 +51,7 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
             gutterBottom
             style={{ color: "#393434", float: "right", margin: "1vh 0vw" }}
           >
-            {`${vCount}`} Violations &#128308;
+            {`${vCount}`} {t("violations")} &#128308;
           </Typography>
         </Box>
 
