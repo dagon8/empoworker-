@@ -7,7 +7,7 @@ export default function Quiz(){
     const questions = [
 
         {
-            questionText: "Are you not gettig paid all the hours you have worked?",
+            questionText: "Are you not getting paid all the hours you have worked?",
             exampleText: "e.i. Not paying at all, paying below minimum wage",
             answerOptions: [
                 {answerText: "Yes", isTrue: true},
