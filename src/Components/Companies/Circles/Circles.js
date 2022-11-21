@@ -36,7 +36,7 @@ const Circles = ({ profile }) => {
 
       <div className='circle' id='circle3'>
         <p className='circleText'>{t("resources_osh_title")}</p>
-        <p style={{ alignText: "center", fontSize: "30px" }}>
+        <p style={{ textAlign: "center", fontSize: "30px" }}>
           {profile[1]["violations"]["workplace_accident"]["category_total"]}
         </p>
       </div>

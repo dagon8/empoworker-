@@ -20,6 +20,7 @@ const Resources = () => {
   //   .then(data => setResources(data))
   // }, [])
   const {t, i18n} = useTranslation()
+  
   return (
     <div className="container">
         <div className="resources-box">
@@ -44,7 +45,9 @@ const Resources = () => {
         <Dropdown num={3}/>
         <Dropdown num={4}/>
         </div> */}
-        <Quiz/>
+          <div className="quiz-section">            
+          <Quiz/>
+          </div>
         </div>
 
         {/* <div className='quiz-form'>

@@ -7,6 +7,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Box from "@mui/material/Box";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import "./ResourceCard.css";
+import { Link, useNavigate } from 'react-router-dom';
 import { t } from 'i18next'
 import { useTranslation } from "react-i18next";
 
@@ -42,7 +43,20 @@ export default function ResourceCard({ category }) {
           <InventoryIcon />
         </Box>
 
-        <div className='card-content'>
+export default function ResourceCard({category}){
+    const navigate = useNavigate();
+    return(
+        
+        <div>
+           <Card 
+           sx={{ backgroundColor: "#bcd2e4", display:"flex", width:"1000px", height:"136px"}}>
+            
+                <Box sx={{display: "flex", flexDirection:"row", flexWrap: "wrap", backgroundColor: "#d3ced0",
+                        width: "220px", height:"136px", position:"absolute", alignItems:"center", justifyContent:"center"}}>
+                    <InventoryIcon />
+                </Box>
+
+               <div className='card-content'>
           <CardContent>
             <Typography
               sx={{
@@ -64,7 +78,15 @@ export default function ResourceCard({ category }) {
               {t(description)}
             </Typography>
           </CardContent>
-        </div>
+                </div>
+                
+                <CardActions sx={{display:"flex", justifyContent:"flex-end"}}>
+                    <IconButton 
+                    component={Link}
+                    to={category.path}    
+                    sx={{color: "#ff7a40"}} > <ArrowForwardIosIcon/></IconButton>
+                </CardActions>
+           </Card>
 
         <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
           <IconButton sx={{ color: "#7f39fb" }}>

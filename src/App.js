@@ -1,11 +1,18 @@
 import { React, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import WageTheft from "./Components/Resources/ResourceCategories/WageTheft";
 import Resources from "./Components/Resources/Resources";
 import Error from "./Components/Error";
 import Home from "./Components/Home/Home";
 import CompanySearch from "./Components/Companies/CompanySearch";
 import CompanyList from "./Components/Companies/CompanyList";
 import "./App.css";
+import ChildLabor from "./Components/Resources/ResourceCategories/ChildLabor";
+import WorkPlaceAccidents from "./Components/Resources/ResourceCategories/WorkPlaceAccidents";
+import MigrantResources from "./Components/Resources/ResourceCategories/MigrantResources";
+import WorkersRights from "./Components/Resources/ResourceCategories/WorkersRights";
+import OccupationSH from "./Components/Resources/ResourceCategories/OccupationSH";
+
 
 function App() {
   const [result, setResult] = useState([]);
@@ -137,6 +144,12 @@ function App() {
         <Route exact path='/resources' element={<Resources />} />
         <Route path='*' element={<Error />} />
         <Route path='/error' element={<Error />} />
+        <Route exact path='/resources/wage-theft' element={<WageTheft />} />
+        <Route exact path='/resources/child-labor' element={<ChildLabor />} />
+        <Route exact path='/resources/workplace-accidents' element={<WorkPlaceAccidents />} />
+        <Route exact path='/resources/migrant-resources' element={<MigrantResources />} />
+        <Route exact path='/resources/workers-rights' element={<WorkersRights />} />
+        <Route exact path='/resources/osh' element={<OccupationSH />} />
       </Routes>
     </div>
   );
