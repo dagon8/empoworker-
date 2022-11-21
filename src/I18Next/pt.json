@@ -1,0 +1,45 @@
+{
+    "home_view": "Ver violações.",
+    "home_prevent": "Prevenir danos.",
+    "home_start": "Comece a pesquisar",
+    "home_company": "sua empresa",
+
+    "home": "Começo",
+    "search": "Pesquisa",
+    "resources": "Recursos",
+    "contact": "Contate-nos",
+    "language": "Língua",
+
+    "resources_wt_title": "Roubo de Salário",
+    "resources_wt_des": "O roubo de salário ocorre sempre que um empregador não paga a um funcionário tudo o que é devido por lei.",
+
+    "resources_cl_title": "Trabalho Infantil",
+    "resources_cl_des": "A exploração de crianças por meio de qualquer forma de trabalho que prive as crianças de sua infância, interfira em sua capacidade de frequentar a escola regular e seja mental, física, social e moralmente prejudicial.",
+
+    "resources_wpa_title": "Acidentes de Trabalho",
+    "resources_wpa_des": "Um incidente ou evento não planejado que leva à lesão de um funcionário.",
+
+    "resources_mr_title": "Recursos Imigrantes",
+    "resources_mr_des": "A Lei de Imigração e Nacionalidade protege os funcionários de serem discriminados por causa de seu status legal nos EUA.",
+
+    "resources_wr_title": "Os Direitos dos Trabalhadores",
+    "resources_wr_des": "Direitos legais e direitos humanos relativos às relações de trabalho entre trabalhadores e empregadores.",
+
+    "resources_osh_title": "Segurança e Saúde Ocupacional",
+    "resources_osh_des": "Trata de todos os aspectos de saúde e segurança no trabalho.",
+
+    "resources_des": "Saiba mais sobre violações relacionadas ao trabalho e seus direitos.",
+
+    "not_found": "Página não encontrada",
+
+    "no_result": "Sem Resultados",
+    "no_result_mess": "Não há empresas que correspondam à sua pesquisa atual.",
+
+    "location": "Localização",
+    "insert_location": " Inserir localização",
+    "violations": "Violações",
+    "insert_violation_num": " Insira o número de violações",
+    "filter": "Filtro",
+    "clear": "Limpar",
+    "total_v": "violações totais"
+}

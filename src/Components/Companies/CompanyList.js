@@ -5,8 +5,12 @@ import CompanyProfileFull from "./CompanyProfileFull.js";
 import InfiniteScroll from "react-infinite-scroll-component";
 import LoadingGif from "../../images/loading.gif";
 import Filter from "../../images/filter.png";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const CompanyList = ({ companies, loading, filter, search, clearFilter }) => {
+  const {t, i18n} = useTranslation()
+
   let companiesList = [];
   if (companies.length !== 0) {
     companiesList = companies;
@@ -67,11 +71,11 @@ const CompanyList = ({ companies, loading, filter, search, clearFilter }) => {
                 fontWeight: "700",
               }}
             >
-              Location
+              {t("location")}
             </p>
           </div>
           <TextField
-            placeholder={" Insert location"}
+            placeholder={t("insert_location")}
             style={{ width: "25vw" }}
             size='small'
             id='locationInput'
@@ -103,13 +107,13 @@ const CompanyList = ({ companies, loading, filter, search, clearFilter }) => {
                 fontWeight: "700",
               }}
             >
-              Violations
+              {t("violations")}
             </p>
           </div>
           <TextField
             type='number'
             size='small'
-            placeholder='Insert number of violations'
+            placeholder={t("insert_violation_num")}
             style={{
               width: "18vw",
             }}
@@ -132,7 +136,7 @@ const CompanyList = ({ companies, loading, filter, search, clearFilter }) => {
             onClick={filter}
           >
             {" "}
-            Filter{" "}
+            {t("filter")}{" "}
           </Button>
           <Button
             variant='contained'
@@ -148,7 +152,7 @@ const CompanyList = ({ companies, loading, filter, search, clearFilter }) => {
             onClick={clearFilter}
           >
             {" "}
-            Clear{" "}
+            {t("clear")}{" "}
           </Button>
         </div>
       </Box>

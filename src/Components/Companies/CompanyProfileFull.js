@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography, Container } from "@mui/material";
 import NoResults from "./NoResults";
 import Circles from "./Circles/Circles.js";
+import { t } from 'i18next'
+import { useTranslation } from "react-i18next";
 
 const CompanyProfileFull = ({ profile }) => {
   let [vCount, setVCount] = useState(0);
+  const {t, i18n} = useTranslation()
 
   useEffect(() => {
     if (profile)
@@ -67,7 +70,7 @@ const CompanyProfileFull = ({ profile }) => {
                 sx={{ mb: 1.5 }}
                 style={{ float: "right", fontSize: "30px" }}
               >
-                Total Violations:{" "}
+                {t("total_v")}:{" "}
                 <span style={{ color: "#FF0000" }}>
                   <strong>{vCount}</strong>
                 </span>

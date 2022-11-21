@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 
@@ -6,6 +7,7 @@ const Navbar = () => {
   const [boxL, setBoxL] = useState(false);
   const [boxR, setBoxR] = useState(false);
   const [boxM, setBoxM] = useState(false);
+  const {t, i18n} = useTranslation()
   return (
     <div
       style={{
@@ -58,7 +60,7 @@ const Navbar = () => {
           onMouseLeave={() => setBoxL(false)}
         >
           <Link to='/' style={{ textDecoration: "none", color: "black" }}>
-            Home
+          {t("home")}
           </Link>
         </div>
 
@@ -75,7 +77,7 @@ const Navbar = () => {
           onMouseLeave={() => setBoxM(false)}
         >
           <Link to='/search' style={{ textDecoration: "none", color: "black" }}>
-            Search
+          {t("search")}
           </Link>
         </div>
 
@@ -95,7 +97,7 @@ const Navbar = () => {
             to='/resources'
             style={{ textDecoration: "none", color: "black" }}
           >
-            Resources
+            {t("resources")}
           </Link>
         </div>
       </div>
