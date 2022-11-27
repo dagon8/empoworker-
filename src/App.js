@@ -13,7 +13,6 @@ import MigrantResources from "./Components/Resources/ResourceCategories/MigrantR
 import WorkersRights from "./Components/Resources/ResourceCategories/WorkersRights";
 import OccupationSH from "./Components/Resources/ResourceCategories/OccupationSH";
 
-
 function App() {
   const [result, setResult] = useState([]);
   const [ogSearch, setOGSearch] = useState([]);
@@ -146,9 +145,21 @@ function App() {
         <Route path='/error' element={<Error />} />
         <Route exact path='/resources/wage-theft' element={<WageTheft />} />
         <Route exact path='/resources/child-labor' element={<ChildLabor />} />
-        <Route exact path='/resources/workplace-accidents' element={<WorkPlaceAccidents />} />
-        <Route exact path='/resources/migrant-resources' element={<MigrantResources />} />
-        <Route exact path='/resources/workers-rights' element={<WorkersRights />} />
+        <Route
+          exact
+          path='/resources/workplace-accidents'
+          element={<WorkPlaceAccidents />}
+        />
+        <Route
+          exact
+          path='/resources/migrant-resources'
+          element={<MigrantResources />}
+        />
+        <Route
+          exact
+          path='/resources/workers-rights'
+          element={<WorkersRights />}
+        />
         <Route exact path='/resources/osh' element={<OccupationSH />} />
       </Routes>
     </div>
