@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #18332D;
+    width: 1240px;
+    height: 800px;
+    margin: 90px 120px 3px;
+    padding-right: 60px;
+}
+
+.header{
+    color: #ff7a40;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.rights-title{
+    color: #f3ff67;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 250px;
+}
+
+.rights-description{
+    font-size: 22px;
+    color:white;
+    display: flex;
+    padding-left: 250px;
+    margin-bottom: 500px;
+    width:850px;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./WageTheft.css";
+import "../ResourceCategories/ResourcesCSS/WageTheft.css";
 
 const WageTheft = () => {
   return (
