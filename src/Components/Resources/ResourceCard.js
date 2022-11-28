@@ -24,7 +24,7 @@ export default function ResourceCard({ category }) {
           backgroundColor: "#ccfcf3",
           display: "flex",
           width: "1000px",
-          height: "136px",
+          // height: "136px",
           borderBottom:"3px solid #86e7d5",
           boxShadow:"none"
         }}
@@ -60,7 +60,9 @@ export default function ResourceCard({ category }) {
             >
               {t(title)}
             </Typography>
-            <Typography
+
+            {/* this was the css for including the resource descriptions on the card */}
+            {/* <Typography
               sx={{
                 typography: "body2",
                 color: "#343741",
@@ -69,7 +71,7 @@ export default function ResourceCard({ category }) {
               }}
             >
               {t(description)}
-            </Typography>
+            </Typography> */}
           </CardContent>
         </div>
 

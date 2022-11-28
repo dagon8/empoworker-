@@ -1,3 +1,9 @@
+@font-face {
+    font-family: LabilGroteskTrial;
+    font-weight: bold;
+    src: url(../../../../fonts/LabilGroteskTrial-Bold.otf) format("opentype");
+}
+
 .container{
     display: flex;
 }
@@ -19,6 +25,7 @@
     font-size: 40px;
     font-weight: bold;
     padding-bottom: 50px;
+    font-family: LabilGroteskTrial;
 }
 
 .wage-title{
