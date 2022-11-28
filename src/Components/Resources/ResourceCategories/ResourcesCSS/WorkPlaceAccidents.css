@@ -2,11 +2,11 @@
     display: flex;
 }
 
-.box{
+.wpa-box{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #18332D;
+    background-color:#ccfcf3;
     width: 1240px;
     height: 800px;
     margin: 90px 120px 3px;
@@ -29,9 +29,9 @@
 
 .work-description{
     font-size: 22px;
-    color:white;
+    color:black;
     display: flex;
-    padding-left: 250px;
+    padding-left: 275px;
     margin-bottom: 500px;
     width:850px;
 }
