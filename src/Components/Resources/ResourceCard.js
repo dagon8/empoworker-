@@ -21,13 +21,17 @@ export default function ResourceCard({ category }) {
     <div>
       <Card
         sx={{
-          backgroundColor: "#bcd2e4",
+          backgroundColor: "#ccfcf3",
           display: "flex",
           width: "1000px",
           height: "136px",
+          borderBottom:"3px solid #86e7d5",
+          boxShadow:"none"
         }}
       >
-        <Box
+      {/* this was the css for the gray icons in the cards */}
+      {/* leaving this in case we need it again */}
+        {/* <Box
           sx={{
             display: "flex",
             flexDirection: "row",
@@ -41,7 +45,7 @@ export default function ResourceCard({ category }) {
           }}
         >
           <InventoryIcon />
-        </Box>
+        </Box> */}
 
         <div className='card-content'>
           <CardContent>
@@ -49,8 +53,9 @@ export default function ResourceCard({ category }) {
               sx={{
                 fontSize: "22px",
                 fontWeight: "bold",
-                marginLeft: "205px",
+                // marginLeft: "205px",
                 padding: "16px",
+                // justifyContent:"flex-start",
               }}
             >
               {t(title)}
@@ -59,7 +64,8 @@ export default function ResourceCard({ category }) {
               sx={{
                 typography: "body2",
                 color: "#343741",
-                marginLeft: "220px",
+                // marginLeft: "220px",
+                paddingLeft:"16px",
               }}
             >
               {t(description)}
