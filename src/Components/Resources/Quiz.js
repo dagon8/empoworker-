@@ -30,12 +30,21 @@ export default function Quiz(){
                 {answerText: "No", isTrue: false},
             ],  
         },
+        {
+            questionText: "Have you faced an injury at work?",
+            exampleText: "",
+            answerOptions: [
+                {answerText: "Yes", isTrue: true},
+                {answerText: "No", isTrue: false},
+            ],  
+        },
     ];
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [wageTheft, setWageTheft] = useState(0);
     const [harassment, setHarrasment] = useState(0);
     const [childLabor, setChildLabor] = useState(0);
+    const [accident, setAccident] = useState(0);
     const [showEvaluation, setEvaluation] = useState(false);
     const [results, setResults] = useState([""]);
 
@@ -46,6 +55,7 @@ export default function Quiz(){
         setWageTheft(0);
         setHarrasment(0);
         setChildLabor(0);
+        setAccident(0);
         setResults([""]);
     }
 
@@ -82,6 +92,9 @@ export default function Quiz(){
         else if (isTrue ===true && currentQuestion===2){
             setChildLabor(childLabor + 1);
         }
+        else if (isTrue ===true && currentQuestion===3){
+            setAccident(accident + 1);
+        }
     }
 
     // based on the value of the category, it adds the type of abuse to the result list 
@@ -97,6 +110,10 @@ export default function Quiz(){
         if (childLabor === 1){ 
             addResult("Child Labor");
         }
+        if (accident === 1){ 
+            addResult("Work Place Accidents");
+        }
+
     }
 
 	return (
@@ -133,11 +150,6 @@ export default function Quiz(){
                 </div>
              {/* </Box> */}
         </Card>
-        // NEEDED LOGIC:
-        // each question corresponds to a certain type of abuse
-        // if the user says yes, we want to increment the abuse type so it can tracked and later displayed
-        // if abuse_num > 1 then at showEvaluation, need to list abuse
-        // currently stuck on incrementing the abuse type 
 	);
     
 }
