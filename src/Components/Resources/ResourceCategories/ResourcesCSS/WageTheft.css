@@ -40,6 +40,19 @@
     color:black;
     display: flex;
     padding-left: 250px;
-    margin-bottom: 500px;
+    /* margin-bottom: 500px; */
     width:850px;
+}
+
+.wage-links{
+    padding-left: 250px;
+    padding-top: 15px;
+    margin-bottom:500px;
+    font-family: LabilGroteskTrial;
+    font-size:18px;
+}
+
+a:visited{
+    text-decoration: none;
+    color:black;
 }
