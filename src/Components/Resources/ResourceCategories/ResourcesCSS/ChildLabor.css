@@ -1,12 +1,18 @@
+@font-face {
+    font-family: LabilGroteskTrial;
+    font-weight: bold;
+    src: url(../../../../fonts/LabilGroteskTrial-Bold.otf) format("opentype");
+}
+
 .container{
     display: flex;
 }
 
-.box{
+.child-box{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #18332D;
+    background-color:#ccfcf3;
     width: 1240px;
     height: 800px;
     margin: 90px 120px 3px;
@@ -18,6 +24,7 @@
     justify-content: center;
     font-size: 40px;
     font-weight: bold;
+    font-family: LabilGroteskTrial;
 }
 
 .child-title{
@@ -29,7 +36,7 @@
 
 .child-description{
     font-size: 22px;
-    color:white;
+    color:black;
     display: flex;
     padding-left: 250px;
     margin-bottom: 500px;

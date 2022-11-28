@@ -5,10 +5,10 @@ import "../ResourceCategories/ResourcesCSS/MigrantResources.css";
 const MigrantResources = () => {
   return (
     <div className="container">
-        <div className="box">
-          <div className= "header">Resources</div>
-          <div className="migrant-title">Immigrant Resources</div>
-          <div className="migrant-description">Wage theft occurs any time an employer does not pay an employee everything the employee is owed by law. </div>
+        <div className="migrant-box">
+          <div className= "header">Immigrant Resources</div>
+          {/* <div className="migrant-title">Immigrant Resources</div> */}
+          <div className="migrant-description">The Immigration and Nationality Act protects employees from being descriminated against because of their legal status in the US.</div>
         </div>
     </div>
    

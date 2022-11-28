@@ -5,10 +5,10 @@ import "../ResourceCategories/ResourcesCSS/WorkersRights.css";
 const WorkersRights = () => {
   return (
     <div className="container">
-        <div className="box">
-          <div className= "header">Resources</div>
-          <div className="rights-title">Worker's Rights Resources</div>
-          <div className="rights-description">Wage theft occurs any time an employer does not pay an employee everything the employee is owed by law. </div>
+        <div className="rights-box">
+          <div className= "header">Worker's Rights</div>
+          {/* <div className="rights-title">Worker's Rights Resources</div> */}
+          <div className="rights-description">Legal rights and human rights relating to labor relations between workers and employers. </div>
         </div>
     </div>
    

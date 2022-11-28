@@ -12,7 +12,6 @@
             "title": "Child Labor",
             "description": "The exploitation of children through any form of work that deprives children of their childhood, interferes with their ability to attend regular school, and is mentally, physically, socially and morally harmful.",
             "id": 2,
-
             "path": "/resources/child-labor",
             "component": "ChildLabor",
             "transid": "cl"
@@ -28,7 +27,7 @@
         },
         {
             "title": "Immigrant Resources",
-            "description": "Wage theft occurs any time an employer does not pay an employee everything the employee is owed by law.",
+            "description": "The Immigration and Nationality Act protects employees from being descriminated against because of their legal status in the US.",
             "id": 4,
             "path": "/resources/migrant-resources",
             "component": "MigrantResources",
