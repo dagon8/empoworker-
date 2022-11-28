@@ -15,7 +15,8 @@ const Resources = () => {
   return (
     <div className="container">
         <div className="resources-box">
-          <div className= "resources-title">{t("resources")}</div>
+          {/* <div className= "resources-title">{t("resources")}</div> */}
+          <div className="learn-title">Learn More</div>
           {/* <div className="description">{t("resources_des")}</div> */}
           <div className="categories">
             <Grid container spacing={3} m={1} display="flex" alignItems="center" flexDirection="column">
