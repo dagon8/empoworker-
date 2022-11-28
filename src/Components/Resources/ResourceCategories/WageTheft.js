@@ -20,12 +20,20 @@ const WageTheft = () => {
 
             <div className="wage-laws">
                 <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
-                    Massachusetts Wage Laws
-                  </a>
+                  Fair Labor Division Multilingual Resources
+                </a>
+
                   <br></br>
-                  <a href="https://www.mass.gov/guides/breaks-and-time-off" target="_blank" rel="noopener noreferrer">
-                    Breaks and Time Off
-                  </a>
+
+                <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
+                  Massachusetts Wage Laws
+                </a>
+
+                  <br></br>
+
+                <a href="https://www.mass.gov/guides/breaks-and-time-off" target="_blank" rel="noopener noreferrer">
+                  Breaks and Time Off
+                </a>
             </div>
           </div>
 
