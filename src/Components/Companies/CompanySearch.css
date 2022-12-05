@@ -10,15 +10,13 @@
     src: url(../../fonts/Metropolis-Black.otf) format("opentype");
 }
 
-
-
 .header{
     display:flex;
 }
 
 
 .profile{
-    transition-duration: .5s
+    transition-duration: 1s
 }
 
 .logo{
@@ -28,11 +26,12 @@ padding-right: 10px;
 .bar-button-container{
     display:flex;
     padding-top: 98px;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     height: 50px;
     padding: 35px 100px 4px;
     background-color:#f3ff67;;
-    width: 100%
+    width: 100vw
 }
 .SearchBar {
     background-color: #fbfcfd;
@@ -70,4 +69,61 @@ padding-right: 10px;
     display: flex;
     flex-grow: 0;
     padding-right: 30px;
+}
+
+.search-bar-item{
+    background-color: white;
+    width: 29vw;
+    border-radius: 5px;
+}
+
+.search-bar{
+}
+
+.button{
+    margin: 0px
+}
+
+.search-bar-container{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 8vw;
+    margin-right: 0px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+
+.no-result{
+    margin: auto;
+    position: absolute;
+    left: 25vw;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    width: 50vw;
+    height: 50vh;
+    background: #FFFFFF;
+    box-shadow: 0px 0.9px 4px -1px rgba(0, 0, 0, 0.08), 0px 2.6px 8px -1px rgba(0, 0, 0, 0.06), 0px 5.7px 12px -1px rgba(0, 0, 0, 0.05), 0px 15px 15px -1px rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
+}
+
+.no-result-paragraph{
+    color: rgb(159, 159, 159)
+}
+
+.no-result-button{
+    margin: 50px 0px 0px 0px;
+    background-color: rgb(211, 253, 253);
+    border-radius: 10px;
+}
+
+.no-result-h4 {
+    padding: 2px 20px;
 }
