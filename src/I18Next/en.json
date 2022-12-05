@@ -1,0 +1,45 @@
+{
+    "home_view": "View violations.",
+    "home_prevent": "Prevent harm.",
+    "home_start": "Start searching",
+    "home_company": "your company",
+
+    "home": "Home",
+    "search": "Search",
+    "resources": "Resources",
+    "contact": "Contact Us",
+    "language": "Language",
+
+    "resources_wt_title": "Wage Theft",
+    "resources_wt_des": "Wage theft occurs any time an employer does not pay an employee everything the employee is owed by law.",
+
+    "resources_cl_title": "Child Labor",
+    "resources_cl_des": "The exploitation of children through any form of work that deprives children of their childhood, interferes with their ability to attend regular school, and is mentally, physically, socially and morally harmful.",
+
+    "resources_wpa_title": "Work Place Accidents",
+    "resources_wpa_des": "An unplanned incident or event that leads to the injury of an employee.",
+
+    "resources_mr_title": "Immigrant Resources",
+    "resources_mr_des": "The Immigration and Nationality Act protects employees from being descriminated against because of their legal status in the US.",
+
+    "resources_wr_title": "Workers' Rights",
+    "resources_wr_des": "Legal rights and human rights relating to labor relations between workers and employers.",
+
+    "resources_osh_title": "Occupational Safety and Health",
+    "resources_osh_des": "Deals with all aspects of health and safety in the workplace.",
+
+    "resources_des": "Learn more about work-related violations and your rights.",
+
+    "not_found": "Page Not Found",
+
+    "no_result": "No Results",
+    "no_result_mess": "There are no companies that match your current search.",
+
+    "location": "Location",
+    "insert_location": " Insert location",
+    "violations": "Violations",
+    "insert_violation_num": "Number of violations",
+    "filter": "Filter",
+    "clear": "Clear",
+    "total_v": "Total Violations"
+}

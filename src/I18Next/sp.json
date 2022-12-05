@@ -1,0 +1,45 @@
+{
+    "home_view": "Descubre infracciones.",
+    "home_prevent": "Previene el daño.",
+    "home_start": "Empieza a buscar",
+    "home_company": "tu empleador",
+
+    "home": "Inicio",
+    "search": "Buscar",
+    "resources": "Recursos",
+    "contact": "Contáctenos",
+    "language": "Idioma",
+
+    "resources_wt_title": "Robo de Salarios",
+    "resources_wt_des": "El robo de salarios ocurre cada vez que un empleador no le paga a un empleado todo lo que la ley le debe.",
+
+    "resources_cl_title": "Trabajo Infantil",
+    "resources_cl_des": "La explotación de los niños a través de cualquier forma de trabajo que prive a los niños de su infancia, interfiere con su capacidad para asistir a la escuela regular y es mental, física, social y moralmente dañina.",
+
+    "resources_wpa_title": "Accidentes de Trabajo",
+    "resources_wpa_des": "Un incidente o evento no planificado que conduce a la lesión de un empleado.",
+
+    "resources_mr_title": "Recursos Para Inmigrantes",
+    "resources_mr_des": "La Ley de Inmigración y Nacionalidad protege a los empleados de ser discriminados debido a su estatus legal en los EE. UU.",
+
+    "resources_wr_title": "Derechos de los Trabajadores",
+    "resources_wr_des": "Derechos jurídicos y derechos humanos relativos a las relaciones laborales entre trabajadores y patrones.",
+
+    "resources_osh_title": "Seguridad y Salud Ocupacional",
+    "resources_osh_des": "Se ocupa de todos los aspectos de la salud y la seguridad en el lugar de trabajo.",
+
+    "resources_des": "Obtenga más información sobre las infracciones relacionadas con el trabajo y sus derechos.",
+
+    "not_found": "Página No Encontrada",
+    
+    "no_result": "No hay resultados",
+    "no_result_mess": "No hay empresas que coincidan con su búsqueda actual.",
+
+    "location": "Ubicación",
+    "insert_location": " Insertar ubicación",
+    "violations": "Infracciones",
+    "insert_violation_num": " Número de violaciones",
+    "filter": "Filtrar",
+    "clear": "Borrar",
+    "total_v": "Infracciones Totales"
+}

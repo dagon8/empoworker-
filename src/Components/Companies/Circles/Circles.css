@@ -1,0 +1,82 @@
+.circle{
+    border-radius: 50%;
+    height: 47%;
+    width: 39%;
+    outline: 0px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 5px black;
+    flex-direction: column;
+    transition: all 1s ease;
+
+}
+
+.circleText {
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    max-width: 10vw;
+    text-align: center
+}
+
+.descText{
+  max-width: 10vw;
+  text-align: center;
+  font-size: 16px
+}
+
+#circle1{
+    position: absolute;
+    left: 30%;
+    top: 0%;
+    transition-duration: .5s;
+  }
+
+#circle2{
+    position : absolute;
+    left: 60%;
+    top: 30%;
+    background-color: #1A5179;
+    transition-duration: .5s;
+    z-index: 999;
+
+  }
+
+#circle3{
+    position : absolute;
+    left: 30%;
+    top: 60%;
+    background-color: #394f4a;
+    transition-duration: .5s;
+    z-index: 1000;
+
+  }
+
+#circle4{
+    position : absolute;
+    top: 30%;
+    background-color: #FF7A40;
+    transition-duration: .5s;
+    z-index: 999;
+  }
+
+#circle1:hover{
+    top: -5px;
+    z-index: 0;
+    box-shadow: 0 10px 10px black
+}
+
+#circle2:hover{
+    top: 28%;
+    box-shadow: 0 10px 10px black
+}
+#circle3:hover{
+    top: 58%;
+    box-shadow: 0 10px 10px black
+}
+#circle4:hover{
+    top: 28%;
+    box-shadow: 0 10px 10px black
+}

@@ -1,0 +1,31 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: start;
+    grid-gap: 10px;
+}
+
+.grid div {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.grid > *:nth-child(3n-1) {
+  justify-self: center;
+  text-align: center;
+}
+
+.grid > *:nth-child(3n) {
+  justify-self: end;
+  text-align: right;
+}
+
+.grid > *:nth-child(3n-1):nth-last-of-type(1) {
+  border-color: red;
+  grid-column: span 2;
+}
+
+.grid > *:nth-child(3n-2):nth-last-of-type(1) {
+  border-color: red;
+  grid-column: span 3;
+}

@@ -1,0 +1,44 @@
+@font-face {
+    font-family: LabilGroteskTrial;
+    font-weight: bold;
+    src: url(../../../../fonts/LabilGroteskTrial-Bold.otf) format("opentype");
+}
+
+.container{
+    display: flex;
+}
+
+.rights-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color:#ccfcf3;
+    width: 1240px;
+    height: 800px;
+    margin: 90px 120px 3px;
+    padding-right: 60px;
+}
+
+.header{
+    color: #ff7a40;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: LabilGroteskTrial;
+}
+
+.rights-title{
+    color: #f3ff67;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 250px;
+}
+
+.rights-description{
+    font-size: 22px;
+    color:black;
+    display: flex;
+    padding-left: 250px;
+    margin-bottom: 500px;
+    width:850px;
+}

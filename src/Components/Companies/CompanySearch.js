@@ -1,81 +1,115 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
-import CompanyCard from './CompanyCard';
+import "./CompanySearch.css";
+import empoworker_logo from "../../images/empoworker_logo.png";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LangBtn from "../LangBtn/LangBtn";
+import { useLocation } from "react-router-dom";
 
-function CompanySearch(props){
-
-    const[value, setValue] = useState('');
-    const[result, setResult] = useState([]);
-
-    const search = () => {
-        if(value.length > 0){
-            fetch('https://empoworker475-default-rtdb.firebaseio.com/companies.json').then(
-                // when it's finished requesting the data 
-                response => response.json()
-                // to have access to the javascript object
-            ).then(responseData => {
-                console.log(responseData)
-                // clear array results so the search will start from stratch
-                setResult([]);
-                let searchQuery = value.toLowerCase(); 
-                // loop through response data so you can loop through the companies
-                for(const key in responseData){
-                    // get the trade name of each company
-                    let company = responseData[key].trade_nm.toLowerCase();
-                    // returns the first character of the search word
-                    // e.g. if we type in "pear" it's not going to match with "apple" 
-                    // because the 'p' is not at the start of "apple"
-                    if(company.slice(0, searchQuery.length).indexOf(searchQuery) !== -1){
-                        // if we type 'p', it will return "pineapple, pear, peach"
-                        setResult(prevResult => {
-                            return [...prevResult, [key, responseData[key]] ]
-                        })
-                    }
-                }
-            }).catch(error => {
-                console.log(error);
-            })
-        } else {
-            // once the user deletes their input or they don't type anything in
-            console.log('no result')
-            setResult([]);
-        }
-    }
-   
-
-    return (
-        <div className="main">
-            <div className="SearchBar" style={{display: "flex"}}>
-            
-            <TextField
-            id="outlined-basic"
-            onChange={(event) => setValue(event.target.value)}
-            value={value}
-            variant="outlined"
-            fullWidth
-            label="Enter Company Name"
-            onKeyPress= {(e) => {
-                if (e.key === 'Enter') {
-                  search()
-                }
-            }}
-            
-            />
-            <button onClick={() => search()} style={{backgroundColor: "#FF7A40", border: "none", width: "100px", borderRadius: "4px", cursor: "pointer" }}><p style={{fontFamily: "Arial, Helvetica, sans-serif", fontWeight: "bold"}}>Search</p></button>
-
-            </div>
-            
-            <div className='searchBack'>
-                {/* loop through result and display all the values */}
-                {result.map((company, index) => {
-                    return (
-                        <div className='searchEntry' key={index}>
-                            <CompanyCard name={company[0]} info={company[1]}/>
-                            <br/>
-                        </div>
-                )})}
-            </div>
+function CompanySearch({ setValue, value, search }) {
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const [route, setRoute] = useState(location.pathname);
+  useEffect(() => {
+    setRoute(location.pathname);
+  }, [location.pathname]);
+  return (
+    <div className='container'>
+      <div className='bar-button-container'>
+        <div>
+          <img
+            style={{ height: "5vh" }}
+            src={empoworker_logo}
+            alt='empoworker logo'
+          />
         </div>
-    )
+
+        <div className='button-container'>
+          <div className='nav-button home-button'>
+            <Button
+              component={Link}
+              to='/'
+              size='small'
+              sx={{ textTransform: "none", color: "black" }}
+            >
+              <p
+                style={{
+                  textDecoration: `${
+                    route === "/" ? "2px underline solid orange" : ""
+                  }`,
+                }}
+              >
+                {" "}
+                {t("home")}{" "}
+              </p>
+            </Button>
+          </div>
+
+          <div className='nav-button search-button'>
+            <Button
+              component={Link}
+              to='/search'
+              size='small'
+              sx={{ textTransform: "none", color: "black" }}
+            >
+              <p
+                style={{
+                  textDecoration: `${
+                    route === "/search" ? "2px underline solid orange" : ""
+                  }`,
+                }}
+              >
+                {" "}
+                {t("search")}{" "}
+              </p>
+            </Button>
+          </div>
+
+          <div className='nav-button resources-button'>
+            <Button
+              component={Link}
+              to='/resources'
+              size='small'
+              sx={{ textTransform: "none", color: "black" }}
+            >
+              <p
+                style={{
+                  textDecoration: `${
+                    route === "/resources" ? "2px underline solid orange" : ""
+                  }`,
+                }}
+              >
+                {" "}
+                {t("resources")}{" "}
+              </p>
+            </Button>
+          </div>
+
+          <div className='nav-button contact-button'>
+            {/* <Button
+              component={Link}
+              to='/'
+              size='small'
+              variant='outlined'
+              sx={{
+                textTransform: "none",
+                color: "black",
+                borderColor: "black",
+                display: "flex",
+                flexDirection: "column",
+                textAlign: "center",
+              }}
+            >
+              {" "}
+              {t("contact")}{" "}
+            </Button> */}
+            <LangBtn></LangBtn>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default CompanySearch
+export default CompanySearch;

@@ -1,22 +1,41 @@
 import React from 'react'
 import Dropdown from "./Dropdown.js"
-
+import Quiz from './Quiz.js'
+import './Resources.css'
+import ResourceCard from './ResourceCard.js'
+import categories from "./ResourceCategories.json"
+import { Grid } from '@mui/material'
+import { useEffect, useState } from 'react'
+import { t } from 'i18next'
+import { useTranslation } from 'react-i18next'
 const Resources = () => {
+
+  const {t, i18n} = useTranslation()
+  
   return (
-    <div>
-        <div style={{backgroundColor: "#18332D",  height: "100vh",  position: "absolute", left: "20vh", right: "20vh", top: "20vh"}}>
-        <h1 style={{color: "white",}}>Resources</h1>
-        
-        <div style={{display: "grid", gridTemplateColumns: "70vh 30vh", gridAutoRows: "50vh 30vh",  position: "absolute", left: "15vw", right: "15vw", top: "20vh"}}>
-        <Dropdown num={1}/>
-        <Dropdown num={2}/>
-        <Dropdown num={3}/>
-        <Dropdown num={4}/>
+    <div className="container">
+        <div className="resources-box">
+          {/* <div className= "resources-title">{t("resources")}</div> */}
+          <div className="learn-title">Learn More</div>
+          {/* <div className="description">{t("resources_des")}</div> */}
+          <div className="categories">
+            <Grid container spacing={3} m={1} display="flex" alignItems="center" flexDirection="column">
+              {categories.map((category) =>  (
+                <Grid item key={category.id}> 
+                  <ResourceCard category={category}/>
+                </Grid>
+              ))}
+            </Grid>
+          <div className="quiz-title">Questionnaire (Optional) </div>
+          </div>
+      
+          <div className="quiz-section">            
+          <Quiz/>
+          </div>
         </div>
-        
-        
-        </div>
+
     </div>
+   
   )
 }
 
