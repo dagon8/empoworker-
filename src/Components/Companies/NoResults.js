@@ -11,7 +11,7 @@ const NoResults = () => {
       {/* {t("no_result_mess")} */}
       <h1 style={{ padding: "25px" }}>Search result not found</h1>
       <p className='no-result-paragraph'>
-        Sorry, there are not results that match your search.
+        Sorry, there are no results that match your search.
       </p>
       <div className='no-result-button'>
         <h3 className='no-result-h4'>Contact Us</h3>
