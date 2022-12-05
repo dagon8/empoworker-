@@ -14,13 +14,19 @@
     flex-direction: column;
     width: 1240px;
     height: auto;
-    margin: 90px 120px 3px;
+    margin: 90px 130px 3px;
     padding-right: 60px;
+    flex: 1 2;
 }
 
 .learn-box{
     background-color: #ccfcf3;
+    flex:1 2 ;
 }
+
+/* @media only screen and (max-width:993px) {
+    text-align: center;
+} */
 
 .learn-title{
     color: #ff7a40;
