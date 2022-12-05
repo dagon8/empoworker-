@@ -11,7 +11,7 @@ const CompanyProfileFull = ({ profile }) => {
   let [vCount, setVCount] = useState(0);
   const {t, i18n} = useTranslation()
 
-  useEffect(() => {
+  useEffect(() => { 
     if (profile)
       setVCount(
         profile[1]["violations"]["overall"]["case_violtn_cnt"]["count"],
