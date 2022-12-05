@@ -12,12 +12,14 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color:#ccfcf3;
+    background-color:white;
     width: 1240px;
     height: 800px;
     margin: 90px 120px 3px;
     padding-right: 60px;
 }
+
+
 
 .header{
     color: #ff7a40;
@@ -28,15 +30,23 @@
     font-family: LabilGroteskTrial;
 }
 
-.wage-title{
-    color: #f3ff67;
+.wage-subheader1{
+    color: #ff7a40;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 250px;
+    margin-top: 100px;
+}
+
+.wage-subheader{
+    color: #ff7a40;
     font-weight: bold;
     font-size: 25px;
     padding-left: 250px;
 }
 
 .wage-description{
-    font-size: 22px;
+    font-size: 20px;
     color:black;
     display: flex;
     padding-left: 250px;
@@ -50,9 +60,48 @@
     margin-bottom:500px;
     font-family: LabilGroteskTrial;
     font-size:18px;
+    margin-top: 100px;
 }
 
 a:visited{
     text-decoration: none;
     color:black;
 }
+
+.line-div{
+    width: 1000px;
+    height: 2px;
+    margin-top: 8px;
+    margin-left: 250px;
+    flex-grow: 0;
+    background-color: black;
+}
+
+.row1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+  
+.name1 {
+    height: 100px;
+    width:400px;
+}
+  
+.name2 {
+    height: 100px;
+}
+
+.the-container{
+    margin-left: 250px;
+}
+  

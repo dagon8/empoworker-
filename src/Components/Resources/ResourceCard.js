@@ -98,7 +98,7 @@ export default function ResourceCard({ category }) {
         to={category.path}
         sx={{
           display: "flex", 
-          border:"3px solid #ccfcf3", 
+          border:"4px solid #ccfcf3", 
           borderRadius:"66px", 
           width:"454px", 
           height:"290px",  

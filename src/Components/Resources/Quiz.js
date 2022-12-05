@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import Card from '@mui/material/Card';
 import { Box } from "@mui/system";
-
+import "./Quiz.css";
+import { Button } from "@mui/material";
 
 export default function Quiz(){
     const questions = [
@@ -117,7 +118,8 @@ export default function Quiz(){
     }
 
 	return (
-        <Card sx={{ maxWidth: 1000, backgroundColor:"azure", marginRight:"500px", marginLeft:"150px" }}>
+        // <Card sx={{ maxWidth: 1000, backgroundColor:"azure", marginRight:"500px", marginLeft:"150px" }}>
+        <div>
             {/* <Box sx={{display: "flex", flexDirection:"column"}}> */}
                 <div className="quiz">
                     {/* HINT: replace "false" with logic to display the 
@@ -125,31 +127,36 @@ export default function Quiz(){
                     {showEvaluation ? (
                         <div className='eval-section'>
                         You are facing this type of abuses(s):
-                            <button onClick={() => showAbuse()}>Results</button>
+                        <br></br>
+                            <Button variant="outlined" onClick={() => showAbuse()}>Results</Button>
                             {results.map((result, index) => (
                                 <div key={index}>
                                 {result}
                                 </div>
                             ))}
-                            <button onClick={handleResetButton}> Reset </button> 
+                            <br></br>
+                            <Button variant="outlined" onClick={handleResetButton}> Reset </Button> 
                         </div>
                     ) : (
                         <>
                             <div className='question-section'>
                                 <div className='question-count'>
-                                    <span>Question {currentQuestion + 1} </span>/{questions.length}
+                                    <span>Q {currentQuestion + 1} </span>/{questions.length}
                                 </div>
+                                <br></br>
                                 <div className='question-text'>{questions[currentQuestion].questionText}</div>
                             </div>
+                            <br></br>
                             <div className='answer-section'>
                                 {questions[currentQuestion].answerOptions.map((answerOption) =>
-                                    <button onClick={() => process(currentQuestion, answerOption.isTrue)}>{answerOption.answerText}</button>)}
+                                    <Button sx={{paddingLeft:"16px"}} variant="outlined" onClick={() => process(currentQuestion, answerOption.isTrue)}>{answerOption.answerText}</Button>)}
                             </div>
                         </>
                     )}
                 </div>
              {/* </Box> */}
-        </Card>
+         {/* </Card> */}
+        </div>
 	);
     
 }

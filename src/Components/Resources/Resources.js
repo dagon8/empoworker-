@@ -28,7 +28,8 @@ const Resources = () => {
                 </Grid>
               ))}
             </Grid>
-          <div className="quiz-title">Questionnaire (Optional) </div>
+
+          <div className="quiz-title">Questionnaire </div>
           </div>
       
           <div className="quiz-section">            

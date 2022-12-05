@@ -1,0 +1,23 @@
+@font-face {
+    font-family: LabilGroteskTrial;
+    /* font-weight: bold; */
+    src: url(../../fonts/LabilGroteskTrial-Fine.otf) format("opentype");
+}
+
+.question-text{
+    font-family: LabilGroteskTrial;
+}
+
+.eval-section{
+    font-family: LabilGroteskTrial;
+}
+
+.quiz-count{
+    font-family: LabilGroteskTrial;
+}
+
+.answer-section{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 500px;
+}
