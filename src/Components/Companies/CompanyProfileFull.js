@@ -3,12 +3,14 @@ import { Box, Typography, Container } from "@mui/material";
 import Circles from "./Circles/Circles.js";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
+import Rating from "./Rating"
+
 
 const CompanyProfileFull = ({ profile }) => {
   let [vCount, setVCount] = useState(0);
   const { t, i18n } = useTranslation();
 
-  useEffect(() => {
+  useEffect(() => { 
     if (profile)
       setVCount(
         profile[1]["violations"]["overall"]["case_violtn_cnt"]["count"],
@@ -46,6 +48,12 @@ const CompanyProfileFull = ({ profile }) => {
         >
           <div style={{ marginLeft: "0px" }}>
             <Typography
+              component={'span'}
+              style={{ fontSize: "20px", width: "50vw", display: 'grid', gridTemplateColumns:'90% 5%'}}
+            >
+              {`${profile[1]["cty_nm"]}, ${profile[1]["st_cd"]} | ${profile[1]["naic"]["naics_code_description"]}`}
+              <Rating score={profile[1]['violations']['score']}></Rating>
+            </Typography>
               sx={{ mb: 1.5 }}
               style={{
                 color: "#101F2D",
