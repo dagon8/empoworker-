@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, Typography, Button, Box } from "@mui/material";
-import { t } from 'i18next'
+import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 import Rating from "./Rating"
 
 const CompanyProfile = ({ company, switchProfile, highlight }) => {
   let [vCount, setVCount] = useState(0);
-  const {t, i18n} = useTranslation()
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     setVCount(company[1]["violations"]["overall"]["case_violtn_cnt"]["count"]);
@@ -16,10 +16,14 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
     <Card
       sx={{ minWidth: 275 }}
       style={{
-        margin: "5px 5px",
-        background: "#EFFBFF",
+        margin: "15px 5px",
+        background: "#CCFCF3",
         cursor: "pointer",
-        boxShadow: `${highlight ? "0 0 70px black" : ""}`,
+        border: `${highlight ? "2px solid #FF7A40" : ""}`,
+        filter: `${highlight ? "drop-shadow(0px 0px 8px #FF7A40)" : ""}`,
+        transitionProperty: "border, filter",
+        transitionTimingFunction: "ease",
+        transitionDuration: ".1s",
       }}
       onClick={() => switchProfile(company)}
       className='profile'

@@ -1,45 +1,9 @@
 .home-container {
-    margin: 10vh;
     display: grid;
     grid-template-columns: 50% 50%;	
     position: fixed;
-    height: 75vh;
+    height: 100vh;
     width: 100vw
-
-}
-
-.left-home {
-    margin: 0;
-    background: #18332D;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.left-title {
-    padding-left: 11%;
-    margin: 0;
-    padding-top: 18rem;
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 4rem;
-
-
-    color: #F3FF67;
-}
-
-.left-sub {
-    padding-left: 6%;
-    position: absolute;
-    width: 100%;
-    margin: 0;
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.5rem;
-
-    color: #FFFFFF;
 }
 
 .right-home{
@@ -59,36 +23,66 @@
     padding-top: 16rem;
 }
 
-.right-container{
-    height: 60%;
-    width: 25.5vw;
-    aspect-ratio: 1;
-    position: absolute;
-    left: 50%;
-    padding-left: 12%;
-    margin: 0;
-    padding-top: 16rem;
-    cursor: pointer;
-    transition-duration: .5s
+.left{
+    height: 100%;
+    background-color: #1A9479
 }
 
-.right-title{
-    position: absolute;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.left-text{
+    color: #F1FF51;
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
-    font-size: 3.5rem;
-    margin: 0px;
-    padding: 0px;
-    color: #101f2d;
-    top: 0%;
-    padding-left: 11%;
+    font-size: 10vh;
+    margin-top: 20vh;
+    margin-left: 5vw;
+    margin-bottom: 0vh;
 }
 
-.right-container:hover{
-    box-shadow: 0 0 70px black;
+.right{
+    height: 100vh;
+    width: 100vw;
+    background: url("sample.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 40vw 75vh ;
+    position: absolute;
+    left: 55%;
+    top: 10%;
 }
 
+.empoworker-logo{
+    position: absolute;
+    top: 40%;
+    left: 55%;
+}
 
+.empoworker-text{
+    color: orange;
+    font-weight: 50px;
+}
 
+.search-bar-item{
+    background-color: white;
+    width: 35vw;
+    border-radius: 5px;
+}
 
+.search-bar-container{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5vh
+}
+
+.search-bar{
+
+}
+
+.button{
+    margin-top: .5vh
+}
+
+.empoworker-logo-img{
+    position: absolute;
+    height: 11vh;
+    top: 25%
+}

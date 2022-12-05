@@ -4,14 +4,15 @@ import WageTheft from "./Components/Resources/ResourceCategories/WageTheft";
 import Resources from "./Components/Resources/Resources";
 import Error from "./Components/Error";
 import Home from "./Components/Home/Home";
+import LMap from "./Components/Map/LMap";
 import CompanySearch from "./Components/Companies/CompanySearch";
 import CompanyList from "./Components/Companies/CompanyList";
-import "./App.css";
 import ChildLabor from "./Components/Resources/ResourceCategories/ChildLabor";
 import WorkPlaceAccidents from "./Components/Resources/ResourceCategories/WorkPlaceAccidents";
 import MigrantResources from "./Components/Resources/ResourceCategories/MigrantResources";
 import WorkersRights from "./Components/Resources/ResourceCategories/WorkersRights";
 import OccupationSH from "./Components/Resources/ResourceCategories/OccupationSH";
+import "./App.css";
 
 function App() {
   const [result, setResult] = useState([]);
@@ -118,15 +119,19 @@ function App() {
   return (
     <div>
       {/* <Navbar/> */}
-      <CompanySearch
-        value={value}
-        setValue={(val) => setValue(val)}
-        search={() => {
-          search();
-        }}
-      />
+      <CompanySearch />
       <Routes>
-        <Route exact path='/' element={<Home />} />
+        <Route
+          exact
+          path='/'
+          element={
+            <Home
+              value={value}
+              setValue={(val) => setValue(val)}
+              search={search}
+            />
+          }
+        />
         <Route
           exact
           path='/search'
@@ -137,6 +142,8 @@ function App() {
               filter={filter}
               search={search}
               clearFilter={clearFilter}
+              value={value}
+              setValue={(val) => setValue(val)}
             />
           }
         />
@@ -161,6 +168,7 @@ function App() {
           element={<WorkersRights />}
         />
         <Route exact path='/resources/osh' element={<OccupationSH />} />
+        <Route exact path='/map' element={<LMap />} />
       </Routes>
     </div>
   );

@@ -38,7 +38,7 @@
     "location": "Location",
     "insert_location": " Insert location",
     "violations": "Violations",
-    "insert_violation_num": " Insert number of violations",
+    "insert_violation_num": "Number of violations",
     "filter": "Filter",
     "clear": "Clear",
     "total_v": "Total Violations"
