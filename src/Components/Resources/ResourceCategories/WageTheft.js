@@ -1,5 +1,5 @@
 import React from "react";
-import "../ResourceCategories/ResourcesCSS/WageTheft.css";
+import "./ResourceCategory.css";
 import Descriptions from "../ViolationGlossary/violationsDescription.json";
 import { Grid, Box } from '@mui/material'
 
@@ -7,18 +7,18 @@ import { Grid, Box } from '@mui/material'
 const WageTheft = () => {
   return (
     <div>
-      <div className="wage-header">
-        <div className="wage-title">
+      <div className="category-header">
+        <div className="category-title">
           Wage Theft
         </div>
       </div>
 
-      <div className="wage-content">
-        <div className="wage-subheader"> What is Wage Theft?</div>
-        <div className="wage-des1"> { Descriptions.wage_theft.category_description} </div>
+      <div className="category-content">
+        <div className="category-subheader"> What is Wage Theft?</div>
+        <div className="category-des1"> { Descriptions.wage_theft.category_description} </div>
       </div>
 
-      <div className="wage-subheader">  Violations under Wage Theft:</div>
+      <div className="category-subheader">  Violations under Wage Theft:</div>
       <div className="line-div"> </div>
       
       <div className="violations-box-w">
@@ -60,8 +60,8 @@ const WageTheft = () => {
     </Box>
     </div>
 
-    <div className="wage-subheader"> Helpful Links: </div>
-    <div className="wage-links">
+    <div className="category-subheader"> Helpful Links: </div>
+    <div className="category-links">
       <ul>
         <li> 
           <a href="https://www.mass.gov/how-to/file-a-workplace-complaint" target="_blank" rel="noopener noreferrer">
