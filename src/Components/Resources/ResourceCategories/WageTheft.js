@@ -1,81 +1,96 @@
 import React from "react";
 import "../ResourceCategories/ResourcesCSS/WageTheft.css";
 import Descriptions from "../ViolationGlossary/violationsDescription.json";
-import { Grid } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 
 
 const WageTheft = () => {
   return (
-    <div className="page-container">
-        
-        <div className="learn-box">
-          <div className="learn-title"> Wage Theft </div>
+    <div>
+      <div className="wage-header">
+        <div className="wage-title">
+          Wage Theft
         </div>
-        
-        <div className="wage-box">
-          <div className="wage-subheader1">What is Wage Theft?</div>
-          <br></br>
-          <div className="wage-description">
-           { Descriptions.wage_theft.category_description}
-          </div>
+      </div>
 
-          <br></br>
-          <div className="wage-subheader"> Violations under wage theft:</div>
+      <div className="wage-content">
+        <div className="wage-subheader"> What is Wage Theft?</div>
+        <div className="wage-des1"> { Descriptions.wage_theft.category_description} </div>
+      </div>
 
-          <div className="line-div">-</div>
+      <div className="wage-subheader">  Violations under Wage Theft:</div>
+      <div className="line-div"> </div>
+      
+      <div className="violations-box-w">
+      <Box sx={{ width: '100%'}}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={6}>
+          <h4>{Descriptions.wage_theft.violations.sca_violtn_cnt.expanded_name}</h4>
+          <p>{Descriptions.wage_theft.violations.sca_violtn_cnt.violation_description}</p>
+          <h1></h1>
+        </Grid>
+        <Grid item xs={6}>
+          <h4>{Descriptions.wage_theft.violations.fmla_violtn_cnt.expanded_name}</h4>
+          <p>{Descriptions.wage_theft.violations.fmla_violtn_cnt.violation_description}</p>
+        </Grid>
+        <Grid item xs={6}>
+          <h4>{Descriptions.wage_theft.violations.dbra_cl_violtn_cnt.expanded_name}</h4>
+          <p>{Descriptions.wage_theft.violations.dbra_cl_violtn_cnt.violation_description}</p>
+          <h1></h1>
+        </Grid>
+        <Grid item xs={6}>
+          <h4>{Descriptions.wage_theft.violations.flsa_smw14_violtn_cnt.expanded_name}</h4>
+          <p>{Descriptions.wage_theft.violations.flsa_smw14_violtn_cnt.violation_description}</p>
+        </Grid>
+        <Grid item xs={6}>
+          <h4>{Descriptions.wage_theft.violations.cwhssa_violtn_cnt.expanded_name}</h4>
+          <p>{Descriptions.wage_theft.violations.cwhssa_violtn_cnt.violation_description}</p>
+          <h1></h1>
+        </Grid>
+        <Grid item xs={6}>
+          <h4>{Descriptions.wage_theft.violations.pca_violtn_cnt.expanded_name}</h4>
+          <p>{Descriptions.wage_theft.violations.pca_violtn_cnt.violation_description}</p>
+        </Grid>
+        <Grid item xs={6}>
+          <h4>{Descriptions.wage_theft.violations.ca_violtn_cnt.expanded_name}</h4>
+          <p>{Descriptions.wage_theft.violations.ca_violtn_cnt.violation_description}</p>
+          <h1></h1>
+        </Grid>
+      </Grid>
+    </Box>
+    </div>
 
+    <div className="wage-subheader"> Helpful Links: </div>
+    <div className="wage-links">
+      <ul>
+        <li> 
+          <a href="https://www.mass.gov/how-to/file-a-workplace-complaint" target="_blank" rel="noopener noreferrer">
+                    Report Wage Theft 
+          </a>
+        </li>
 
-          <div className="the-container">
-            <div className="row1">
-              <div className="column"> 
-                <div className="name1"> {Descriptions.wage_theft.violations.sca_violtn_cnt.expanded_name}: 
-                  <div className="name1-des">
-                  {Descriptions.wage_theft.violations.sca_violtn_cnt.violation_description}
-                  </div>
-                </div>
-              </div>
-              <div className="column"> 
-                <div className="name2"> {Descriptions.wage_theft.violations.fmla_violtn_cnt.expanded_name}: 
-                <br></br>
-                {Descriptions.wage_theft.violations.fmla_violtn_cnt.violation_description}
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="wage-links">
-          Helpful Links
-            <div className="wage-report">
-                <a href="https://www.mass.gov/how-to/file-a-workplace-complaint" target="_blank" rel="noopener noreferrer">
-                    Report Wage Theft
-                  </a>
-            </div>
-
-            <div className="wage-laws">
-                <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
+        <li> 
+          <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
                   Fair Labor Division Multilingual Resources
-                </a>
-
-                  <br></br>
-
-                <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
+          </a>
+        </li>
+        
+        <li> 
+          <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
                   Massachusetts Wage Laws
-                </a>
-
-                  <br></br>
-
-                <a href="https://www.mass.gov/guides/breaks-and-time-off" target="_blank" rel="noopener noreferrer">
+          </a>
+        </li>
+        
+        <li> 
+          <a href="https://www.mass.gov/guides/breaks-and-time-off" target="_blank" rel="noopener noreferrer">
                   Breaks and Time Off
-                </a>
-            </div>
-          </div>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-          
-        </div>
     </div>
    
-  )
-  };
+  )};
   
   export default WageTheft;
