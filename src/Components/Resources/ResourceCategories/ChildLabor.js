@@ -1,7 +1,7 @@
 import React from "react";
 import "./ResourceCategory.css";
 import Descriptions from "../ViolationGlossary/violationsDescription.json";
-import { Grid, Box } from '@mui/material'
+import { Grid, Box, Typography } from '@mui/material'
 
 
 const ChildLabor = () => {
@@ -15,7 +15,9 @@ const ChildLabor = () => {
 
       <div className="category-content">
         <div className="category-subheader"> What is Child Labor?</div>
-        <div className="category-des1"> { Descriptions.wage_theft.category_description} </div>
+        <div className="category-des1"> 
+        <Typography sx={{width:"1000px"}}> {Descriptions.child_labor.category_description} </Typography>
+        </div>
       </div>
 
       <div className="category-subheader">  Violations under Child Labor:</div>
@@ -25,35 +27,8 @@ const ChildLabor = () => {
       <Box sx={{ width: '100%'}}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.sca_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.sca_violtn_cnt.violation_description}</p>
-          <h1></h1>
-        </Grid>
-        <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.fmla_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.fmla_violtn_cnt.violation_description}</p>
-        </Grid>
-        <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.dbra_cl_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.dbra_cl_violtn_cnt.violation_description}</p>
-          <h1></h1>
-        </Grid>
-        <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.flsa_smw14_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.flsa_smw14_violtn_cnt.violation_description}</p>
-        </Grid>
-        <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.cwhssa_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.cwhssa_violtn_cnt.violation_description}</p>
-          <h1></h1>
-        </Grid>
-        <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.pca_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.pca_violtn_cnt.violation_description}</p>
-        </Grid>
-        <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.ca_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.ca_violtn_cnt.violation_description}</p>
+          <h4>{Descriptions.child_labor.violations.flsa_cl_violtn_cnt.expanded_name}</h4>
+          <p>{Descriptions.child_labor.violations.flsa_cl_violtn_cnt.violation_description}</p>
           <h1></h1>
         </Grid>
       </Grid>
