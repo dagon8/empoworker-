@@ -40,27 +40,33 @@ const ChildLabor = () => {
       <ul>
         <li> 
           <a href="https://www.mass.gov/how-to/file-a-workplace-complaint" target="_blank" rel="noopener noreferrer">
-                    Report Wage Theft 
+                    Report Child Labor
           </a>
         </li>
 
         <li> 
-          <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
-                  Fair Labor Division Multilingual Resources
+          <a href="https://www.mass.gov/info-details/massachusetts-law-about-child-labor" target="_blank" rel="noopener noreferrer">
+                  Massachusetts Law about Child Labor
           </a>
         </li>
         
         <li> 
-          <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
-                  Massachusetts Wage Laws
+          <a href="https://www.mass.gov/doc/child-labor-laws-poster/download " target="_blank" rel="noopener noreferrer">
+                  Massachusetts Child Labor Laws - English
           </a>
         </li>
         
         <li> 
-          <a href="https://www.mass.gov/guides/breaks-and-time-off" target="_blank" rel="noopener noreferrer">
-                  Breaks and Time Off
+          <a href="https://www.mass.gov/doc/child-labor-laws-poster-spanish/download" target="_blank" rel="noopener noreferrer">
+                  Massachusetts Child Labor Laws - Spanish
           </a>
         </li>
+
+        <li> 
+          <a href="https://www.mass.gov/files/documents/2016/08/on/cll-portuguese.pdf" target="_blank" rel="noopener noreferrer">
+                  Massachusetts Child Labor Laws - Portuegese
+          </a>
+        </li>  
       </ul>
     </div>
 
