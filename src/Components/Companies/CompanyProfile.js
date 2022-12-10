@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, CardContent, Typography, Button, Box } from "@mui/material";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
+import Rating from "./Rating"
 
 const CompanyProfile = ({ company, switchProfile, highlight }) => {
   let [vCount, setVCount] = useState(0);
@@ -53,12 +54,15 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
           </Box>
 
           <Typography
+            component={'span'}
             sx={{ fontSize: 18 }}
             gutterBottom
-            style={{ color: "#393434", float: "right", margin: "1vh 0vw" }}
+            style={{ color: "#393434", float: "right", margin: "1vh 0vw", display: 'grid', gridTemplateColumns: '6vw 1vw'}}
           >
-            {`${vCount}`} {t("violations")} &#128308;
+            <>{`${vCount}`} {t("violations")}</>   
+            <Rating score={company[1]['violations']['score']}></Rating>
           </Typography>
+          
         </Box>
 
         {/* <Typography

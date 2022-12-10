@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import "./CompanySearch.css";
 import empoworker_logo from "../../images/empoworker_logo.png";
@@ -6,9 +6,15 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LangBtn from "../LangBtn/LangBtn";
+import { useLocation } from "react-router-dom";
 
 function CompanySearch({ setValue, value, search }) {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const [route, setRoute] = useState(location.pathname);
+  useEffect(() => {
+    setRoute(location.pathname);
+  }, [location.pathname]);
   return (
     <div className='container'>
       <div className='bar-button-container'>
@@ -28,8 +34,16 @@ function CompanySearch({ setValue, value, search }) {
               size='small'
               sx={{ textTransform: "none", color: "black" }}
             >
-              {" "}
-              {t("home")}{" "}
+              <p
+                style={{
+                  textDecoration: `${
+                    route === "/" ? "2px underline solid orange" : ""
+                  }`,
+                }}
+              >
+                {" "}
+                {t("home")}{" "}
+              </p>
             </Button>
           </div>
 
@@ -40,8 +54,16 @@ function CompanySearch({ setValue, value, search }) {
               size='small'
               sx={{ textTransform: "none", color: "black" }}
             >
-              {" "}
-              {t("search")}{" "}
+              <p
+                style={{
+                  textDecoration: `${
+                    route === "/search" ? "2px underline solid orange" : ""
+                  }`,
+                }}
+              >
+                {" "}
+                {t("search")}{" "}
+              </p>
             </Button>
           </div>
 
@@ -52,8 +74,16 @@ function CompanySearch({ setValue, value, search }) {
               size='small'
               sx={{ textTransform: "none", color: "black" }}
             >
-              {" "}
-              {t("resources")}{" "}
+              <p
+                style={{
+                  textDecoration: `${
+                    route === "/resources" ? "2px underline solid orange" : ""
+                  }`,
+                }}
+              >
+                {" "}
+                {t("resources")}{" "}
+              </p>
             </Button>
           </div>
 
