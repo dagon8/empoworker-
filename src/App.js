@@ -11,7 +11,7 @@ import ChildLabor from "./Components/Resources/ResourceCategories/ChildLabor";
 import WorkPlaceAccidents from "./Components/Resources/ResourceCategories/WorkPlaceAccidents";
 import MigrantResources from "./Components/Resources/ResourceCategories/MigrantResources";
 import WorkersRights from "./Components/Resources/ResourceCategories/WorkersRights";
-import OccupationSH from "./Components/Resources/ResourceCategories/OccupationSH";
+import Osha from "./Components/Resources/ResourceCategories/Osha";
 import "./App.css";
 
 function App() {
@@ -167,7 +167,7 @@ function App() {
           path='/resources/workers-rights'
           element={<WorkersRights />}
         />
-        <Route exact path='/resources/osh' element={<OccupationSH />} />
+        <Route exact path='/resources/osh' element={<Osha />} />
         <Route exact path='/map' element={<LMap />} />
       </Routes>
     </div>

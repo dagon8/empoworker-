@@ -4,7 +4,7 @@ import Descriptions from "../ViolationGlossary/violationsDescription.json";
 import { Grid, Box, Typography } from '@mui/material'
 
 
-const OccupationSH = () => {
+const Osha = () => {
   return (
     <div>
       <div className="category-header">
@@ -72,4 +72,4 @@ const OccupationSH = () => {
    
   )};
   
-  export default OccupationSH;
+  export default Osha;
