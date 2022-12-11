@@ -31,7 +31,7 @@ function App() {
     }
 
     if (value.length > 0) {
-      fetch("https://empoworkerbase-default-rtdb.firebaseio.com/companies.json")
+      fetch("https://empoworkerdemo-default-rtdb.firebaseio.com/companies.json")
         .then(
           // when it's finished requesting the data
           (response) => response.json(),
