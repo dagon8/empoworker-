@@ -4,6 +4,10 @@
     src: url(../../fonts/LabilGroteskTrial-Bold.otf) format("opentype");
 }
 
+/* .page-container{
+    display: flex;
+} */
+
 .container{
     display: flex;
 }
@@ -12,7 +16,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 1240px;
+    /* width: 1240px; */
     height: auto;
     margin: 90px 130px 3px;
     padding-right: 60px;
@@ -21,12 +25,13 @@
 
 .learn-box{
     background-color: #ccfcf3;
-    flex:1 2 ;
+    display: flex;
+    /* position : absolute; */
+    width: auto;
+    /* flex: 1 2; */
+    /* max-width: 100%; */
 }
 
-/* @media only screen and (max-width:993px) {
-    text-align: center;
-} */
 
 .learn-title{
     color: #ff7a40;
@@ -37,6 +42,7 @@
     display: flex;
     padding-top: 70px;
     padding-bottom: 70px;
+    flex: 1 2;
 }
 
 .description{
