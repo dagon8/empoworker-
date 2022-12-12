@@ -4,7 +4,6 @@ import WageTheft from "./Components/Resources/ResourceCategories/WageTheft";
 import Resources from "./Components/Resources/Resources";
 import Error from "./Components/Error";
 import Home from "./Components/Home/Home";
-import LMap from "./Components/Map/LMap";
 import CompanySearch from "./Components/Companies/CompanySearch";
 import CompanyList from "./Components/Companies/CompanyList";
 import ChildLabor from "./Components/Resources/ResourceCategories/ChildLabor";
@@ -168,7 +167,6 @@ function App() {
           element={<WorkersRights />}
         />
         <Route exact path='/resources/osh' element={<Osha />} />
-        <Route exact path='/map' element={<LMap />} />
       </Routes>
     </div>
   );
