@@ -56,6 +56,10 @@ function QuizTwo() {
 
   return (
     <form>
+      {/* style={{display:"flex",
+       flexDirection:"column",
+        justifyContent:"center",
+         alignItems:"center"}}> */}
       {questions.map((question) => (
         <div key={question.id}>
           <label> Q {question.text}</label>
@@ -65,13 +69,14 @@ function QuizTwo() {
             name={question.id}
             value="yes"
             onClick={(e) => handleChange(e, question.id)}
+            // style={{justifyContent:"space-between", alignItems:"center"}}
           />
             Yes
           <input
             type="radio"
             name={question.id}
             value="no"
-            // style={{marginRight:"20px"}}
+            // style={{ marginRight:"20px", justifyContent:"center", alignItems:"center"}}
             onClick={(e) => handleChange(e, question.id)}
           />
           No
@@ -85,7 +90,6 @@ function QuizTwo() {
           </div>
         ))}
       </div>
-
     </form>
   );
 }

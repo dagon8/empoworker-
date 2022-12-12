@@ -46,7 +46,7 @@ const Resources = () => {
         >
           <div className='quiz-title'>Questionnaire </div>
           <div className='quiz-section' style={{ marginLeft: "0px" }}>
-            <Quiz Two/>
+            <QuizTwo />
           </div>
         </div>
       </div>

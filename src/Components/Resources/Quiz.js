@@ -145,7 +145,7 @@ export default function Quiz() {
                 }}
               >
                 <Button variant='outlined' onClick={() => showAbuse()}>
-                  Results
+                  <h1>Results</h1>
                 </Button>
                 <Button variant='outlined' onClick={handleResetButton}>
                   {" "}
