@@ -1,3 +1,15 @@
+# Empoworker Project Description
+
+Because of lack of knowledge about worker’s rights and their employer, 
+undocumented workers are often victims of wage theft or accidents in unsafe 
+working conditions.
+
+Empoworker seeks to help undocumented workers assess the reliability of an 
+employer/company by giving them access to a company’s workforce violation 
+information gathered from government datasets
+
+https://www.empoworker-bu.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
