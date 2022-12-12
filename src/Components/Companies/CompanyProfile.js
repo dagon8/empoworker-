@@ -57,7 +57,7 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
             component={'span'}
             sx={{ fontSize: 18 }}
             gutterBottom
-            style={{ color: "#393434", float: "right", margin: "1vh 0vw", display: 'grid', gridTemplateColumns: '6vw 1vw'}}
+            style={{ color: "#393434", float: "right", margin: "0.5vh 0vw", display: 'grid', gridTemplateColumns: '7vw 1vw'}}
           >
             <>{`${vCount}`} {t("violations")}</>   
             <Rating score={company[1]['violations']['score']}></Rating>
