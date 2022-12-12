@@ -32,7 +32,7 @@ function CompanySearch({ setValue, value, search }) {
               component={Link}
               to='/'
               size='small'
-              sx={{ textTransform: "none", color: "black" }}
+              sx={{ textTransform: "none", color: "black", height:30 }}
             >
               <p
                 style={{
@@ -52,7 +52,7 @@ function CompanySearch({ setValue, value, search }) {
               component={Link}
               to='/search'
               size='small'
-              sx={{ textTransform: "none", color: "black" }}
+              sx={{ textTransform: "none", color: "black", height:30 }}
             >
               <p
                 style={{
@@ -72,7 +72,7 @@ function CompanySearch({ setValue, value, search }) {
               component={Link}
               to='/resources'
               size='small'
-              sx={{ textTransform: "none", color: "black" }}
+              sx={{ textTransform: "none", color: "black", height:30 }}
             >
               <p
                 style={{
