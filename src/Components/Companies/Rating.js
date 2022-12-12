@@ -13,8 +13,8 @@ const Rating = ({score}) => {
     return(
         <>
             <div style={{
-                height: '25px',
-                width: '25px',
+                height: '1vw',
+                width: '1vw',
                 backgroundColor: myStyle,
                 borderRadius: '50%',
             }}>

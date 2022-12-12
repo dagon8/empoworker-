@@ -38,8 +38,6 @@ const Circles = ({ profile }) => {
 
   useEffect(() => {}, [profile]);
 
-  useEffect(() => {}, [profile]);
-
   return (
     <div
       style={{

@@ -6,7 +6,7 @@ import "./Home.css";
 import SearchIcon from "@mui/icons-material/Search";
 import empoworker_logo from "../../images/empoworker_logo.png";
 
-export default function Home({ value, setValue, search }) {
+export default function Home({ value, setValue, search, cityVal, setCityVal, citySearch}) {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
@@ -38,7 +38,29 @@ export default function Home({ value, setValue, search }) {
                   </InputAdornment>
                 ),
               }}
-              className='search-bar-item'
+              className='comp-search-bar-item'
+            />
+
+            <TextField
+              id='outlined-basic'
+              onChange={(event) => setCityVal(event.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  search();
+                }
+              }}
+              value={cityVal}
+              variant='outlined'
+              label={t("search")}
+              size='small'
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position='start'>
+                    <SearchIcon />
+                  </InputAdornment>
+                ),
+              }}
+              className='city-search-bar-item'
             />
           </div>
 
