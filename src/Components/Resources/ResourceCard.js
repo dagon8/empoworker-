@@ -12,7 +12,6 @@ import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 import { textAlign } from "@mui/system";
 
-
 export default function ResourceCard({ category }) {
   const { t, i18n } = useTranslation();
 
@@ -93,34 +92,34 @@ export default function ResourceCard({ category }) {
 
   return (
     <div>
-    <Box
+      <Box
         component={Link}
         to={category.path}
         sx={{
-          display: "flex", 
-          border:"4px solid #ccfcf3", 
-          borderRadius:"66px", 
-          width:"454px", 
-          height:"290px",  
-          alignItems: "center", 
-          justifyContent:"center",
-          textDecoration:"none",
-          "&:hover": {boxShadow: "10px 10px 10px 0 #ff7032"},
-       }}>
-      
-      <div className='card-content'>
-        <Typography
-          sx={{
-            fontSize: "22px",
-            fontWeight: "bold",
-            textAlign:"center",
-            flexGrow: "1",
-          }}
-        >
-          {t(title)}
-        </Typography>
-      </div>
+          display: "flex",
+          border: "4px solid #ccfcf3",
+          borderRadius: "66px",
+          width: "454px",
+          height: "290px",
+          alignItems: "center",
+          justifyContent: "center",
+          textDecoration: "none",
+          "&:hover": { boxShadow: "10px 10px 10px 0 #ff7032" },
+        }}
+      >
+        <div className='card-content'>
+          <Typography
+            sx={{
+              fontSize: "22px",
+              fontWeight: "bold",
+              textAlign: "center",
+              flexGrow: "1",
+            }}
+          >
+            {t(title)}
+          </Typography>
+        </div>
       </Box>
     </div>
-  )
+  );
 }

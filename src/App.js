@@ -16,7 +16,6 @@ import { db } from "./Util/fire-config";
 import Osha from "./Components/Resources/ResourceCategories/Osha";
 import "./App.css";
 
-
 function App() {
   const [result, setResult] = useState([]);
   const [ogSearch, setOGSearch] = useState([]);
@@ -35,38 +34,39 @@ function App() {
       setResult([]);
     }
 
-
-    if (cityVal.length > 0){
+    if (cityVal.length > 0) {
       const dbRef = ref(db);
-      get(child(dbRef, `locations/${cityVal}`)).then((snapshot) => {
-        console.log("searched for :", cityVal)
-        if (snapshot.exists()) {
-          console.log(snapshot.val());
-          let responseData = snapshot.val()
-          for (let i = 0; i < responseData.length; i++) {
-            let key = responseData[i].company_key              
+      get(child(dbRef, `locations/${cityVal}`))
+        .then((snapshot) => {
+          console.log("searched for :", cityVal);
+          if (snapshot.exists()) {
+            console.log(snapshot.val());
+            let responseData = snapshot.val();
+            for (let i = 0; i < responseData.length; i++) {
+              let key = responseData[i].company_key;
               setResult((prevResult) => {
                 return [...prevResult, [key, responseData[i]]];
               });
-              
+
               setOGSearch((prevResult) => {
                 return [...prevResult, [key, responseData[i]]];
               });
-          }
+            }
 
-          setLoading(false);
-        } else {
-          console.log("No data available");
-        }
-      }).catch((error) => {
-        console.error(error);
-      });
-    }else {
+            setLoading(false);
+          } else {
+            console.log("No data available");
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    } else {
       // once the user deletes their input or they don't type anything in
       console.log("no result");
       setResult([]);
     }
-  }
+  };
 
   const search = () => {
     setLoading(true);
@@ -76,12 +76,12 @@ function App() {
       setLoading(false);
       setResult([]);
       if (cityVal.length > 0) {
-        citySearch()
+        citySearch();
       }
     }
 
     if (value.length > 0) {
-      fetch("https://empoworkerdemo-default-rtdb.firebaseio.com/companies.json")
+      fetch("https://empoworkerdemo-default-rtdb.firebaseio.com/employers.json")
         .then(
           // when it's finished requesting the data
           (response) => response.json(),
@@ -96,15 +96,13 @@ function App() {
             if (
               company.slice(0, searchQuery.length).indexOf(searchQuery) !== -1
             ) {
-              
               setResult((prevResult) => {
                 return [...prevResult, [key, responseData[key]]];
               });
-              
+
               setOGSearch((prevResult) => {
                 return [...prevResult, [key, responseData[key]]];
               });
-              
             }
           }
           setLoading(false);
@@ -135,9 +133,8 @@ function App() {
       } else if (!num && str) {
         let lStr = str.toLowerCase();
         setResult(
-          ogSearch.filter(
-            (obj) =>
-              obj[1]["cty_nm"].toLowerCase().includes(lStr)
+          ogSearch.filter((obj) =>
+            obj[1]["cty_nm"].toLowerCase().includes(lStr),
           ),
         );
       } else if (num && str) {
@@ -163,8 +160,6 @@ function App() {
     document.getElementById("locationInput").value = "";
   };
 
-
-
   return (
     <div>
       {/* <Navbar/> */}
@@ -178,7 +173,6 @@ function App() {
               value={value}
               setValue={(val) => setValue(val)}
               search={search}
-
               citySearch={citySearch}
               cityVal={cityVal}
               setCityVal={(cval) => setCityVal(cval)}
@@ -197,7 +191,6 @@ function App() {
               clearFilter={clearFilter}
               value={value}
               setValue={(val) => setValue(val)}
-
               citySearch={citySearch}
               cityVal={cityVal}
               setCityVal={(cval) => setCityVal(cval)}

@@ -28,15 +28,36 @@ const Circles = ({ profile }) => {
       for (let title in vals) {
         ranks.push([title, vals[title]]);
       }
+      ranks.sort(function (a, b) {
+        return a[1] - b[1];
+      });
+      setRankClasses({
+        child_labor: "first",
+        workplace_accident: "first",
+        wage_theft: "first",
+        migrant: "first",
+      });
     }
-    ranks.sort(function (a, b) {
-      return a[1] - b[1];
-    });
-
-    setRankClasses({});
   }, [profile]);
 
-  useEffect(() => {}, [profile]);
+  useEffect(() => {
+    if (profile) {
+      let rankWords = ["first", "second", "third", "fourth"];
+      let titles = [
+        "child_labor",
+        "workplace_accident",
+        "wage_theft",
+        "migrant",
+      ];
+      let rankWordIndex = 0;
+      for (let i = 0; i < titles.length; i++) {
+        if (i !== 0) {
+          if (ranks[[titles][i]] === ranks[[titles][i - 1]]) {
+          }
+        }
+      }
+    }
+  }, [profile]);
 
   return (
     <div
