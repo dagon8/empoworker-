@@ -82,7 +82,7 @@ function CompanySearch({ setValue, value, search }) {
                 }}
               >
                 {" "}
-                {t("resources")}{" "}
+                {t("learn_more")}{" "}
               </p>
             </Button>
           </div>

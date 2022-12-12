@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, CardContent, Typography, Button, Box } from "@mui/material";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
-import Rating from "./Rating"
+import Rating from "./Rating";
 
 const CompanyProfile = ({ company, switchProfile, highlight }) => {
   let [vCount, setVCount] = useState(0);
@@ -44,25 +44,20 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
             >
               {`${company[1]["cty_nm"]}, ${company[1]["st_cd"]}`}
             </Typography>
-            <Typography
-              sx={{ fontSize: 18 }}
-              gutterBottom
-              style={{ color: "#393434", maxWidth: "350px" }}
-            >
-              {`${company[1]["naic"]["naics_code_description"]}`}
-            </Typography>
           </Box>
 
           <Typography
-            component={'span'}
+            component={"span"}
             sx={{ fontSize: 18 }}
             gutterBottom
+
             style={{ color: "#393434", float: "right", margin: "0.5vh 0vw", display: 'grid', gridTemplateColumns: '7vw 1vw'}}
           >
-            <>{`${vCount}`} {t("violations")}</>   
-            <Rating score={company[1]['violations']['score']}></Rating>
+            <>
+              {`${vCount}`} {t("violations")}
+            </>
+            <Rating score={company[1]["violations"]["score"]}></Rating>
           </Typography>
-          
         </Box>
 
         {/* <Typography
@@ -77,6 +72,13 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
           style={{ color: "#101F2D", fontWeight: "800", fontSize: "20px" }}
         >
           {`${company[1]["trade_nm"]}`}
+        </Typography>
+        <Typography
+          sx={{ fontSize: 18 }}
+          gutterBottom
+          style={{ color: "#393434", maxWidth: "350px" }}
+        >
+          {`${company[1]["naic"]["naics_code_description"]}`}
         </Typography>
       </CardContent>
     </Card>

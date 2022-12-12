@@ -14,6 +14,9 @@
     display:flex;
 }
 
+/* .cs-container{
+    max-width:100%;
+} */
 
 .profile{
     transition-duration: 1s
@@ -31,7 +34,7 @@ padding-right: 10px;
     height: 50px;
     padding: 35px 100px 4px;
     background-color:#f3ff67;;
-    width: 100vw
+    width: 100vw;
 }
 .SearchBar {
     background-color: #fbfcfd;

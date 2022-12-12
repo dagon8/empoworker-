@@ -5,7 +5,6 @@ import WageTheft from "./Components/Resources/ResourceCategories/WageTheft";
 import Resources from "./Components/Resources/Resources";
 import Error from "./Components/Error";
 import Home from "./Components/Home/Home";
-import LMap from "./Components/Map/LMap";
 import CompanySearch from "./Components/Companies/CompanySearch";
 import CompanyList from "./Components/Companies/CompanyList";
 import ChildLabor from "./Components/Resources/ResourceCategories/ChildLabor";
@@ -14,6 +13,7 @@ import MigrantResources from "./Components/Resources/ResourceCategories/MigrantR
 import WorkersRights from "./Components/Resources/ResourceCategories/WorkersRights";
 import OccupationSH from "./Components/Resources/ResourceCategories/OccupationSH";
 import { db } from "./Util/fire-config";
+import Osha from "./Components/Resources/ResourceCategories/Osha";
 import "./App.css";
 
 
@@ -224,8 +224,7 @@ function App() {
           path='/resources/workers-rights'
           element={<WorkersRights />}
         />
-        <Route exact path='/resources/osh' element={<OccupationSH />} />
-        <Route exact path='/map' element={<LMap />} />
+        <Route exact path='/resources/osh' element={<Osha />} />
       </Routes>
     </div>
   );

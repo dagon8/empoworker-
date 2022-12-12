@@ -17,13 +17,13 @@
             "transid": "cl"
         },
         {
-            "title": "Work Place Accidents",
-            "description": "An unplanned incident or event that leads to the injury of an employee.",
+            "title": "Occupational Safety and Health",
+            "description": "Deals with all aspects of health and safety in the workplace.",
             "id": 3,
 
-            "path": "/resources/workplace-accidents",
-            "component": "WorkplaceAccidents",
-            "transid": "wpa"
+            "path" : "/resources/osh",
+            "component": "Osh",
+            "transid": "osh"   
         },
         {
             "title": "Immigrant Resources",
@@ -41,12 +41,4 @@
             "path" : "/resources/workers-rights",
             "component" : "WorkersRights",
             "transid": "wr"
-        },
-        {
-            "title": "Occupational Safety and Health",
-            "description": "Deals with all aspects of health and safety in the workplace.",
-            "id": 6,   
-            "path" : "/resources/osh",
-            "component": "Osh",
-            "transid": "osh"   
-}]
+        }]
