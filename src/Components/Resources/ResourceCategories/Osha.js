@@ -43,26 +43,20 @@ const Osha = () => {
     <div className="category-links">
       <ul>
         <li> 
-          <a href="https://www.mass.gov/how-to/file-a-workplace-complaint" target="_blank" rel="noopener noreferrer">
-                    Report Wage Theft 
+          <a href="https://www.osha.gov/workers/file-complaint" target="_blank" rel="noopener noreferrer">
+                    Report Safety & Health Violation
           </a>
         </li>
 
         <li> 
-          <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
-                  Fair Labor Division Multilingual Resources
+          <a href="https://www.osha.gov/workers#:~:text=To%20discuss%20a%20health%20and,information%20will%20be%20kept%20confidential." target="_blank" rel="noopener noreferrer">
+                    OSHA Worker Rights and Protections
           </a>
         </li>
-        
+
         <li> 
-          <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
-                  Massachusetts Wage Laws
-          </a>
-        </li>
-        
-        <li> 
-          <a href="https://www.mass.gov/guides/breaks-and-time-off" target="_blank" rel="noopener noreferrer">
-                  Breaks and Time Off
+          <a href="https://www.mass.gov/workplace-safety-and-health-program-wshp" target="_blank" rel="noopener noreferrer">
+                  Workplace Safety and Health Program (WSHP)
           </a>
         </li>
       </ul>

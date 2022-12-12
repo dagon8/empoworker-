@@ -61,28 +61,17 @@ const WorkersRights = () => {
     <div className="category-links">
       <ul>
         <li> 
-          <a href="https://www.mass.gov/how-to/file-a-workplace-complaint" target="_blank" rel="noopener noreferrer">
-                    Report Wage Theft 
+          <a href="https://www.mass.gov/service-details/report-an-accident-file-a-complaint-or-request-assistance" target="_blank" rel="noopener noreferrer">
+                  Report an accident, file a complaint, or request assistance 
           </a>
         </li>
 
         <li> 
-          <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
-                  Fair Labor Division Multilingual Resources
+          <a href="https://www.mass.gov/topics/workers-rights-safety" target="_blank" rel="noopener noreferrer">
+                   Massachusetts Workers' Rights & Safety
           </a>
         </li>
         
-        <li> 
-          <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
-                  Massachusetts Wage Laws
-          </a>
-        </li>
-        
-        <li> 
-          <a href="https://www.mass.gov/guides/breaks-and-time-off" target="_blank" rel="noopener noreferrer">
-                  Breaks and Time Off
-          </a>
-        </li>
       </ul>
     </div>
 

@@ -3,6 +3,9 @@ import Card from "@mui/material/Card";
 import { Box } from "@mui/system";
 import "./Quiz.css";
 import { Button } from "@mui/material";
+import Test from "./QuizTwo";
+import NewTest from "./NewTest";
+import QuizTwo from "./QuizTwo";
 
 export default function Quiz() {
   const questions = [
@@ -142,7 +145,7 @@ export default function Quiz() {
                 }}
               >
                 <Button variant='outlined' onClick={() => showAbuse()}>
-                  Results
+                  <h1>Results</h1>
                 </Button>
                 <Button variant='outlined' onClick={handleResetButton}>
                   {" "}
