@@ -61,16 +61,23 @@
     font-weight: 50px;
 }
 
-.search-bar-item{
+.comp-search-bar-item{
     background-color: white;
-    width: 35vw;
+    width: 20vw;
+    border-radius: 5px;
+}
+.city-search-bar-item{
+    background-color: white;
+    width: 10vw;
     border-radius: 5px;
 }
 
 .search-bar-container{
     display: flex;
-    justify-content: flex-start;
-    margin-top: 5vh
+    flex-direction: row;
+    width: fit-content;
+
+    border: solid red;
 }
 
 .search-bar{
@@ -78,7 +85,7 @@
 }
 
 .button{
-    margin-top: .5vh
+    margin-top: .6vh
 }
 
 .empoworker-logo-img{

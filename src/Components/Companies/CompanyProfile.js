@@ -50,13 +50,8 @@ const CompanyProfile = ({ company, switchProfile, highlight }) => {
             component={"span"}
             sx={{ fontSize: 18 }}
             gutterBottom
-            style={{
-              color: "#393434",
-              float: "right",
-              margin: "0vh 0vw",
-              display: "grid",
-              gridTemplateColumns: "8vw 1vw",
-            }}
+
+            style={{ color: "#393434", float: "right", margin: "0.5vh 0vw", display: 'grid', gridTemplateColumns: '7vw 1vw'}}
           >
             <>
               {`${vCount}`} {t("violations")}
