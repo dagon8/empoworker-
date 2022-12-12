@@ -3,6 +3,9 @@ import Card from '@mui/material/Card';
 import { Box } from "@mui/system";
 import "./Quiz.css";
 import { Button } from "@mui/material";
+import Test from "./QuizTwo";
+import NewTest from "./NewTest";
+import QuizTwo from "./QuizTwo";
 
 export default function Quiz(){
     const questions = [
@@ -118,9 +121,7 @@ export default function Quiz(){
     }
 
 	return (
-        // <Card sx={{ maxWidth: 1000, backgroundColor:"azure", marginRight:"500px", marginLeft:"150px" }}>
         <div>
-            {/* <Box sx={{display: "flex", flexDirection:"column"}}> */}
                 <div className="quiz">
                     {/* HINT: replace "false" with logic to display the 
             score when the user has answered all the questions */}
@@ -154,8 +155,7 @@ export default function Quiz(){
                         </>
                     )}
                 </div>
-             {/* </Box> */}
-         {/* </Card> */}
+
         </div>
 	);
     

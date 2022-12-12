@@ -168,7 +168,7 @@ function App() {
           element={<WorkersRights />}
         />
         <Route exact path='/resources/osh' element={<Osha />} />
-        <Route exact path='/map' element={<LMap />} />
+        {/* <Route exact path='/map' element={<LMap />} /> */}
       </Routes>
     </div>
   );

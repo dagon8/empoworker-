@@ -80,6 +80,24 @@ const WageTheft = () => {
                   Massachusetts Wage Laws
           </a>
         </li>
+
+        <li> 
+          <a href="https://www.mass.gov/doc/massachusetts-wage-hour-laws-poster/download" target="_blank" rel="noopener noreferrer">
+                  Massachusetts Wage & Hour Laws Poster - English
+          </a>
+        </li>
+
+        <li> 
+          <a href="https://www.mass.gov/doc/massachusetts-wage-hour-laws-poster-spanish/download" target="_blank" rel="noopener noreferrer">
+                  Massachusetts Wage & Hour Laws Poster - Spanish
+          </a>
+        </li>
+
+        <li> 
+          <a href="https://www.mass.gov/doc/massachusetts-wage-hour-laws-poster-portuguese/download" target="_blank" rel="noopener noreferrer">
+                  Massachusetts Wage & Hour Laws Poster - Portuguese
+          </a>
+        </li>
         
         <li> 
           <a href="https://www.mass.gov/guides/breaks-and-time-off" target="_blank" rel="noopener noreferrer">
