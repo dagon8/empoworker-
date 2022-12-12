@@ -11,7 +11,7 @@ import ChildLabor from "./Components/Resources/ResourceCategories/ChildLabor";
 import WorkPlaceAccidents from "./Components/Resources/ResourceCategories/WorkPlaceAccidents";
 import MigrantResources from "./Components/Resources/ResourceCategories/MigrantResources";
 import WorkersRights from "./Components/Resources/ResourceCategories/WorkersRights";
-import OccupationSH from "./Components/Resources/ResourceCategories/OccupationSH";
+//import OccupationSH from "./Components/Resources/ResourceCategories/OccupationSH";
 import { db } from "./Util/fire-config";
 import Osha from "./Components/Resources/ResourceCategories/Osha";
 import "./App.css";

@@ -77,7 +77,7 @@
     flex-direction: row;
     width: fit-content;
 
-    border: solid red;
+    /* border: solid red; */
 }
 
 .search-bar{
