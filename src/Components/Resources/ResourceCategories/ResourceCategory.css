@@ -94,3 +94,6 @@ a:visited{
     background-color: black;
 }
 
+li {
+    margin-bottom: 10px;
+}

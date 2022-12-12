@@ -28,21 +28,22 @@ const MigrantResources = () => {
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
           <h4>U Visa</h4>
-          <p>{Descriptions.workplace_accident.violations.osha_violtn_cnt.violation_description}</p>
+          <Typography>The U nonimmigrant status (U visa) is set aside for victims of certain crimes who have suffered mental or 
+          physical abuse and are helpful to law enforcement or government officials in the investigation or prosecution 
+          of criminal activity.</Typography>
           <h1></h1>
         </Grid>
         <Grid item xs={6}>
           <h4>Pro Se</h4>
-          <p>{Descriptions.workplace_accident.violations.crew_violtn_cnt.violation_description}</p>
+          <Typography>Pro se legal action is another way to refer to self-representation during a legal claim. To appear pro se before the
+           court means to appear without representation from an attorney.</Typography>
         </Grid>
         <Grid item xs={6}>
           <h4>Labor Trafficking</h4>
-          <p>{Descriptions.workplace_accident.violations.osha_violtn_cnt.violation_description}</p>
+          <Typography>Labor trafficking is a form of modern-day slavery in which individuals perform labor or services through the use of force, fraud, or coercion.
+              Labor trafficking includes situations of debt bondage, forced labor, and involuntary child labor. Labor traffickers use violence, threats, lies, and other
+              forms of coercion to force people to work against their will in many industries. </Typography>
           <h1></h1>
-        </Grid>
-        <Grid item xs={6}>
-          <h4>Something</h4>
-          <p>{Descriptions.workplace_accident.violations.crew_violtn_cnt.violation_description}</p>
         </Grid>
       </Grid>
     </Box>
@@ -82,7 +83,7 @@ const MigrantResources = () => {
 
         <li> 
           <a href="https://cgrs.uchastings.edu/sites/default/files/CGRS%20DV%20Pro%20Se%20Manual_Final_2013.pdf" target="_blank" rel="noopener noreferrer">
-                  Pro Se Manual: Asylum, Withholding of Removal, and Convention Against Torture Protection for Survivors of Domestic Violence - English
+                  Pro Se Manual: Asylum, Withholding of Removal, and Convention <br></br>Against Torture Protection for Survivors of Domestic Violence - English
           </a>
         </li>
 
