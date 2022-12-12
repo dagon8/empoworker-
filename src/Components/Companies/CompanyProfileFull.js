@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Container } from "@mui/material";
+import { Box, Typography, Container, Tooltip } from "@mui/material";
 import Circles from "./Circles/Circles.js";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
+import Rating from "./Rating";
+import Info from "./info.png";
 
 const CompanyProfileFull = ({ profile }) => {
   let [vCount, setVCount] = useState(0);
@@ -84,12 +86,24 @@ const CompanyProfileFull = ({ profile }) => {
               <span>{vCount} </span>
               {t("total_v")}
             </Typography>
-            <div style={{ fontSize: "2.5vh" }}>&#128308;</div>
+            <div style={{ fontSize: "2.5vh" }}>
+              <Rating score={profile[1]["violations"]["score"]}></Rating>
+            </div>
           </div>
         </div>
 
         <Circles profile={profile} />
       </Container>
+      <Tooltip
+        title='The amount of violations displayed are limited to those that have been reported'
+        placement='right'
+      >
+        <img
+          src={Info}
+          alt='info'
+          style={{ width: "1.1vw", height: "2vh", marginLeft: "5px" }}
+        />
+      </Tooltip>
     </Box>
   );
 };

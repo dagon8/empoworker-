@@ -1,11 +1,63 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { t } from "i18next";
 import "./Circles.css";
 
 const Circles = ({ profile }) => {
+  const [vals, setVals] = useState({});
+  const [ranks, setRanks] = useState([]);
+  const [rankClasses, setRankClasses] = useState({});
   const { t, i18n } = useTranslation();
   const [hovDesc, setHovDesc] = useState("");
+
+  useEffect(() => {
+    setRanks([]);
+    if (profile) {
+      setVals({
+        child_labor: profile[1]["violations"]["child_labor"]["category_total"],
+        workplace_accident:
+          profile[1]["violations"]["workplace_accident"]["category_total"],
+        wage_theft: profile[1]["violations"]["wage_theft"]["category_total"],
+        migrant: profile[1]["violations"]["migrant"]["category_total"],
+      });
+    }
+  }, [profile]);
+
+  useEffect(() => {
+    if (profile) {
+      for (let title in vals) {
+        ranks.push([title, vals[title]]);
+      }
+      ranks.sort(function (a, b) {
+        return a[1] - b[1];
+      });
+      setRankClasses({
+        child_labor: "first",
+        workplace_accident: "first",
+        wage_theft: "first",
+        migrant: "first",
+      });
+    }
+  }, [profile]);
+
+  useEffect(() => {
+    if (profile) {
+      let rankWords = ["first", "second", "third", "fourth"];
+      let titles = [
+        "child_labor",
+        "workplace_accident",
+        "wage_theft",
+        "migrant",
+      ];
+      let rankWordIndex = 0;
+      for (let i = 0; i < titles.length; i++) {
+        if (i !== 0) {
+          if (ranks[[titles][i]] === ranks[[titles][i - 1]]) {
+          }
+        }
+      }
+    }
+  }, [profile]);
 
   return (
     <div
@@ -15,6 +67,7 @@ const Circles = ({ profile }) => {
         height: "54vh",
         marginTop: "5px",
       }}
+      className='container'
     >
       <div
         className='circle'
@@ -30,10 +83,7 @@ const Circles = ({ profile }) => {
         }}
       >
         {hovDesc === "wage_theft" ? (
-          <p className='descText'>
-            Wage theft occurs any time an employer does not pay an employee
-            everything the employee is owed by law.
-          </p>
+          <p className='descText'>{t("resources_wt_des")}</p>
         ) : (
           <>
             <p className='circleText'>{t("resources_wt_title")}</p>
@@ -53,11 +103,7 @@ const Circles = ({ profile }) => {
         }}
       >
         {hovDesc === "migrant" ? (
-          <p className='descText'>
-            This category represents violations that pertain to migrant workers
-            and their employers. The violations below represent the violation of
-            acts to protect documented and undocumented immigrants.
-          </p>
+          <p className='descText'>{t("resources_wr_des")}</p>
         ) : (
           <>
             <p className='circleText'>{t("resources_wr_title")}</p>
@@ -77,10 +123,7 @@ const Circles = ({ profile }) => {
         }}
       >
         {hovDesc === "workplace_accident" ? (
-          <p className='descText'>
-            An OSHA violation occurs when a company or employee willingly or
-            unknowingly ignores potential and real safety hazards.
-          </p>
+          <p className='descText'>{t("resources_osh_des")}</p>
         ) : (
           <>
             <p className='circleText'>{t("resources_osh_title")}</p>
@@ -101,11 +144,7 @@ const Circles = ({ profile }) => {
         }}
       >
         {hovDesc === "child_labor" ? (
-          <p className='descText'>
-            The child labor laws were enacted to ensure that when young people
-            work, the work is safe and does not jeopardize their health,
-            well-being or educational opportunities.
-          </p>
+          <p className='descText'>{t("resources_cl_des")}</p>
         ) : (
           <>
             <p className='circleText'>{t("resources_cl_title")}</p>

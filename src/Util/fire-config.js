@@ -6,13 +6,13 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC97_5nlekB1Ge7zrkJ1HoAia_Nj02GlCI",
-  authDomain: "empoworkerbase.firebaseapp.com",
-  databaseURL: "https://empoworkerbase-default-rtdb.firebaseio.com",
-  projectId: "empoworkerbase",
-  storageBucket: "empoworkerbase.appspot.com",
-  messagingSenderId: "430092950273",
-  appId: "1:430092950273:web:f566c5bb3c18e0e3205900"
+  apiKey: "AIzaSyDd8_hhARNusjGLZKdMrsc3jE0rG3r-yWw",
+  authDomain: "empoworkerdemo.firebaseapp.com",
+  databaseURL: "https://empoworkerdemo-default-rtdb.firebaseio.com",
+  projectId: "empoworkerdemo",
+  storageBucket: "empoworkerdemo.appspot.com",
+  messagingSenderId: "732774087936",
+  appId: "1:732774087936:web:52b0e6242c758cafe3c7e5"
 };
 
 // Initialize Firebase

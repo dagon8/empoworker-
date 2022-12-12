@@ -4,39 +4,67 @@
     src: url(../../../../fonts/LabilGroteskTrial-Bold.otf) format("opentype");
 }
 
-.container{
-    display: flex;
-}
 
-.wage-box{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color:#ccfcf3;
-    width: 1240px;
-    height: 800px;
-    margin: 90px 120px 3px;
-    padding-right: 60px;
-}
-
-.header{
+/* for the page header */
+.category-header{
     color: #ff7a40;
+    display: flex;
+    background-color: #ccfcf3;
     justify-content: center;
     font-size: 40px;
     font-weight: bold;
-    padding-bottom: 50px;
+    height: 100px;
+    padding-top: 50px;
     font-family: LabilGroteskTrial;
 }
 
-.wage-title{
-    color: #f3ff67;
+.category-subheader1{
+    color: #ff7a40;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     padding-left: 250px;
+    margin-top: 50px;
 }
 
-.wage-description{
+/* What is category Theft? & Vioaltions under category theft*/
+.category-subheader{
+    color: #ff7a40;
+    font-weight: bold;
     font-size: 22px;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+/* the one being used for definition */
+.category-des1{
+    margin-left: 250px;
+    font-size: 18px;
+}
+
+/* uusing */
+.violations-box-w{
+    display: flex;
+    margin-left: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* using */
+.violations-box-w p{
+    width:450px;
+    /* border-bottom: 1px solid black; */
+}
+
+/* using */
+.violations-box-w h1{
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+    padding-top: 5px;
+    width: 177%;
+}
+
+.category-description{
+    font-size: 20px;
     color:black;
     display: flex;
     padding-left: 250px;
@@ -44,15 +72,25 @@
     width:850px;
 }
 
-.wage-links{
-    padding-left: 250px;
-    padding-top: 15px;
-    margin-bottom:500px;
+.category-links{
+    margin-left: 250px;
     font-family: LabilGroteskTrial;
-    font-size:18px;
+    font-weight: bold;
+    font-size:15px;
+    margin-bottom: 75px;
 }
 
 a:visited{
     text-decoration: none;
     color:black;
 }
+
+.line-div{
+    width: 1100px;
+    height: 2px;
+    margin-top: 8px;
+    margin-left: 250px;
+    flex-grow: 0;
+    background-color: black;
+}
+

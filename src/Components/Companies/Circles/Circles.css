@@ -9,12 +9,11 @@
     box-shadow: 0 3px 5px black;
     flex-direction: column;
     transition: all 1s ease;
-
 }
 
 .circleText {
     font-weight: 700;
-    margin-top: 0px;
+    margin-top: 5px;
     margin-bottom: 20px;
     font-size: 18px;
     max-width: 10vw;
@@ -24,7 +23,7 @@
 .descText{
   max-width: 10vw;
   text-align: center;
-  font-size: 16px
+  font-size: 1vw
 }
 
 #circle1{
@@ -38,7 +37,7 @@
     position : absolute;
     left: 60%;
     top: 30%;
-    background-color: #1A5179;
+    background-color: #6587FF;
     transition-duration: .5s;
     z-index: 999;
 
@@ -48,7 +47,7 @@
     position : absolute;
     left: 30%;
     top: 60%;
-    background-color: #394f4a;
+    background-color: #1FD7AE;
     transition-duration: .5s;
     z-index: 1000;
 
@@ -79,4 +78,25 @@
 #circle4:hover{
     top: 28%;
     box-shadow: 0 10px 10px black
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.first{
+  
+}
+
+.second{
+}
+
+.third{
+}
+
+.fourth {
+
 }

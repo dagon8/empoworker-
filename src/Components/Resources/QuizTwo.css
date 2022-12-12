@@ -1,0 +1,8 @@
+@font-face {
+    font-family: LabilGroteskTrial;
+    font-weight: bold;
+    src: url(../../fonts/LabilGroteskTrial-Fine.otf) format("opentype");
+}
+ .h2{
+    font-family: LabilGroteskTrial;
+ }

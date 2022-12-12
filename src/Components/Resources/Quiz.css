@@ -1,0 +1,39 @@
+@font-face {
+    font-family: LabilGroteskTrial;
+    /* font-weight: bold; */
+    src: url(../../fonts/LabilGroteskTrial-Fine.otf) format("opentype");
+}
+
+
+
+.eval-section{
+    font-family: LabilGroteskTrial;
+}
+
+.quiz-count{
+    font-family: LabilGroteskTrial;
+}
+
+.answer-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-text{
+    font-family: LabilGroteskTrial;
+    text-align: center;
+}
+
+.quiz-subsection{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.quiz-section{
+    padding-left: 0px
+}
