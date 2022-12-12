@@ -4,9 +4,7 @@
     src: url(../../fonts/LabilGroteskTrial-Fine.otf) format("opentype");
 }
 
-.question-text{
-    font-family: LabilGroteskTrial;
-}
+
 
 .eval-section{
     font-family: LabilGroteskTrial;
@@ -18,6 +16,24 @@
 
 .answer-section{
     display: flex;
-    justify-content: space-between;
-    padding-right: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-text{
+    font-family: LabilGroteskTrial;
+    text-align: center;
+}
+
+.quiz-subsection{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.quiz-section{
+    padding-left: 0px
 }
