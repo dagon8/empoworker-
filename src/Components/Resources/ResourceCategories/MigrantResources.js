@@ -1,13 +1,26 @@
 import React from "react";
 import "./ResourceCategory.css";
 import Descriptions from "../ViolationGlossary/violationsDescription.json";
-import { Grid, Box, Typography } from '@mui/material'
+import { Grid, Box, Typography, IconButton } from '@mui/material'
+import { useNavigate } from "react-router";
+import WestIcon from '@mui/icons-material/West';
+
 
 
 const MigrantResources = () => {
+  let navigate = useNavigate();
+
   return (
     <div>
-      <div className="category-header">
+       <div className="category-header" style={{display:"flex", flexDirection:"row"}}>
+        <div className="back-button">
+            <IconButton
+            sx={{alignItems:"flex-start", justifyContent:"flex-start"}}
+            onClick={()=> navigate(-1)}>
+            <WestIcon />
+            </IconButton>
+        </div>
+       
         <div className="category-title">
           Immigrant Resources
         </div>

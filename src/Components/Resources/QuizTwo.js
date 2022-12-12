@@ -3,7 +3,7 @@ import "./QuizTwo.css"
 import { Typography } from '@mui/material';
 
 function QuizTwo() {
-  const [responses, setResponses] = useState([]);
+  const [responses, setResponses] = useState(new Set());
   const [results, setResults] = useState([]);
 
   const questions = [
@@ -41,17 +41,8 @@ function QuizTwo() {
 
   function handleChange(e, id) {
     const value = e.target.value === 'yes' ? true : false;
-    // if (!responses?.includes(value)) {
-    //     setResponses({ ...responses, [id]: value });
-    // }
     setResponses({ ...responses, [id]: value });
 
-
-    const uniqueResponses = responses.filter(
-        (response, index) => responses.indexOf(response) === index
-      );
-
-      setResults(uniqueResponses);
   }
 
   return (
