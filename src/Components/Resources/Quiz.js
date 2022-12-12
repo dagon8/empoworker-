@@ -165,7 +165,7 @@ export default function Quiz() {
             </div>
           </div>
         ) : (
-          <div className='question-subsection'>
+          <div className='question-subsection' style={{ textAlign: "center" }}>
             <div
               style={{
                 width: "35vw",

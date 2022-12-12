@@ -33,7 +33,10 @@ const Circles = ({ profile }) => {
       return a[1] - b[1];
     });
 
-    setRankClasses({});
+    setRankClasses({
+      child_labor: "",
+      workplace_accident: "",
+    });
   }, [profile]);
 
   useEffect(() => {}, [profile]);

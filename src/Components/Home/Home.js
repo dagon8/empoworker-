@@ -6,7 +6,14 @@ import "./Home.css";
 import SearchIcon from "@mui/icons-material/Search";
 import empoworker_logo from "../../images/empoworker_logo.png";
 
-export default function Home({ value, setValue, search, cityVal, setCityVal, citySearch}) {
+export default function Home({
+  value,
+  setValue,
+  search,
+  cityVal,
+  setCityVal,
+  citySearch,
+}) {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
@@ -27,6 +34,7 @@ export default function Home({ value, setValue, search, cityVal, setCityVal, cit
                   search();
                 }
               }}
+              placeholder={"Search company"}
               value={value}
               variant='outlined'
               label={t("search")}
@@ -50,6 +58,7 @@ export default function Home({ value, setValue, search, cityVal, setCityVal, cit
                 }
               }}
               value={cityVal}
+              placeholder={"Search city"}
               variant='outlined'
               label={t("search")}
               size='small'

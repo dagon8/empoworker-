@@ -8,7 +8,7 @@ import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
-import QuizTwo from './QuizTwo.js'
+import QuizTwo from "./QuizTwo.js";
 const Resources = () => {
   const { t, i18n } = useTranslation();
 
@@ -45,7 +45,10 @@ const Resources = () => {
           }}
         >
           <div className='quiz-title'>Questionnaire </div>
-          <div className='quiz-section' style={{ marginLeft: "0px" }}>
+          <div
+            className='quiz-section'
+            style={{ marginLeft: "0px", textAlign: "center" }}
+          >
             <QuizTwo />
           </div>
         </div>

@@ -18,8 +18,8 @@ const CompanyList = ({
   clearFilter,
   value,
   setValue,
-  cityVal, 
-  setCityVal, 
+  cityVal,
+  setCityVal,
   citySearch,
 }) => {
   const { t, i18n } = useTranslation();
@@ -53,54 +53,64 @@ const CompanyList = ({
           alignItems: "center",
           flexDirection: "row",
           marginBottom: "0px",
-          marginTop: "0px",
+          marginTop: "2rem",
         }}
       >
         <div className='search-bar-container'>
           <div className='search-bar'>
-            <TextField
-              id='outlined-basic'
-              onChange={(event) => setValue(event.target.value)}
-              onKeyPress={(e) => {
-                if (e.key === "Enter") {
-                  search();
-                }
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                direction: "row",
               }}
-              value={value}
-              variant='outlined'
-              label={t("search")}
-              size='small'
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position='start'>
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-              }}
-              className='comp-search-bar-item'
-            />
+            >
+              <TextField
+                id='outlined-basic'
+                onChange={(event) => setValue(event.target.value)}
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") {
+                    search();
+                  }
+                }}
+                placeholder={"Search company"}
+                value={value}
+                variant='outlined'
+                label={t("search")}
+                size='small'
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position='start'>
+                      <SearchIcon />
+                    </InputAdornment>
+                  ),
+                }}
+                className='comp-search-bar-item'
+              />
 
-            <TextField
-              id='outlined-basic'
-              onChange={(event) => setCityVal(event.target.value)}
-              onKeyPress={(e) => {
-                if (e.key === "Enter") {
-                  search();
-                }
-              }}
-              value={cityVal}
-              variant='outlined'
-              label={t("search")}
-              size='small'
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position='start'>
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-              }}
-              className='city-search-bar-item'
-            />
+              <TextField
+                id='outlined-basic'
+                onChange={(event) => setCityVal(event.target.value)}
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") {
+                    search();
+                  }
+                }}
+                placeholder={"Search city"}
+                value={cityVal}
+                variant='outlined'
+                label={t("search")}
+                size='small'
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position='start'>
+                      <SearchIcon />
+                    </InputAdornment>
+                  ),
+                }}
+                className='city-search-bar-item'
+              />
+            </div>
           </div>
 
           <div className='button'>
@@ -125,7 +135,6 @@ const CompanyList = ({
             display: "flex",
             alignItems: "center",
             marginLeft: "2vw",
-            marginTop: "3vh",
           }}
         >
           <p style={{ paddingRight: "1vw" }}>Filter by</p>
