@@ -114,9 +114,9 @@ const CompanyList = ({
             <div
               style={{
                 backgroundColor: "#F0F0F0",
-                margin: "0px",
                 textAlign: "center",
-                height: "4.75vh",
+                alignItems: "normal",
+                height: "5vh",
                 borderRadius: "5px",
                 outlineColor: "#F0F0F0",
               }}
@@ -124,7 +124,9 @@ const CompanyList = ({
               <p
                 style={{
                   fontSize: "14px",
-                  padding: "0px 5px 5px 5px",
+                  padding: "0px",
+                  margin: "0px",
+                  paddingTop: "1.5vh",
                   fontWeight: "700",
                 }}
               >
@@ -149,9 +151,9 @@ const CompanyList = ({
             <div
               style={{
                 backgroundColor: "#F0F0F0",
-                margin: "0px",
                 textAlign: "center",
-                height: "4.75vh",
+                alignItems: "normal",
+                height: "5vh",
                 borderRadius: "5px",
                 outlineColor: "#F0F0F0",
               }}
@@ -159,7 +161,9 @@ const CompanyList = ({
               <p
                 style={{
                   fontSize: "14px",
-                  padding: "0px 5px 5px 5px",
+                  padding: "0px",
+                  margin: "0px",
+                  paddingTop: "1.5vh",
                   fontWeight: "700",
                 }}
               >
