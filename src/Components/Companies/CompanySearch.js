@@ -95,7 +95,7 @@ function CompanySearch({ setValue, value, search }) {
               variant='outlined'
               sx={{
                 textTransform: "none",
-                color: "black",
+                color: "black", 
                 borderColor: "black",
                 display: "flex",
                 flexDirection: "column",
