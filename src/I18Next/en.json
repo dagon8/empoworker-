@@ -90,7 +90,7 @@
     "what_wr": "What are Workers' Rights?",
     "violation_wr":"Violations under Workers' Rights:",
     "report_wr":"Report an accident, file a complaint, or request assistance ",
-    "mass_wr":"Massachusetts Workers' Rights & Safety",
+    "mass_wr":"Massachusetts Workers' Rights & Safety", 
 
     "sca_violtn":"Service Contract Act Violations",
     "sca_violtn_des":"The McNamara-O Hara Service Contract Act requires contractors and subcontractors performing services on prime contracts in excess of $2,500 to pay service employees in various classes no less than the wage rates and fringe benefits found prevailing in the locality, or the rates (including prospective increases) contained in a predecessor contractor's collective bargaining agreement.",
@@ -110,5 +110,5 @@
     "flsa_cl_violtn": "Fair Labor Standards Act - Child Labor Violations",
     "flsa_cl_violtn_des": "FLSA restricts the hours that youth under 16 years of age can work and lists hazardous occupations too dangerous for young workers to perform."
 
-    
+
 }
