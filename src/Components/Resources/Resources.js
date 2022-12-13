@@ -44,7 +44,7 @@ const Resources = () => {
             alignItems: "center",
           }}
         >
-          <div className='quiz-title'>Questionnaire </div>
+          <div className='quiz-title'>{t("questi")}</div>
           <div
             className='quiz-section'
             style={{ marginLeft: "0px", textAlign: "center" }}

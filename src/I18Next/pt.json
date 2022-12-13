@@ -35,6 +35,8 @@
     "no_result": "Sem Resultados",
     "no_result_mess": "Não há empresas que correspondam à sua pesquisa atual.",
     "no_result_mess2": "Sinta-se à vontade para enviar outra entrada ou explorar nossa página \"Saiba mais\".",
+    "result": "Resultado",
+
 
     "location": "Localização",
     "insert_location": " Inserir localização",
@@ -126,5 +128,21 @@
      "h1a_violtn": "",
      "h1a_violtn_des":"",
      "eev_violtn": "Violação da Lei de Padrões de Emprego",
-     "eev_violtn_des": "Os empregadores são obrigados a verificar a identidade e a autorização de trabalho dos indivíduos contratados para trabalhar nos Estados Unidos."
+     "eev_violtn_des": "Os empregadores são obrigados a verificar a identidade e a autorização de trabalho dos indivíduos contratados para trabalhar nos Estados Unidos.",
+
+     "questi": "Questionário",
+     "q1":"Você não está recebendo todas as horas que trabalhou?",
+     "a1":"Isso é uma violação de Roubo de Salário.",
+     "q2":"Você é ou conhece alguém menor de 18 anos que trabalha mais de 9 horas por dia?",
+     "a2":"Isso é uma violação de trabalho infantil.",
+     "q3":"Você já enfrentou alguma lesão no trabalho?",
+     "a3":"Isso é uma violação de Segurança e Saúde Ocupacional.",
+     "q4":"Você está recebendo menos do que o salário mínimo (US$ 14,25 por hora)?",
+     "a4":"Isso é uma violação de Roubo de Salário.",
+     "q5":"Você desenvolveu algum problema de saúde devido ao seu atual local de trabalho?",
+     "a5":"Isso é uma violação de segurança e saúde ocupacional.",
+
+     "yes": "Sim",
+     "no": "Não"
+     
 }

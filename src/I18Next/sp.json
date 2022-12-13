@@ -35,6 +35,7 @@
     "no_result": "No hay resultados",
     "no_result_mess": "No hay empresas que coincidan con su búsqueda actual.",
     "no_result_mess2": "Siéntete libre de enviar otra entrada de búsqueda o explorar nuestra página \"Aprende Más\".",
+    "result": "Resultado",
 
     "location": "Ubicación",
     "insert_location": " Insertar ubicación",
@@ -126,5 +127,20 @@
      "h1a_violtn": "",
      "h1a_violtn_des":"",
      "eev_violtn": "Violación de la Ley de Normas Laborales",
-     "eev_violtn_des": "Los empleadores deben verificar la identidad y la autorización de empleo de las personas contratadas para trabajar en los Estados Unidos."
+     "eev_violtn_des": "Los empleadores deben verificar la identidad y la autorización de empleo de las personas contratadas para trabajar en los Estados Unidos.",
+
+     "questi": "Cuestionario",
+     "q1":"¿No te pagan todas las horas que has trabajado?",
+     "a1":"Eso es una infracción de robo de salario.",
+     "q2":"¿Eres o conoces a alguien menor de 18 años que trabaja más de 9 horas al día?",
+     "a2":"Eso es una infracción de trabajo infantil.",
+     "q3":"¿Te has lesionado en el trabajo?",
+     "a3":"Eso es una infracción de seguridad y salud en el trabajo.",
+     "q4":"¿Le pagan menos del salario mínimo ($14.25 por hora)?",
+     "a4":"Eso es una infracción de robo de salario.",
+     "q5":"¿Ha desarrollado algún problema de salud debido a su lugar de trabajo actual?",
+     "a5":"Esa es una infracción de seguridad y salud en el trabajo.",
+
+     "yes": "Si",
+     "no": "No"
 }
