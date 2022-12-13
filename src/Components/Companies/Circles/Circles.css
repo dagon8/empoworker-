@@ -37,13 +37,14 @@
     margin-bottom: 20px;
     font-size: 18px;
     max-width: 10vw;
-    text-align: center
+    text-align: center;
+  padding-top: 20px
 }
 
 .descText{
   max-width: 12vw;
   text-align: center;
-  font-size: .85vw
+  font-size: .85vw;
 }
 
 #circle1{
