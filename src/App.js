@@ -119,14 +119,15 @@ function App() {
 
   const filter = () => {
     let num = document.getElementById("numberInput").value;
-    let str = document.getElementById("locationInput").value;
+    let str = document.getElementById("locationInput").value.trim();
 
     if (ogSearch.length !== 0 && (num || str)) {
+      console.log(ogSearch);
       if (num && !str) {
         setResult(
           ogSearch.filter(
             (obj) =>
-              obj[1]["violations"]["overall"]["case_violtn_cnt"]["count"] ===
+              obj[1]["violations"]["overall"]["case_violtn_cnt"]["count"] ==
               num,
           ),
         );
@@ -146,7 +147,7 @@ function App() {
                 obj[1]["st_cd"].toLowerCase().includes(lStr) ||
                 obj[1]["street_addr_1_txt"].toLowerCase().includes(lStr) ||
                 obj[1]["zip_cd"] === lStr) &&
-              obj[1]["violations"]["overall"]["case_violtn_cnt"]["count"] ===
+              obj[1]["violations"]["overall"]["case_violtn_cnt"]["count"] ==
                 num,
           ),
         );

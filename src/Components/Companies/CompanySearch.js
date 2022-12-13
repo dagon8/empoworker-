@@ -18,13 +18,13 @@ function CompanySearch({ setValue, value, search }) {
   return (
     <div className='container'>
       <div className='bar-button-container'>
-        <div>
+        <a href='/'>
           <img
-            style={{ height: "5vh" }}
+            style={{ height: "4.5vh", marginLeft: "1.75vw" }}
             src={empoworker_logo}
             alt='empoworker logo'
           />
-        </div>
+        </a>
 
         <div className='button-container'>
           <div className='nav-button home-button'>
