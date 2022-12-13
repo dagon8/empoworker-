@@ -18,7 +18,7 @@ const WorkersRights = () => {
       <div className="category-header" style={{display:"flex", flexDirection:"row"}}>
         <div className="back-button">
             <IconButton
-            sx={{alignItems:"flex-start", justifyContent:"flex-start"}}
+            sx={{alignItems:"flex-start", justifyContent:"flex-start", color:"black"}}
             onClick={()=> navigate(-1)}>
             <WestIcon />
             </IconButton>
