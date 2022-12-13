@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { TextField, InputAdornment, Button } from "@mui/material";
 import "./Home.css";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SearchIcon from "@mui/icons-material/Search";
 import empoworker_logo from "../../images/empoworker_logo.png";
 
@@ -24,7 +25,7 @@ export default function Home({
           {t("home_view")} <br /> {t("home_prevent")}
         </p>
 
-        <div className='search-bar-container'>
+        <div className='search-bar-container' style={{ marginTop: "3vh" }}>
           <div className='search-bar'>
             <TextField
               id='outlined-basic'
@@ -37,7 +38,7 @@ export default function Home({
               placeholder={"Search company"}
               value={value}
               variant='outlined'
-              label={t("search")}
+              // label={t("search")}
               size='small'
               InputProps={{
                 startAdornment: (
@@ -60,12 +61,12 @@ export default function Home({
               value={cityVal}
               placeholder={"Search city"}
               variant='outlined'
-              label={t("search")}
+              // label={t("search")}
               size='small'
               InputProps={{
                 startAdornment: (
                   <InputAdornment position='start'>
-                    <SearchIcon />
+                    <LocationOnIcon />
                   </InputAdornment>
                 ),
               }}

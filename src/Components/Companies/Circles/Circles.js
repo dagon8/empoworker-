@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { t } from "i18next";
 import "./Circles.css";
@@ -10,54 +10,51 @@ const Circles = ({ profile }) => {
   const { t, i18n } = useTranslation();
   const [hovDesc, setHovDesc] = useState("");
 
+  let rankWords = ["first", "second", "third", "fourth"];
+
   useEffect(() => {
-    setRanks([]);
-    if (profile) {
-      setVals({
-        child_labor: profile[1]["violations"]["child_labor"]["category_total"],
-        workplace_accident:
-          profile[1]["violations"]["workplace_accident"]["category_total"],
-        wage_theft: profile[1]["violations"]["wage_theft"]["category_total"],
-        migrant: profile[1]["violations"]["migrant"]["category_total"],
-      });
-    }
+    setVals({
+      child_labor: profile[1]["violations"]["child_labor"]["category_total"],
+      workplace_accident:
+        profile[1]["violations"]["workplace_accident"]["category_total"],
+      wage_theft: profile[1]["violations"]["wage_theft"]["category_total"],
+      migrant: profile[1]["violations"]["migrant"]["category_total"],
+    });
   }, [profile]);
 
   useEffect(() => {
-    if (profile) {
-      for (let title in vals) {
-        ranks.push([title, vals[title]]);
-      }
-      ranks.sort(function (a, b) {
-        return a[1] - b[1];
-      });
-      setRankClasses({
-        child_labor: "first",
-        workplace_accident: "first",
-        wage_theft: "first",
-        migrant: "first",
-      });
+    let temp = [];
+    for (let title in vals) {
+      temp.push([title, vals[title]]);
     }
-  }, [profile]);
+    temp = temp.sort(function (a, b) {
+      return a[1] - b[1];
+    });
+    setRanks(temp);
+  }, [vals]);
 
   useEffect(() => {
-    if (profile) {
-      let rankWords = ["first", "second", "third", "fourth"];
-      let titles = [
-        "child_labor",
-        "workplace_accident",
-        "wage_theft",
-        "migrant",
-      ];
-      let rankWordIndex = 0;
-      for (let i = 0; i < titles.length; i++) {
-        if (i !== 0) {
-          if (ranks[[titles][i]] === ranks[[titles][i - 1]]) {
-          }
+    let rankWordIndex = 0;
+    let temp = ranks;
+    let temp2 = {};
+    for (let i = 0; i < ranks.length; i++) {
+      if (i === 0) {
+        temp[i].push(rankWords[rankWordIndex]);
+        rankWordIndex++;
+      } else {
+        if (temp[i][1] === temp[i - 1][1]) {
+          temp[i].push(temp[i - 1][2]);
+        } else {
+          temp[i].push(rankWords[rankWordIndex]);
+          rankWordIndex++;
         }
       }
     }
-  }, [profile]);
+    for (let i = 0; i < temp.length; i++) {
+      temp2[temp[i][0]] = temp[i][2];
+      setRankClasses(temp2);
+    }
+  }, [ranks]);
 
   return (
     <div
@@ -70,7 +67,8 @@ const Circles = ({ profile }) => {
       className='container'
     >
       <div
-        className='circle'
+        className={`circle ${rankClasses["wage_theft"]}`}
+        // className={`circle first`}
         id='circle1'
         style={{
           backgroundColor: "#F3FF67",
@@ -95,7 +93,8 @@ const Circles = ({ profile }) => {
       </div>
 
       <div
-        className='circle'
+        className={`circle ${rankClasses["migrant"]}`}
+        // className={`circle second`}
         id='circle2'
         onMouseEnter={() => setHovDesc("migrant")}
         onMouseLeave={() => {
@@ -115,7 +114,8 @@ const Circles = ({ profile }) => {
       </div>
 
       <div
-        className='circle'
+        className={`circle ${rankClasses["workplace_accident"]}`}
+        // className={`circle third`}
         id='circle3'
         onMouseEnter={() => setHovDesc("workplace_accident")}
         onMouseLeave={() => {
@@ -136,7 +136,8 @@ const Circles = ({ profile }) => {
       </div>
 
       <div
-        className='circle'
+        className={`circle ${rankClasses["child_labor"]}`}
+        // className={`circle fourth`}
         id='circle4'
         onMouseEnter={() => setHovDesc("child_labor")}
         onMouseLeave={() => {

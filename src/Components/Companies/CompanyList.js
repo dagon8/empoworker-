@@ -7,6 +7,7 @@ import LoadingGif from "../../images/loading.gif";
 import Filter from "../../images/filter.png";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SearchIcon from "@mui/icons-material/Search";
 import NoResults from "./NoResults.js";
 
@@ -76,7 +77,7 @@ const CompanyList = ({
                 placeholder={"Search company"}
                 value={value}
                 variant='outlined'
-                label={t("search")}
+                // label={t("search")}
                 size='small'
                 InputProps={{
                   startAdornment: (
@@ -99,12 +100,12 @@ const CompanyList = ({
                 placeholder={"Search city"}
                 value={cityVal}
                 variant='outlined'
-                label={t("search")}
+                // label={t("search")}
                 size='small'
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position='start'>
-                      <SearchIcon />
+                      <LocationOnIcon />
                     </InputAdornment>
                   ),
                 }}
@@ -150,7 +151,7 @@ const CompanyList = ({
                 backgroundColor: "#F0F0F0",
                 textAlign: "center",
                 alignItems: "normal",
-                height: "5vh",
+                height: "4.5vh",
                 borderRadius: "5px",
                 outlineColor: "#F0F0F0",
               }}
@@ -162,6 +163,8 @@ const CompanyList = ({
                   margin: "0px",
                   paddingTop: "1.5vh",
                   fontWeight: "700",
+                  paddingLeft: "5px",
+                  paddingRight: "5px",
                 }}
               >
                 {t("location")}
@@ -187,7 +190,7 @@ const CompanyList = ({
                 backgroundColor: "#F0F0F0",
                 textAlign: "center",
                 alignItems: "normal",
-                height: "5vh",
+                height: "4.5vh",
                 borderRadius: "5px",
                 outlineColor: "#F0F0F0",
               }}
@@ -199,6 +202,8 @@ const CompanyList = ({
                   margin: "0px",
                   paddingTop: "1.5vh",
                   fontWeight: "700",
+                  paddingLeft: "5px",
+                  paddingRight: "5px",
                 }}
               >
                 {t("violations")}

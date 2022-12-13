@@ -42,7 +42,7 @@ const CompanyProfileFull = ({ profile }) => {
             justifyContent: "spaceBetween",
             margin: "10px",
             marginLeft: "0px",
-            marginBottom: "0px",
+            marginBottom: "15px",
             paddingBottom: "0px",
           }}
         >

@@ -1,7 +1,7 @@
 .circle{
     border-radius: 50%;
-    height: 47%;
-    width: 39%;
+    height: 43%;
+    width: 31%;
     outline: 0px solid black;
     display: flex;
     align-items: center;
@@ -9,6 +9,26 @@
     box-shadow: 0 3px 5px black;
     flex-direction: column;
     transition: all 1s ease;
+}
+
+.first{
+  height: 45%;
+  width: 31%;
+}
+
+.second{
+  height: 50.75%;
+  width: 36.75%;
+}
+
+.third{
+  height: 52.75%;
+  width: 38.75%;
+}
+
+.fourth {
+  height: 55.75%;
+  width: 41.75%;
 }
 
 .circleText {
@@ -21,14 +41,14 @@
 }
 
 .descText{
-  max-width: 10vw;
+  max-width: 12vw;
   text-align: center;
-  font-size: 1vw
+  font-size: .9vw
 }
 
 #circle1{
     position: absolute;
-    left: 30%;
+    left: 60%;
     top: 0%;
     transition-duration: .5s;
   }
@@ -36,7 +56,7 @@
 #circle2{
     position : absolute;
     left: 60%;
-    top: 30%;
+    top: 55%;
     background-color: #6587FF;
     transition-duration: .5s;
     z-index: 999;
@@ -45,8 +65,8 @@
 
 #circle3{
     position : absolute;
-    left: 30%;
-    top: 60%;
+    left: 10%;
+    top: 55%;
     background-color: #1FD7AE;
     transition-duration: .5s;
     z-index: 1000;
@@ -55,29 +75,26 @@
 
 #circle4{
     position : absolute;
-    top: 30%;
+    left: 10%;
+    top: 0%;
     background-color: #FF7A40;
     transition-duration: .5s;
     z-index: 999;
   }
 
 #circle1:hover{
-    top: -5px;
     z-index: 0;
     box-shadow: 0 10px 10px black
 }
 
 #circle2:hover{
-    top: 28%;
-    box-shadow: 0 10px 10px black
+  box-shadow: 0 10px 10px black
 }
 #circle3:hover{
-    top: 58%;
-    box-shadow: 0 10px 10px black
+  box-shadow: 0 10px 10px black
 }
 #circle4:hover{
-    top: 28%;
-    box-shadow: 0 10px 10px black
+  box-shadow: 0 10px 10px black
 }
 
 .container {
@@ -87,16 +104,3 @@
   flex-wrap: wrap;
 }
 
-.first{
-  
-}
-
-.second{
-}
-
-.third{
-}
-
-.fourth {
-
-}
