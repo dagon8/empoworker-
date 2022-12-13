@@ -6,7 +6,7 @@
 
     "home": "Inicio",
     "search": "Buscar",
-    "learn_more": "Aprende más",
+    "learn_more": "Aprende Más",
     "contact": "Contáctenos",
     "language": "Idioma",
 
@@ -41,5 +41,26 @@
     "insert_violation_num": " Número de violaciones",
     "filter": "Filtrar",
     "clear": "Borrar",
-    "total_v": "Infracciones Totales"
+    "total_v": "Infracciones Totales",
+
+    "helpful_links": "Enlaces Útiles:",
+
+    "child_labor": "Trabajo Infantil",
+    "what_cl": "¿Qué es el trabajo infantil?",
+    "violation_cl": "Violaciones bajo Trabajo Infantil:",
+    "report_cl": "Reportar Trabajo Infantil",
+    "mass_cl": "Ley de Massachusetts sobre trabajo infantil",
+    "mass_cl_en":"Leyes de trabajo infantil de Massachusetts - Inglés",
+    "mass_cl_sp": "Leyes de trabajo infantil de Massachusetts - Español",
+    "mass_cl_pt": "Leyes de trabajo infantil de Massachusetts - Portugués",
+
+    "what_wt": "¿Qué es el robo de salarios?",
+    "violation_wt": "Violaciones bajo Robo de Salario:",
+    "report_wt": "Denuncie el robo de salario",
+    "mass_wt": "Leyes de Horas y Salarios de Massachusetts",
+    "mass_wt_en":"Leyes de Horas y Salarios de Massachusetts - Inglés",
+    "mass_wt_sp": "Leyes de Horas y Salarios de Massachusetts - Español",
+    "mass_wt_pt": "Leyes de Horas y Salarios de Massachusetts - Portugués",
+    "breaks_off":"Descansos y tiempo libre",
+    "fl_wt": "Recursos multilingües de la División de Trabajo Justo"
 }

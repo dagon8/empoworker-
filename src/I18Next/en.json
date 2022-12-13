@@ -41,5 +41,26 @@
     "insert_violation_num": "Number of violations",
     "filter": "Filter",
     "clear": "Clear",
-    "total_v": "Total Violations"
+    "total_v": "Total Violations",
+
+    "helpful_links": "Helpful Links: ",
+
+    "child_labor": "Child Labor",
+    "what_cl": "What is Child Labor?",
+    "violation_cl": "Violations under Child Labor:",
+    "report_cl": "Report Child Labor",
+    "mass_cl": "Massachusetts Law about Child Labor",
+    "mass_cl_en":"Massachusetts Child Labor Laws - English",
+    "mass_cl_sp": "Massachusetts Child Labor Laws - Spanish",
+    "mass_cl_pt": "Massachusetts Child Labor Laws - Portuegese",
+
+    "what_wt": "What is Wage Theft?",
+    "violation_wt": "Violations under Wage Theft:",
+    "report_wt": "Report Wage Theft",
+    "mass_wt": "Massachusetts Wage & Hour Laws",
+    "mass_wt_en":"Massachusetts Wage & Hour Laws - English",
+    "mass_wt_sp": "Massachusetts Wage & Hour Laws - Spanish",
+    "mass_wt_pt": "Massachusetts Wage & Hour Laws - Portuegese",
+    "breaks_off":"Breaks and Time Off",
+    "fl_wt": "Fair Labor Division Multilingual Resources"
 }

@@ -4,10 +4,13 @@ import Descriptions from "../ViolationGlossary/violationsDescription.json";
 import { Grid, Box, IconButton } from '@mui/material'
 import { useNavigate } from "react-router";
 import WestIcon from '@mui/icons-material/West';
+import { useTranslation } from "react-i18next";
+
 
 
 const WageTheft = () => {
   let navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
   return (
     <div>
@@ -21,16 +24,16 @@ const WageTheft = () => {
         </div>
        
         <div className="category-title">
-          Wage Theft
+          {t("resources_wt_title")}
         </div>
       </div>
 
       <div className="category-content">
-        <div className="category-subheader"> What is Wage Theft?</div>
-        <div className="category-des1"> { Descriptions.wage_theft.category_description} </div>
+        <div className="category-subheader"> {t("what_wt")}</div>
+        <div className="category-des1"> {t("resources_wt_des")} </div>
       </div>
 
-      <div className="category-subheader">  Violations under Wage Theft:</div>
+      <div className="category-subheader">{t("violation_wt")}</div>
       <div className="line-div"> </div>
       
       <div className="violations-box-w">
@@ -72,48 +75,48 @@ const WageTheft = () => {
     </Box>
     </div>
 
-    <div className="category-subheader"> Helpful Links: </div>
+    <div className="category-subheader"> {t("helpful_links")} </div>
     <div className="category-links">
       <ul>
         <li> 
           <a href="https://www.mass.gov/how-to/file-a-workplace-complaint" target="_blank" rel="noopener noreferrer">
-                    Report Wage Theft 
+                    {t("report_wt")} 
           </a>
         </li>
 
         <li> 
           <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
-                  Fair Labor Division Multilingual Resources
+                  {t("fl_wt")}
           </a>
         </li>
         
         <li> 
           <a href="https://www.mass.gov/guides/pay-and-recordkeeping" target="_blank" rel="noopener noreferrer">
-                  Massachusetts Wage Laws
+                  {t("mass_wt")}
           </a>
         </li>
 
         <li> 
           <a href="https://www.mass.gov/doc/massachusetts-wage-hour-laws-poster/download" target="_blank" rel="noopener noreferrer">
-                  Massachusetts Wage & Hour Laws Poster - English
+                  {t("mass_wt_en")}
           </a>
         </li>
 
         <li> 
           <a href="https://www.mass.gov/doc/massachusetts-wage-hour-laws-poster-spanish/download" target="_blank" rel="noopener noreferrer">
-                  Massachusetts Wage & Hour Laws Poster - Spanish
+          {t("mass_wt_sp")}
           </a>
         </li>
 
         <li> 
           <a href="https://www.mass.gov/doc/massachusetts-wage-hour-laws-poster-portuguese/download" target="_blank" rel="noopener noreferrer">
-                  Massachusetts Wage & Hour Laws Poster - Portuguese
+          {t("mass_wt_pt")}
           </a>
         </li>
         
         <li> 
           <a href="https://www.mass.gov/guides/breaks-and-time-off" target="_blank" rel="noopener noreferrer">
-                  Breaks and Time Off
+                  {t("breaks_off")}
           </a>
         </li>
       </ul>

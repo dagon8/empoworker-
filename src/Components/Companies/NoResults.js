@@ -9,9 +9,9 @@ const NoResults = () => {
     <Box className='no-result'>
       {/* <h2>{t("no_result")}</h2> */}
       {/* {t("no_result_mess")} */}
-      <h1 style={{ padding: "25px" }}>Search result not found</h1>
+      <h1 style={{ padding: "25px" }}>{t("no_result")}</h1>
       <p className='no-result-paragraph'>
-        Sorry, there are no results that match your search.
+        {t("no_result_mess")}
       </p>
       <div className='no-result-button'>
         <h3 className='no-result-h4'>Contact Us</h3>

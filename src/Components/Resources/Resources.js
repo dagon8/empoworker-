@@ -15,7 +15,7 @@ const Resources = () => {
   return (
     <div className='page-container'>
       <div className='learn-box'>
-        <div className='learn-title'>Learn More</div>
+        <div className='learn-title'>{t("learn_more")}</div>
       </div>
       <div className='resources-box'>
         {/* <div className= "resources-title">{t("resources")}</div> */}
