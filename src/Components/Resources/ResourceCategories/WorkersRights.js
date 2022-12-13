@@ -4,11 +4,15 @@ import Descriptions from "../ViolationGlossary/violationsDescription.json";
 import { Grid, Box, Typography, IconButton} from '@mui/material'
 import { useNavigate } from "react-router";
 import WestIcon from '@mui/icons-material/West';
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+
 
 
 const WorkersRights = () => {
   let navigate = useNavigate();
-  
+  const { t, i18n } = useTranslation();
+
   return (
     <div>
       <div className="category-header" style={{display:"flex", flexDirection:"row"}}>
@@ -21,18 +25,18 @@ const WorkersRights = () => {
         </div>
        
         <div className="category-title">
-          Workers' Rights
+          {t("resources_wr_title")}
         </div>
       </div>
 
       <div className="category-content">
-        <div className="category-subheader"> What are Workers' Rights?</div>
+        <div className="category-subheader">{t("what_wr")}</div>
         <div className="category-des1">
-         <Typography sx={{width:"1000px"}}>{ Descriptions.migrant.category_description} </Typography>
+         <Typography sx={{width:"1000px"}}>{t("resources_wr_des")}</Typography>
          </div>
       </div>
 
-      <div className="category-subheader">  Violations under Workers' Rights:</div>
+      <div className="category-subheader">{t("violation_wr")}</div>
       <div className="line-div"> </div>
       
       <div className="violations-box-w">
@@ -69,18 +73,18 @@ const WorkersRights = () => {
     </Box>
     </div>
 
-    <div className="category-subheader"> Helpful Links: </div>
+    <div className="category-subheader">{t("helpful_links")}</div>
     <div className="category-links">
       <ul>
         <li> 
           <a href="https://www.mass.gov/service-details/report-an-accident-file-a-complaint-or-request-assistance" target="_blank" rel="noopener noreferrer">
-                  Report an accident, file a complaint, or request assistance 
+                  {t("report_wr")}
           </a>
         </li>
 
         <li> 
           <a href="https://www.mass.gov/topics/workers-rights-safety" target="_blank" rel="noopener noreferrer">
-                   Massachusetts Workers' Rights & Safety
+                   {t("mass_wr")}
           </a>
         </li>
         

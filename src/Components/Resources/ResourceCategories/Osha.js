@@ -4,10 +4,15 @@ import Descriptions from "../ViolationGlossary/violationsDescription.json";
 import { Grid, Box, Typography, IconButton } from '@mui/material'
 import { useNavigate } from "react-router";
 import WestIcon from '@mui/icons-material/West';
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+
 
 
 const Osha = () => {
   let navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+
   
   return (
     <div>
@@ -21,18 +26,18 @@ const Osha = () => {
         </div>
        
         <div className="category-title">
-          Occupaton Safety & Health (OSHA)
+          {t("resources_osh_title")}
         </div>
       </div>
 
       <div className="category-content">
-        <div className="category-subheader"> What is OSHA?</div>
+        <div className="category-subheader">{t("what_os")}</div>
         <div className="category-des1"> 
-        <Typography sx={{width:"1000px"}}> { Descriptions.workplace_accident.category_description} </Typography>
+        <Typography sx={{width:"1000px"}}> {t("resources_osh_des")} </Typography>
         </div>
       </div>
 
-      <div className="category-subheader">  Violations under OSHA:</div>
+      <div className="category-subheader">{t("violation_os")}</div>
       <div className="line-div"> </div>
       
       <div className="violations-box-w">
@@ -51,24 +56,24 @@ const Osha = () => {
     </Box>
     </div>
 
-    <div className="category-subheader"> Helpful Links: </div>
+    <div className="category-subheader">{t("helpful_links")}</div>
     <div className="category-links">
       <ul>
         <li> 
           <a href="https://www.osha.gov/workers/file-complaint" target="_blank" rel="noopener noreferrer">
-                    Report Safety & Health Violation
+                    {t("report_os")}
           </a>
         </li>
 
         <li> 
           <a href="https://www.osha.gov/workers#:~:text=To%20discuss%20a%20health%20and,information%20will%20be%20kept%20confidential." target="_blank" rel="noopener noreferrer">
-                    OSHA Worker Rights and Protections
+                    {t("rights_os")}
           </a>
         </li>
 
         <li> 
           <a href="https://www.mass.gov/workplace-safety-and-health-program-wshp" target="_blank" rel="noopener noreferrer">
-                  Workplace Safety and Health Program (WSHP)
+                  {t("program_os")}
           </a>
         </li>
       </ul>

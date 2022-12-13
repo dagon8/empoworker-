@@ -41,8 +41,8 @@ const ChildLabor = () => {
       <Box sx={{ width: '100%'}}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
-          <h4>{Descriptions.child_labor.violations.flsa_cl_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.child_labor.violations.flsa_cl_violtn_cnt.violation_description}</p>
+          <h4>{t("flsa_cl_violtn")}</h4>
+          <p>{t("flsa_cl_violtn_des")}</p>
           <h1></h1>
         </Grid>
       </Grid>

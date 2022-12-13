@@ -40,35 +40,35 @@ const WageTheft = () => {
       <Box sx={{ width: '100%'}}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.sca_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.sca_violtn_cnt.violation_description}</p>
+          <h4>{t("sca_violtn")}</h4>
+          <p>{t("sca_violtn_des")}</p>
           <h1></h1>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.fmla_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.fmla_violtn_cnt.violation_description}</p>
+          <h4>{t("fmla_violtn")}</h4>
+          <p>{t("fmla_violtn_des")}</p>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.dbra_cl_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.dbra_cl_violtn_cnt.violation_description}</p>
+          <h4>{t("dbra_cl_violtn")}</h4>
+          <p>{t("dbra_cl_violtn_des")}</p>
           <h1></h1>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.flsa_smw14_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.flsa_smw14_violtn_cnt.violation_description}</p>
+          <h4>{t("flsa_smw14_violtn")}</h4>
+          <p>{t("flsa_smw14_violtn_des")}</p>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.cwhssa_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.cwhssa_violtn_cnt.violation_description}</p>
+          <h4>{t("cwhssa_violtn")}</h4>
+          <p>{t("cwhssa_violtn_des")}</p>
           <h1></h1>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.pca_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.pca_violtn_cnt.violation_description}</p>
+          <h4>{t("pca_violtn")}</h4>
+          <p>{t("pca_violtn_des")}</p>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.wage_theft.violations.ca_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.wage_theft.violations.ca_violtn_cnt.violation_description}</p>
+          <h4>{t("ca_violtn")}</h4>
+          <p>{t("ca_violtn_des")}</p>
           <h1></h1>
         </Grid>
       </Grid>
