@@ -20,7 +20,7 @@ function CompanySearch({ setValue, value, search }) {
       <div className='bar-button-container'>
         <a href='/'>
           <img
-            style={{ height: "5vh" }}
+            style={{ height: "4.5vh", marginLeft: "1.75vw" }}
             src={empoworker_logo}
             alt='empoworker logo'
           />
