@@ -108,7 +108,23 @@
     "ca_violtn_des":"The Copeland Act's Anti-Kickback provision prohibits contractors and subcontractors performing work on covered contracts from in any way inducing an employee to give up any part of the compensation to which he or she is entitled.",
 
     "flsa_cl_violtn": "Fair Labor Standards Act - Child Labor Violations",
-    "flsa_cl_violtn_des": "FLSA restricts the hours that youth under 16 years of age can work and lists hazardous occupations too dangerous for young workers to perform."
+    "flsa_cl_violtn_des": "FLSA restricts the hours that youth under 16 years of age can work and lists hazardous occupations too dangerous for young workers to perform.",
 
+    "osha_violtn": "Occupational Safety and Health Standards Violations",
+    "osha_violtn_des": "the Occupational Safety and Health Administration (OSHA) to ensure safe and healthful working conditions for workers by setting and enforcing standards and by providing training, outreach, education and assistance.",
+    "crew_violtn": "CREW Act Violations",
+    "crew_violtn_des": "A federal law that provides for the payment of compensation, medical care, and vocational rehabilitation services to employees disabled from on the job injuries that occur on the navigable waters of the United States, or in adjoining areas customarily used in the loading, unloading, repairing, or building of a vessel.",
 
+    "sraw_violtn_des": "Act aimed at protecting undocumented people already working in the fields and to prevent labor shortages.",
+    "sraw_violtn":"Spec. Agri. Workers/Replenishment Agri. Workers Violations",
+    "mspa_violtn": "Migrant and Seasonal Agricultural Worker Protection Act Violations",
+    "mspa_violtn_des": "Protects migrant and seasonal agricultural workers by establishing employment standards related to wages, housing, transportation, disclosures and recordkeeping. The MSPA also requires farm labor contractors to register with the U.S. Department of Labor (DOL).",
+    "h1b_violtn": "Work Visa - Speciality Occupations Violations",
+    "h1b_violtn_des": "The H-1B is a temporary (nonimmigrant) visa category that allows employers to petition for highly educated foreign professionals to work in “specialty occupations” that require at least a bachelor's degree or the equivalent.",
+    "h2a_violtn": "Work Visa - Seasonal Agricultural Workers Violations",
+    "h2a_violtn_des": "The H-2A program allows U.S. employers or U.S. agents who meet specific regulatory requirements to bring foreign nationals to the United States to fill temporary agricultural jobs.",
+    "h1a_violtn": "",
+    "h1a_violtn_des":"",
+    "eev_violtn": "Employment Standards Act Violation",
+    "eev_violtn_des": "Employers are required to verify the identity and employment authorization of individuals hired for employment in the United States."
 }

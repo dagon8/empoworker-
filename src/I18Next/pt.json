@@ -90,5 +90,41 @@
      "what_wr": "Quais são os direitos dos trabalhadores?",
      "violation_wr":"Violações dos Direitos dos Trabalhadores:",
      "report_wr":"Relate um acidente, registre uma reclamação ou solicite assistência ",
-     "mass_wr":"Direitos e Segurança dos Trabalhadores de Massachusetts"
+     "mass_wr":"Direitos e Segurança dos Trabalhadores de Massachusetts",
+
+     "sca_violtn":"Violações da Lei do Contrato de Serviço",
+     "sca_violtn_des":"A Lei de Contrato de Serviço McNamara-O Hara exige que empreiteiros e subempreiteiros que executam serviços em contratos principais acima de US$ 2.500 paguem aos funcionários de serviços em várias classes não menos do que os salários e benefícios adicionais encontrados prevalecentes na localidade, ou o taxas (incluindo aumentos prospectivos) contidas no acordo coletivo de trabalho de um contratante antecessor.",
+     "fmla_violtn":"Violações da Lei de Licença Médica e Familiar",
+     "fmla_violtn_des":"O FMLA dá direito a funcionários elegíveis de empregadores cobertos a tirar licença não remunerada e protegida por motivos médicos e familiares especificados com continuação da cobertura de seguro de saúde em grupo sob os mesmos termos e condições como se o funcionário não tivesse tirado licença." ,
+     "dbra_cl_violtn":"Davis-Bacon e violações de leis relacionadas",
+     "dbra_cl_violtn_des":"De acordo com o Davis-Bacon and Related Acts and Reorganization Plan No. 14 de 1950, o Departamento do Trabalho dos EUA é responsável por determinar os salários vigentes, emitir regulamentos e padrões a serem observados por agências federais que concedem ou financiam projetos sujeitos aos padrões de trabalho Davis-Bacon e supervisionar a aplicação consistente dos padrões de trabalho Davis-Bacon.",
+     "flsa_smw14_violtn":"Lei de Padrões Trabalhistas Justos - Violações de Salário Mínimo Especial",
+     "flsa_smw14_violtn_des":"O pagamento de horas extras a uma taxa não inferior a uma vez e meia a taxa normal de pagamento é exigido após 40 horas de trabalho em uma semana de trabalho. Salário mínimo da FLSA: o salário mínimo federal é de $ 7,25 por hora a partir de 24 de julho , 2009.",
+     "cwhssa_violtn":"Violações do contrato de horas de trabalho e normas de segurança",
+     "cwhssa_violtn_des":"A Lei de Horas de Trabalho Contratadas e Padrões de Segurança (CWHSSA) exige que empreiteiros e subempreiteiros paguem trabalhadores e mecânicos, incluindo vigias e guardas, empregados na execução de contratos cobertos uma vez e meia sua taxa básica de pagamento por todas as horas trabalhadas acima de 40 em uma semana de trabalho.",
+     "pca_violtn":"Violações da Lei de Contratos Públicos",
+     "pca_violtn_des":"A Lei de Contratos Públicos Walsh-Healey (PCA), conforme alterada, estabelece salário mínimo, horas máximas e padrões de segurança e saúde para trabalho em contratos superiores a $ 15.000 para a fabricação ou fornecimento de materiais, suprimentos, artigos , ou equipamento para o governo dos EUA ou o Distrito de Columbia.",
+     "ca_violtn":"Violações da Lei Anti-Suborno de Copenhague",
+     "ca_violtn_des":"A cláusula Anti-Suborno da Lei Copeland proíbe empreiteiros e subempreiteiros que executam trabalho em contratos cobertos de qualquer forma induzir um funcionário a desistir de qualquer parte da remuneração a que ele ou ela tem direito.",
+
+     "flsa_cl_violtn": "Lei de Padrões Justos de Trabalho - Violações de Trabalho Infantil",
+     "flsa_cl_violtn_des": "A FLSA restringe as horas que jovens menores de 16 anos podem trabalhar e lista ocupações perigosas muito perigosas para jovens trabalhadores.",
+
+     "osha_violtn": "Violações de normas de segurança e saúde ocupacional",
+     "osha_violtn_des": "a Administração de Segurança e Saúde Ocupacional (OSHA) para garantir condições de trabalho seguras e saudáveis para os trabalhadores, definindo e aplicando padrões e fornecendo treinamento, divulgação, educação e assistência.",
+     "crew_violtn": "Violações da Lei da Tripulação",
+     "crew_violtn_des": "Uma lei federal que prevê o pagamento de compensações, cuidados médicos e serviços de reabilitação vocacional a empregados incapacitados devido a acidentes de trabalho que ocorram nas águas navegáveis dos Estados Unidos ou em áreas adjacentes habitualmente utilizadas no carregar, descarregar, reparar ou construir uma embarcação.",
+
+     "sraw_violtn_des": "Lei destinada a proteger os indocumentados que já trabalham nos campos e a prevenir a escassez de mão-de-obra.",
+     "sraw_violtn":"Spec. Agri. Workers/Replenishment Agri. Workers Violations",
+     "mspa_violtn": "Violações da Lei de Proteção aos Trabalhadores Agrícolas Sazonais e Migrantes",
+     "mspa_violtn_des": "Protege trabalhadores agrícolas migrantes e sazonais estabelecendo padrões de emprego relacionados a salários, moradia, transporte, divulgações e manutenção de registros. A MSPA também exige que os contratados de mão de obra agrícola se registrem no Departamento de Trabalho dos EUA (DOL).",
+     "h1b_violtn": "Visto de Trabalho - Violações de Ocupações Especiais",
+     "h1b_violtn_des": "O H-1B é uma categoria de visto temporário (não imigrante) que permite aos empregadores solicitar profissionais estrangeiros altamente qualificados para trabalhar em 'ocupações especializadas' que exigem pelo menos um diploma de bacharel ou equivalente.",
+     "h2a_violtn": "Visto de Trabalho - Violações de Trabalhadores Agrícolas Sazonais",
+     "h2a_violtn_des": "O programa H-2A permite que empregadores ou agentes dos EUA que atendam a requisitos regulamentares específicos tragam cidadãos estrangeiros para os Estados Unidos para preencher empregos agrícolas temporários.",
+     "h1a_violtn": "",
+     "h1a_violtn_des":"",
+     "eev_violtn": "Violação da Lei de Padrões de Emprego",
+     "eev_violtn_des": "Os empregadores são obrigados a verificar a identidade e a autorização de trabalho dos indivíduos contratados para trabalhar nos Estados Unidos."
 }

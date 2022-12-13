@@ -43,31 +43,31 @@ const WorkersRights = () => {
       <Box sx={{ width: '100%'}}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
-          <h4>{Descriptions.migrant.violations.sraw_violtn_cnt.expanded_name}</h4>
-          <Typography sx={{marginBottom:"55px"}}>{Descriptions.migrant.violations.sraw_violtn_cnt.violation_description}</Typography>
+          <h4>{t("sraw_violtn")}</h4>
+          <Typography sx={{marginBottom:"55px"}}>{t("sraw_violtn_des")}</Typography>
           <h1></h1>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.migrant.violations.mspa_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.migrant.violations.mspa_violtn_cnt.violation_description}</p>
+          <h4>{t("mspa_violtn")}</h4>
+          <p>{t("mspa_violtn_des")}</p>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.migrant.violations.h1b_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.migrant.violations.h1b_violtn_cnt.violation_description}</p>
+          <h4>{t("h1b_violtn")}</h4>
+          <p>{t("h1b_violtn_des")}</p>
           <h1></h1>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.migrant.violations.h2a_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.migrant.violations.h2a_violtn_cnt.violation_description}</p>
+          <h4>{t("h2a_violtn")}</h4>
+          <p>{t("h2a_violtn_des")}</p>
         </Grid>
-        <Grid item xs={6}>
-          <h4>{Descriptions.migrant.violations.h1a_violtn_cnt.expanded_name}</h4>
-          <Typography sx={{marginBottom:"85px"}}> {Descriptions.migrant.violations.h1a_violtn_cnt.violation_description}</Typography>
+        {/* <Grid item xs={6}>
+          <h4>{t("h1a_violtn")}</h4>
+          <Typography sx={{marginBottom:"85px"}}> {t("h1a_violtn_des")}</Typography>
           <h1></h1>
-        </Grid>
+        </Grid> */}
         <Grid item xs={6}>
-          <h4>{Descriptions.migrant.violations.eev_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.migrant.violations.eev_violtn_cnt.violation_description}</p>
+          <h4>{t("eev_violtn")}</h4>
+          <p>{t("eev_violtn_des")}</p>
         </Grid>
       </Grid>
     </Box>

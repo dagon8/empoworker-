@@ -44,13 +44,13 @@ const Osha = () => {
       <Box sx={{ width: '100%'}}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
-          <h4>{Descriptions.workplace_accident.violations.osha_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.workplace_accident.violations.osha_violtn_cnt.violation_description}</p>
+          <h4>{t("osha_violtn")}</h4>
+          <p>{t("osha_violtn_des")}</p>
           <h1></h1>
         </Grid>
         <Grid item xs={6}>
-          <h4>{Descriptions.workplace_accident.violations.crew_violtn_cnt.expanded_name}</h4>
-          <p>{Descriptions.workplace_accident.violations.crew_violtn_cnt.violation_description}</p>
+          <h4>{t("crew_violtn")}</h4>
+          <p>{t("crew_violtn_des")}</p>
         </Grid>
       </Grid>
     </Box>

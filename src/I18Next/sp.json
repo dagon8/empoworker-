@@ -108,5 +108,23 @@
     "ca_violtn_des":"La disposición Antisoborno de la Ley Copeland prohíbe que los contratistas y subcontratistas que realizan trabajos en contratos cubiertos induzcan de alguna manera a un empleado a renunciar a cualquier parte de la compensación a la que tiene derecho.",
 
     "flsa_cl_violtn": "Ley de Normas Justas de Trabajo - Violaciones de Trabajo Infantil",
-     "flsa_cl_violtn_des": "FLSA restringe las horas en que los jóvenes menores de 16 años pueden trabajar y enumera las ocupaciones peligrosas que son demasiado peligrosas para que las realicen los trabajadores jóvenes."
+    "flsa_cl_violtn_des": "FLSA restringe las horas en que los jóvenes menores de 16 años pueden trabajar y enumera las ocupaciones peligrosas que son demasiado peligrosas para que las realicen los trabajadores jóvenes.",
+
+    "osha_violtn": "Violaciones de las Normas de Seguridad y Salud Ocupacional",
+    "osha_violtn_des": "la Administración de Salud y Seguridad Ocupacional (OSHA) para garantizar condiciones de trabajo seguras y saludables para los trabajadores mediante el establecimiento y el cumplimiento de estándares y la provisión de capacitación, divulgación, educación y asistencia.",
+    "crew_violtn": "Violaciones de la Ley de CREW",
+    "crew_violtn_des": "Una ley federal que estipula el pago de compensación, atención médica y servicios de rehabilitación vocacional a empleados discapacitados por lesiones laborales que ocurren en las aguas navegables de los Estados Unidos, o en áreas adyacentes que se usan habitualmente en el carga, descarga, reparación o construcción de un buque.",
+
+    "sraw_violtn_des": "Ley destinada a proteger a las personas indocumentadas que ya trabajan en el campo y prevenir la escasez de mano de obra.",
+     "sraw_violtn":"Espec. Agri. Trabajadores/Reabastecimiento Agri. Trabajadores Violaciones",
+     "mspa_violtn": "Violaciones de la Ley de Protección de Trabajadores Agrícolas Migratorios y de Temporada",
+     "mspa_violtn_des": "Protege a los trabajadores agrícolas migrantes y de temporada mediante el establecimiento de estándares de empleo relacionados con salarios, vivienda, transporte, divulgación y mantenimiento de registros. La MSPA también requiere que los contratistas de mano de obra agrícola se registren en el Departamento de Trabajo de EE. UU. (DOL)",
+     "h1b_violtn": "Visa de trabajo - Infracciones de ocupaciones especializadas",
+     "h1b_violtn_des": "La H-1B es una categoría de visa temporal (no inmigrante) que permite a los empleadores solicitar profesionales extranjeros altamente calificados para trabajar en 'ocupaciones especializadas' que requieren al menos una licenciatura o el equivalente.",
+     "h2a_violtn": "Visa de trabajo - Infracciones de trabajadores agrícolas de temporada",
+     "h2a_violtn_des": "El programa H-2A permite a los empleadores o agentes estadounidenses que cumplan con los requisitos reglamentarios específicos traer ciudadanos extranjeros a los Estados Unidos para ocupar trabajos agrícolas temporales.",
+     "h1a_violtn": "",
+     "h1a_violtn_des":"",
+     "eev_violtn": "Violación de la Ley de Normas Laborales",
+     "eev_violtn_des": "Los empleadores deben verificar la identidad y la autorización de empleo de las personas contratadas para trabajar en los Estados Unidos."
 }
