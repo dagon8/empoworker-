@@ -42,7 +42,7 @@ const CompanyProfileFull = ({ profile }) => {
             justifyContent: "spaceBetween",
             margin: "10px",
             marginLeft: "0px",
-            marginBottom: "0px",
+            marginBottom: "15px",
             paddingBottom: "0px",
           }}
         >
@@ -53,7 +53,7 @@ const CompanyProfileFull = ({ profile }) => {
                 color: "#101F2D",
                 fontWeight: "700",
                 width: "30vw",
-                fontSize: "30px",
+                fontSize: "22px",
                 margin: 0,
                 padding: 0,
                 textDecoration: "underline solid #FF7032",

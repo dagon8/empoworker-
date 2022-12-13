@@ -19,7 +19,7 @@ export default function LangBtn() {
 
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 120, minHeight: 60}}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">{t("language")}</InputLabel>
         <Select

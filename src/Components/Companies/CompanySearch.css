@@ -31,7 +31,7 @@ padding-right: 10px;
     padding-top: 98px;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    height: 20px;
     padding: 35px 100px 4px;
     background-color:#f3ff67;;
     width: 100vw;
@@ -80,9 +80,6 @@ padding-right: 10px;
     border-radius: 5px;
 }
 
-.search-bar{
-}
-
 .button{
     margin: 0px
 }
@@ -92,6 +89,7 @@ padding-right: 10px;
     justify-content: flex-start;
     margin-left: 8vw;
     margin-right: 0px;
+    margin-top: 2px
 }
 
 .button-container{

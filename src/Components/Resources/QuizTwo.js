@@ -1,40 +1,44 @@
 import React, { useState } from "react";
 import "./QuizTwo.css";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
+
 
 function QuizTwo() {
   const [responses, setResponses] = useState(new Set());
   const [results, setResults] = useState([]);
+  const { t, i18n } = useTranslation();
+
 
   const questions = [
     {
       id: 1,
-      text: "Are you not getting paid all the hours you have worked?",
-      yes: "That is a Wage Theft violation.",
+      text: t("q1"),
+      yes: t("a1"),
       no: "",
     },
     {
       id: 2,
-      text: "Are you or know anyone who is under 18 and is working over 9 hours a day?",
-      yes: "That is a Child Labor violation.",
+      text: t("q2"),
+      yes: t("a2"),
       no: "",
     },
     {
       id: 3,
-      text: "Have you faced an injury at work?",
-      yes: "That is an Occupation Safety and Health violation.",
+      text: t("q3"),
+      yes: t("a3"),
       no: "",
     },
     {
       id: 4,
-      text: "Are you getting paid less than minimum wage ($14.25 per hour)?",
-      yes: "That is a Wage Theft violation.",
+      text: t("q4"),
+      yes: t("a4"),
       no: "",
     },
     {
       id: 5,
-      text: "Have you developed a health condition because of your current place of employement?",
-      yes: "That is a an Occupation Safety and Health Violation.",
+      text: t("q5"),
+      yes: t("a5"),
       no: "",
     },
   ];
@@ -61,7 +65,7 @@ function QuizTwo() {
             onClick={(e) => handleChange(e, question.id)}
             // style={{justifyContent:"space-between", alignItems:"center"}}
           />
-          Yes
+          {t("yes")}
           <input
             type='radio'
             name={question.id}
@@ -69,10 +73,10 @@ function QuizTwo() {
             // style={{ marginRight:"20px", justifyContent:"center", alignItems:"center"}}
             onClick={(e) => handleChange(e, question.id)}
           />
-          No
+          {t("no")}
         </div>
       ))}
-      <h2>Results:</h2>
+      <h2>{t("result")}:</h2>
       <div>
         {questions.map((question) => (
           <div key={question.id}>

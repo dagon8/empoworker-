@@ -18,13 +18,13 @@ function CompanySearch({ setValue, value, search }) {
   return (
     <div className='container'>
       <div className='bar-button-container'>
-        <div>
+        <a href='/'>
           <img
-            style={{ height: "5vh" }}
+            style={{ height: "4.5vh", marginLeft: "1.75vw" }}
             src={empoworker_logo}
             alt='empoworker logo'
           />
-        </div>
+        </a>
 
         <div className='button-container'>
           <div className='nav-button home-button'>
@@ -32,7 +32,7 @@ function CompanySearch({ setValue, value, search }) {
               component={Link}
               to='/'
               size='small'
-              sx={{ textTransform: "none", color: "black" }}
+              sx={{ textTransform: "none", color: "black", height:30 }}
             >
               <p
                 style={{
@@ -52,7 +52,7 @@ function CompanySearch({ setValue, value, search }) {
               component={Link}
               to='/search'
               size='small'
-              sx={{ textTransform: "none", color: "black" }}
+              sx={{ textTransform: "none", color: "black", height:30 }}
             >
               <p
                 style={{
@@ -72,7 +72,7 @@ function CompanySearch({ setValue, value, search }) {
               component={Link}
               to='/resources'
               size='small'
-              sx={{ textTransform: "none", color: "black" }}
+              sx={{ textTransform: "none", color: "black", height:30 }}
             >
               <p
                 style={{
@@ -95,7 +95,7 @@ function CompanySearch({ setValue, value, search }) {
               variant='outlined'
               sx={{
                 textTransform: "none",
-                color: "black",
+                color: "black", 
                 borderColor: "black",
                 display: "flex",
                 flexDirection: "column",
