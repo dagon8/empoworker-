@@ -34,7 +34,8 @@
 
     "no_result": "No Results",
     "no_result_mess": "There are no companies that match your current search.",
-
+    "no_result_mess2": "Feel free to submit another search entry or explore our \"Learn More\" page.",
+    
     "location": "Location",
     "insert_location": " Insert location",
     "violations": "Violations",
