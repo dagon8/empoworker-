@@ -175,6 +175,11 @@ const CompanyList = ({
               style={{ width: "10vw" }}
               size='small'
               id='locationInput'
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  filter();
+                }
+              }}
             />
           </Box>
 
@@ -217,6 +222,11 @@ const CompanyList = ({
                 width: "12.1vw",
               }}
               id='numberInput'
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  filter();
+                }
+              }}
             />
           </Box>
 
